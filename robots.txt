@@ -1,4 +1,3 @@
-# Default: Private (Link-Only Mode — Hidden from Google Search)
-# To allow Google Search indexing, replace with: Allow: /
 User-agent: *
-Disallow: /
+Allow: /
+Sitemap: https://gurudattkaushik.github.io/TheGuru-ExamO/sitemap.xml

@@ -1,15 +1,14 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" data-quality="premium">
-<head>
+<html lang="en" data-theme="light" data-quality="low" style="--q-font-size: 16px; --q-pane-max-h: 440px; --passage-split: 46%; --shell-max-w: 100%; --primary: #1e3a8a; --accent: #0f766e;"><head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0">
-<meta name="robots" id="metaRobots" content="noindex, nofollow">
-<meta name="description" id="metaDesc" content="TheGuru-EXamO — Pro Self-Updating CBT Examination, 1000-Q Practice Portal & Classroom Assessment Suite.">
+<meta name="robots" id="metaRobots" content="index, follow">
+<meta name="description" id="metaDesc" content="Interactive CBT practice sets, 30-Q slices, unit-wise drills, and classroom assessments by GuruDatt Kaushik.">
 <meta name="author" id="metaAuthor" content="GuruDatt Kaushik">
 <meta property="og:type" content="website">
-<meta property="og:title" id="ogTitle" content="TheGuru-EXamO — Pro CBT & Practice Portal">
+<meta property="og:title" id="ogTitle" content="TheGuru-EXamO — Pro CBT &amp; Practice Portal">
 <meta property="og:description" id="ogDesc" content="Attend interactive CBT practice sets, 30-Q slices, unit-wise drills, and proctored assessments anytime.">
-<title>TheGuru-EXamO — Pro CBT &amp; Self-Updating Assessment Platform (v5.1)</title>
+<title>TheGuru-EXamO — Pro CBT &amp; Practice Portal</title>
 <style>
 :root {
  --bg: #f1f5f9;
@@ -1050,10 +1049,10 @@ body.admin-hidden .admin-only-el { display: none !important; }
 
 </style>
 </head>
-<body class="admin-hidden">
+<body class="">
 
 <!-- Subtle Branded Watermark Layer (Toggled via Admin -> Brand & Layout Studio) -->
-<div id="guruWatermarkLayer" class="guru-watermark hidden"><span id="guruWatermarkText">GuruDatt Kaushik</span></div>
+<div id="guruWatermarkLayer" class="guru-watermark hidden"><span id="guruWatermarkText">The Guru</span></div>
 
 <!-- 1-Click Shared Link Auto-Loader Splash -->
 <div id="portalSplashOverlay" class="splash-overlay hidden">
@@ -1081,10 +1080,10 @@ body.admin-hidden .admin-only-el { display: none !important; }
         <div class="brand-badge">GE</div>
         <div>
           <h2 id="gateTitle" style="font-size:17px;font-weight:900;">Admin Verification</h2>
-          <div id="gateSubtitle" style="font-size:11.5px;color:var(--text-soft);">Private Owner Access &bull; Salted SHA-256</div>
+          <div id="gateSubtitle" style="font-size:11.5px;color:var(--text-soft);">Private Owner Access • Salted SHA-256</div>
         </div>
       </div>
-      <button id="gateCloseBtn" class="btn btn-sm btn-outline" onclick="GuruExamO.Security.closeModal()" title="Close">&times;</button>
+      <button id="gateCloseBtn" class="btn btn-sm btn-outline" onclick="GuruExamO.Security.closeModal()" title="Close">×</button>
     </div>
 
     <!-- MODE 1: FIRST-TIME OWNER SETUP (No hardcoded password in code!) -->
@@ -1105,7 +1104,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
         <input id="setupPasswordConfirm" class="input" type="password" placeholder="Re-enter password" autocomplete="new-password">
       </div>
       <div id="gateSetupMsg" style="font-size:12px;color:var(--danger);font-weight:700;min-height:18px;margin-bottom:8px;"></div>
-      <button class="btn btn-primary" style="width:100%;margin-bottom:10px;" onclick="GuruExamO.Security.completeFirstSetup()">&#128274; Create Admin &amp; Unlock</button>
+      <button class="btn btn-primary" style="width:100%;margin-bottom:10px;" onclick="GuruExamO.Security.completeFirstSetup()">🔒 Create Admin &amp; Unlock</button>
       <details style="font-size:12px;color:var(--text-muted);background:var(--surface-alt);padding:8px 10px;border-radius:8px;border:1px solid var(--border);">
         <summary style="cursor:pointer;font-weight:700;">Already set up on another device? Link Bridge URL to Login</summary>
         <div style="margin-top:8px;display:flex;gap:6px;">
@@ -1118,9 +1117,9 @@ body.admin-hidden .admin-only-el { display: none !important; }
     <!-- MODE 2 & 3 & 4: LOGIN + FORGOT/RESET TABS (Shown once Admin exists) -->
     <div id="gateAuthTabsWrap">
       <div class="auth-tabs">
-        <button id="authTabLogin" class="auth-tab-btn active" onclick="GuruExamO.Security.switchAuthView('login')">&#128273; Login</button>
-        <button id="authTabOtp" class="auth-tab-btn" onclick="GuruExamO.Security.switchAuthView('otp')">&#9993;&#65039; Gmail OTP Reset</button>
-        <button id="authTabRec" class="auth-tab-btn" onclick="GuruExamO.Security.switchAuthView('recovery')">&#128737;&#65039; Recovery Code</button>
+        <button id="authTabLogin" class="auth-tab-btn active" onclick="GuruExamO.Security.switchAuthView('login')">🔑 Login</button>
+        <button id="authTabOtp" class="auth-tab-btn" onclick="GuruExamO.Security.switchAuthView('otp')">✉️ Gmail OTP Reset</button>
+        <button id="authTabRec" class="auth-tab-btn" onclick="GuruExamO.Security.switchAuthView('recovery')">🛡️ Recovery Code</button>
       </div>
 
       <!-- LOGIN VIEW -->
@@ -1134,7 +1133,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
           <input id="gatePassword" class="input" type="password" placeholder="Enter your Password" autocomplete="current-password">
         </div>
         <div id="gateMsg" style="font-size:12px;color:var(--danger);font-weight:700;min-height:18px;margin-bottom:8px;"></div>
-        <button class="btn btn-primary" style="width:100%;" onclick="GuruExamO.Security.attemptUnlock()">&#128275; Unlock Admin Panel</button>
+        <button class="btn btn-primary" style="width:100%;" onclick="GuruExamO.Security.attemptUnlock()">🔓 Unlock Admin Panel</button>
       </div>
 
       <!-- GMAIL OTP RESET VIEW -->
@@ -1142,7 +1141,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
         <div style="font-size:12px;color:var(--text-muted);margin-bottom:10px;">
           Forgot ID or Password? Send a 6-digit OTP directly to your own Apps Script Gmail account (valid 10 mins).
         </div>
-        <button id="sendOtpBtn" class="btn btn-accent" style="width:100%;margin-bottom:10px;" onclick="GuruExamO.Security.requestGmailOtp()">&#9993;&#65039; Send 6-Digit Reset OTP to My Gmail</button>
+        <button id="sendOtpBtn" class="btn btn-accent" style="width:100%;margin-bottom:10px;" onclick="GuruExamO.Security.requestGmailOtp()">✉️ Send 6-Digit Reset OTP to My Gmail</button>
         <div class="field" style="margin-bottom:8px;">
           <label for="otpCodeInp">6-Digit OTP from Your Gmail</label>
           <input id="otpCodeInp" class="input" type="text" inputmode="numeric" placeholder="Enter 6-digit OTP">
@@ -1178,7 +1177,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="modal-box">
  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;">
  <strong id="previewModalTitle" style="font-size:15px;">Rendered Question Preview</strong>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.UI.closeModal()">Close &times;</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.UI.closeModal()">Close ×</button>
  </div>
  <div id="previewModalBody"></div>
  </div>
@@ -1191,23 +1190,23 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;">
  <strong id="examHeaderTitle" style="font-size:15px;">TheGuru-EXamO CBT</strong>
  <span id="examCandBadge" class="badge" style="background:rgba(255,255,255,0.18);color:#fff;">Personal Mode</span>
- <span id="examAutoSaveBadge" style="font-size:11px;opacity:0.85;">&#128190; Auto-saved</span>
+ <span id="examAutoSaveBadge" style="font-size:11px;opacity:0.85;">💾 Auto-saved</span>
  </div>
  <div class="exam-timers">
- <span id="examOverallTimer" class="t-badge">&#9201;&#65039; 30:00</span>
+ <span id="examOverallTimer" class="t-badge">⏱️ 30:00</span>
  <span id="examSectionTimer" class="t-badge hidden">Sec: 15:00</span>
  <span id="examPerQTimer" class="t-badge hidden">Q: 60s</span>
- <span id="examViolBadge" class="v-badge hidden">&#128737;&#65039; Warnings: 0/3</span>
- <button id="examPauseBtn" class="btn btn-sm btn-outline hidden" style="color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1);" onclick="GuruExamO.Exam.togglePause()">&#9208; Pause</button>
- <button id="examPaperBtn" class="btn btn-sm btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1);" onclick="GuruExamO.Exam.openQuestionPaper()">&#128196; Q-Paper</button>
- <button class="btn btn-sm btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1);" onclick="GuruExamO.Proctor.requestFullscreen()">&#x26F6; Fullscreen</button>
- <button class="btn btn-sm btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1);" onclick="GuruExamO.Exam.toggleMobilePalette()">&#9776; Palette</button>
+ <span id="examViolBadge" class="v-badge hidden">🛡️ Warnings: 0/3</span>
+ <button id="examPauseBtn" class="btn btn-sm btn-outline hidden" style="color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1);" onclick="GuruExamO.Exam.togglePause()">⏸ Pause</button>
+ <button id="examPaperBtn" class="btn btn-sm btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1);" onclick="GuruExamO.Exam.openQuestionPaper()">📄 Q-Paper</button>
+ <button class="btn btn-sm btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1);" onclick="GuruExamO.Proctor.requestFullscreen()">⛶ Fullscreen</button>
+ <button class="btn btn-sm btn-outline" style="color:#fff;border-color:rgba(255,255,255,0.4);background:rgba(255,255,255,0.1);" onclick="GuruExamO.Exam.toggleMobilePalette()">☰ Palette</button>
  </div>
  </div>
 
  <!-- Anti-Cheat Grace Period Banner -->
  <div id="proctorGraceBanner" class="proctor-grace-bar hidden">
- <span id="proctorGraceText">&#9888;&#65039; Proctoring Alert! Return to exam immediately.</span>
+ <span id="proctorGraceText">⚠️ Proctoring Alert! Return to exam immediately.</span>
  <button class="btn btn-sm btn-outline" style="background:#fff;color:#991b1b;" onclick="GuruExamO.Proctor.acknowledgeGrace()">Return / Re-Enter Fullscreen</button>
  </div>
 
@@ -1233,7 +1232,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  </div>
  <div style="display:flex;align-items:center;gap:10px;">
  <span id="examQMarksLabel" style="font-weight:800;color:var(--success);">+1 / -0.25</span>
- <button id="examBookmarkBtn" class="btn btn-sm btn-outline" onclick="GuruExamO.Bookmarks.toggleCurrent()" title="Bookmark / Star this question for later revision">&#9734; Star</button>
+ <button id="examBookmarkBtn" class="btn btn-sm btn-outline" onclick="GuruExamO.Bookmarks.toggleCurrent()" title="Bookmark / Star this question for later revision">☆ Star</button>
  <span id="examQTimeSpent" style="font-family:ui-monospace,monospace;font-size:12px;color:var(--text-soft);">0s</span>
  </div>
  </div>
@@ -1242,12 +1241,12 @@ body.admin-hidden .admin-only-el { display: none !important; }
 
  <div class="exam-footer">
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Exam.markForReviewAndNext()">&#128278; Mark for Review &amp; Next</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Exam.markForReviewAndNext()">🔖 Mark for Review &amp; Next</button>
  <button class="btn btn-sm btn-outline" onclick="GuruExamO.Exam.clearCurrentResponse()">Clear Response</button>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Exam.navigate(-1)">&larr; Previous</button>
- <button class="btn btn-sm btn-primary" onclick="GuruExamO.Exam.saveAndNext()">Save &amp; Next &rarr;</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Exam.navigate(-1)">← Previous</button>
+ <button class="btn btn-sm btn-primary" onclick="GuruExamO.Exam.saveAndNext()">Save &amp; Next →</button>
  </div>
  </div>
  </div>
@@ -1266,7 +1265,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div id="examPaletteGrid" class="pal-grid"></div>
  </div>
  <div class="palette-foot">
- <button class="btn btn-success" style="width:100%;" onclick="GuruExamO.Exam.confirmSubmit()">&#9989; Final Submit Test</button>
+ <button class="btn btn-success" style="width:100%;" onclick="GuruExamO.Exam.confirmSubmit()">✅ Final Submit Test</button>
  <button id="examExitBtn" class="btn btn-sm btn-outline" style="width:100%;" onclick="GuruExamO.Exam.exitWithoutSubmit()">Save &amp; Exit (Resume Later)</button>
  </div>
  </aside>
@@ -1277,8 +1276,8 @@ body.admin-hidden .admin-only-el { display: none !important; }
 <div id="qPaperModal" class="modal-backdrop hidden" onclick="if(event.target===this)this.classList.add('hidden')">
  <div class="modal-box" style="max-width:940px;">
  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border);">
- <strong style="font-size:16px;">&#128196; Full Question Paper View</strong>
- <button class="btn btn-sm btn-outline" onclick="document.getElementById('qPaperModal').classList.add('hidden')">Close &times;</button>
+ <strong style="font-size:16px;">📄 Full Question Paper View</strong>
+ <button class="btn btn-sm btn-outline" onclick="document.getElementById('qPaperModal').classList.add('hidden')">Close ×</button>
  </div>
  <div id="qPaperBody" style="display:flex;flex-direction:column;gap:14px;"></div>
  </div>
@@ -1287,16 +1286,16 @@ body.admin-hidden .admin-only-el { display: none !important; }
 <!-- Pause Overlay -->
 <div id="examPauseOverlay" class="lock-wall hidden">
  <div class="gate-card" style="text-align:center;">
- <h2 style="font-size:20px;font-weight:900;margin-bottom:8px;">&#9208; Exam Paused</h2>
+ <h2 style="font-size:20px;font-weight:900;margin-bottom:8px;">⏸ Exam Paused</h2>
  <p style="font-size:13px;color:var(--text-soft);margin-bottom:16px;">Questions are hidden while the timer is paused. Your progress is safely auto-saved in IndexedDB.</p>
- <button class="btn btn-primary" style="width:100%;" onclick="GuruExamO.Exam.togglePause()">&#9654;&#65039; Resume Exam</button>
+ <button class="btn btn-primary" style="width:100%;" onclick="GuruExamO.Exam.togglePause()">▶️ Resume Exam</button>
  </div>
 </div>
 
 <!-- Proctor Breach Lock Overlay (Admin Unlock Required) -->
 <div id="proctorLockOverlay" class="lock-wall hidden">
  <div class="gate-card">
- <h2 style="font-size:18px;font-weight:900;color:var(--danger);margin-bottom:6px;">&#128680; Exam Locked — Proctoring Breach</h2>
+ <h2 style="font-size:18px;font-weight:900;color:var(--danger);margin-bottom:6px;">🚨 Exam Locked — Proctoring Breach</h2>
  <p id="proctorLockReason" style="font-size:12.5px;color:var(--text-muted);margin-bottom:12px;">Maximum warnings exceeded. Admin authorization is required to resume or finalize.</p>
  <div class="field" style="margin-bottom:10px;">
  <label for="proctorUnlockPass">Admin Password (SHA-256)</label>
@@ -1316,12 +1315,12 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title" id="resTitle">&#127942; Assessment Result Summary</div>
+ <div class="card-title" id="resTitle">🏆 Assessment Result Summary</div>
  <div class="card-sub" id="resSubtitle">Saved to IndexedDB Attempts Store</div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-accent" onclick="GuruExamO.PdfGen.printAttempt(GuruExamO.Exam.lastAttempt)">&#128424;&#65039; Single-Student Result PDF</button>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Exam.exportResultJson()">&#128190; Export Attempt JSON</button>
+ <button class="btn btn-sm btn-accent" onclick="GuruExamO.PdfGen.printAttempt(GuruExamO.Exam.lastAttempt)">🖨️ Single-Student Result PDF</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Exam.exportResultJson()">💾 Export Attempt JSON</button>
  <button class="btn btn-sm btn-primary" onclick="GuruExamO.Exam.closeResult()">Return to Dashboard</button>
  </div>
  </div>
@@ -1340,10 +1339,10 @@ body.admin-hidden .admin-only-el { display: none !important; }
 <div id="studioEditorModal" class="modal-backdrop hidden" onclick="if(event.target===this)GuruExamO.Studio.closeEditor()">
  <div class="modal-box" style="max-width:920px;">
  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:12px;padding-bottom:10px;border-bottom:1px solid var(--border);">
- <strong id="studioModalTitle" style="font-size:16px;">&#9999;&#65039; Add / Edit Question</strong>
+ <strong id="studioModalTitle" style="font-size:16px;">✏️ Add / Edit Question</strong>
  <div style="display:flex;gap:6px;">
- <button class="btn btn-sm btn-soft" onclick="GuruExamO.Studio.previewEditor()">&#128065;&#65039; Live Smart Preview</button>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Studio.closeEditor()">Close &times;</button>
+ <button class="btn btn-sm btn-soft" onclick="GuruExamO.Studio.previewEditor()">👁️ Live Smart Preview</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Studio.closeEditor()">Close ×</button>
  </div>
  </div>
 
@@ -1430,7 +1429,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
 
  <div style="display:flex;justify-content:flex-end;gap:8px;border-top:1px solid var(--border);padding-top:12px;">
  <button class="btn btn-outline" onclick="GuruExamO.Studio.closeEditor()">Cancel</button>
- <button class="btn btn-success" onclick="GuruExamO.Studio.saveEditor()">&#9989; Save Question to Vault</button>
+ <button class="btn btn-success" onclick="GuruExamO.Studio.saveEditor()">✅ Save Question to Vault</button>
  </div>
  </div>
 </div>
@@ -1446,34 +1445,30 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <h1>TheGuru-EXamO</h1>
  <div class="sub">
  <span>Pro Self-Updating CBT Suite</span>
- <span class="ver-chip" id="topVerChip">Pro v5.1 &bull; Private Admin Auth</span>
+ <span class="ver-chip" id="topVerChip">Pro v5.1 • Private Admin Auth</span>
  </div>
  </div>
  </div>
 
  <nav class="module-nav" aria-label="Primary Modules">
- <button class="mod-tab active" data-mod="personal" onclick="GuruExamO.UI.switchModule('personal')">
- <span>&#128218;</span> Personal Test
+ <button class="mod-tab" data-mod="personal" onclick="GuruExamO.UI.switchModule('personal')">
+ <span>📚</span> Personal Test
  </button>
  <button class="mod-tab" data-mod="student" onclick="GuruExamO.UI.switchModule('student')">
- <span>&#127891;</span> Student Test
+ <span>🎓</span> Student Test
  </button>
- <button class="mod-tab" data-mod="admin" onclick="GuruExamO.UI.switchModule('admin')">
- <span>&#9881;&#65039;</span> Admin Panel
+ <button class="mod-tab active" data-mod="admin" onclick="GuruExamO.UI.switchModule('admin')">
+ <span>⚙️</span> Admin Panel
  </button>
  </nav>
 
  <div class="top-right">
- <span id="vaultStatusPill" class="status-pill ok"><span class="status-dot"></span> Vault: Initializing...</span>
- <button id="cloudStatusPill" class="status-pill" onclick="GuruExamO.UI.switchModule('admin','cloud')" title="Open Live Google Drive &amp; Sheets Manager"><span class="status-dot"></span> Cloud: Offline</button>
- <button id="adminHideBtn" class="icon-btn" style="border-color:var(--danger);color:var(--danger);" onclick="GuruExamO.Security.lockAndHideAdmin()" title="Lock &amp; Hide Admin Panel">&#128274; Hide Admin</button>
- <button id="gateQuickBtn" class="icon-btn" onclick="GuruExamO.Security.quickToggleGate()" title="1-Click Toggle Master Access Gate">
- &#128275; Gate: OFF
- </button>
- <button id="qualityCycleBtn" class="icon-btn" onclick="GuruExamO.Brand.cycleQuality()" title="Switch Visual Quality (Low / Medium / Premium)">&#10024; Premium</button>
- <button id="themeCycleBtn" class="icon-btn" onclick="GuruExamO.UI.cycleTheme()" title="Switch Theme (Light / Dark / Sepia)">
- &#9728;&#65039; Light
- </button>
+ <span id="vaultStatusPill" class="status-pill ok"><span class="status-dot"></span> Vault: 6 Qs (7 KB)</span>
+ <button id="cloudStatusPill" class="status-pill warn" onclick="GuruExamO.UI.switchModule('admin','cloud')" title="Open Live Google Drive &amp; Sheets Manager"><span class="status-dot"></span> Cloud: Ready</button>
+ <button id="adminHideBtn" class="icon-btn" style="border-color:var(--danger);color:var(--danger);" onclick="GuruExamO.Security.lockAndHideAdmin()" title="Lock &amp; Hide Admin Panel">🔒 Hide Admin</button>
+ <button id="gateQuickBtn" class="icon-btn" onclick="GuruExamO.Security.quickToggleGate()" title="1-Click Toggle Master Access Gate" style="border-color: var(--warn);">🔒 Gate: ON</button>
+ <button id="qualityCycleBtn" class="icon-btn" onclick="GuruExamO.Brand.cycleQuality()" title="Switch Visual Quality (Low / Medium / Premium)">⚡ Lite</button>
+ <button id="themeCycleBtn" class="icon-btn" onclick="GuruExamO.UI.cycleTheme()" title="Switch Theme (Light / Dark / Sepia)">☀️ Light</button>
  </div>
 </header>
 
@@ -1482,11 +1477,11 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <!-- Crash-Proof Auto-Save Resume Banner -->
  <div id="resumeSessionBanner" class="resume-banner hidden">
  <div>
- <strong>&#9889; Unfinished Exam Session Recovered from IndexedDB!</strong>
+ <strong>⚡ Unfinished Exam Session Recovered from IndexedDB!</strong>
  <div id="resumeSessionInfo" style="font-size:12.5px;color:var(--text-muted);"></div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-primary" onclick="GuruExamO.Exam.resumeSavedSession()">&#9654;&#65039; Resume Exactly Where Left Off</button>
+ <button class="btn btn-sm btn-primary" onclick="GuruExamO.Exam.resumeSavedSession()">▶️ Resume Exactly Where Left Off</button>
  <button class="btn btn-sm btn-outline" onclick="GuruExamO.Exam.discardSavedSession()">Discard</button>
  </div>
  </div>
@@ -1495,19 +1490,19 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <!-- =========================================================
  MODULE 1: PERSONAL TEST (SELF-STUDY & SMART RENDERER LAB)
  ========================================================= -->
- <section id="mod-personal" class="module-section active">
+ <section id="mod-personal" class="module-section">
  <div id="personalSectionStack" class="portal-stack">
  <!-- BLOCK 1: HERO WELCOME BANNER & MENTOR SPOTLIGHT -->
  <div id="sec-hero" class="portal-block" style="order:1;">
- <div id="heroCardEl" class="hero-card">
- <div id="heroAvatarEl" class="hero-avatar frame-circle">GK</div>
+ <div id="heroCardEl" class="hero-card align-center">
+ <div id="heroAvatarEl" class="hero-avatar frame-banner"><img src="data:image/jpeg;base64,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" alt="The Guru" style="width:100%;height:100%;object-fit:cover;border-radius:inherit;" onerror="this.parentElement.textContent='GE'"></div>
  <div class="hero-main">
  <div class="hero-title" id="heroTitleText">TheGuru-EXamO — Pro CBT &amp; Practice Portal</div>
- <div class="hero-sub" id="heroTaglineText">Curated &amp; Mentored by GuruDatt Kaushik &bull; Practice 1,000+ Questions Anytime, Unit-wise or 30-Q Sets</div>
+ <div class="hero-sub" id="heroTaglineText">Master every exam with 1,000+ curated questions, 30-Q practice sets, unit-wise drills &amp; instant explanations.</div>
  <div class="hero-badges">
- <span class="hero-pill" id="heroMentorBadge">&#127891; GuruDatt Kaushik</span>
- <span class="hero-pill" id="heroPackCountBadge">&#128218; Vault Ready</span>
- <span class="hero-pill" id="heroBookmarkCountBadge">&#11088; 0 Starred</span>
+ <span class="hero-pill" id="heroMentorBadge">🎓 The Guru</span>
+ <span class="hero-pill" id="heroPackCountBadge">📚 6 Qs Ready</span>
+ <span class="hero-pill" id="heroBookmarkCountBadge">⭐ 0 Starred</span>
  <input id="friendDisplayNameInp" class="input" style="max-width:210px;padding:4px 10px;font-size:12.5px;background:rgba(255,255,255,0.92);color:#0f172a;border:none;" placeholder="Your Name (for Scorecard)" onchange="GuruExamO.Brand.saveFriendName(this.value)">
  </div>
  </div>
@@ -1517,7 +1512,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <!-- BLOCK 2: LIVE NOTICE / EXAM COUNTDOWN -->
  <div id="sec-notice" class="portal-block" style="order:2;">
  <div class="notice-bar">
- <span id="noticeTextEl">&#128226; Welcome! Select any 30-Q Set below or filter by Unit &amp; Subject to start practicing anytime.</span>
+ <span id="noticeTextEl">Welcome! Choose any 30-Q Practice Set, Unit, or Subject below — attempt anytime at your own pace.</span>
  <span id="noticeCountdownEl" class="countdown-chip hidden"></span>
  </div>
  </div>
@@ -1526,13 +1521,13 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div id="sec-shayari" class="portal-block" style="order:3;">
  <div class="shayari-card">
  <div style="flex:1;min-width:240px;">
- <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.7px;color:var(--primary);margin-bottom:5px;">&#10024; Thought &amp; Shayari Corner</div>
- <div id="shayariTextEl" class="shayari-quote"></div>
- <div id="shayariAuthorEl" class="shayari-author"></div>
+ <div style="font-size:11px;font-weight:800;text-transform:uppercase;letter-spacing:0.7px;color:var(--primary);margin-bottom:5px;">✨ Thought &amp; Shayari Corner</div>
+ <div id="shayariTextEl" class="shayari-quote">“Consistency beats intensity — 30 focused questions every day build an unstoppable rank.”</div>
+ <div id="shayariAuthorEl" class="shayari-author">— GuruDatt Kaushik</div>
  </div>
  <div style="display:flex;gap:6px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.copyCurrentShayari()">&#128203; Copy</button>
- <button class="btn btn-sm btn-primary" onclick="GuruExamO.Brand.nextShayari()">Next Shayari &rarr;</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.copyCurrentShayari()">📋 Copy</button>
+ <button class="btn btn-sm btn-primary" onclick="GuruExamO.Brand.nextShayari()">Next Shayari →</button>
  </div>
  </div>
  </div>
@@ -1542,7 +1537,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="card">
  <div class="card-header" style="margin-bottom:10px;">
  <div>
- <div class="card-title">&#128444;&#65039; Highlights &amp; Photo Gallery</div>
+ <div class="card-title">🖼️ Highlights &amp; Photo Gallery</div>
  <div class="card-sub">Curated visuals, motivational posters &amp; study snapshots</div>
  </div>
  </div>
@@ -1555,16 +1550,16 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="card">
  <div class="card-header" style="margin-bottom:10px;">
  <div>
- <div class="card-title">&#127919; Quick Practice Sets &amp; Cloud Library (<span id="setGridSummary">30-Q Slices</span>)</div>
+ <div class="card-title">🎯 Quick Practice Sets &amp; Cloud Library (<span id="setGridSummary">6 Qs • 1 Set(s) of 30 Qs</span>)</div>
  <div class="card-sub">Jump directly into any 30-Q slice, full unit, or starred revision — progress tracked per set</div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
  <select id="portalCloudPackSel" class="select hidden" style="width:auto;min-width:190px;padding:5px 8px;font-size:12px;" onchange="GuruExamO.SharePortal.loadSelectedCloudPack(this.value)"></select>
- <button class="btn btn-sm btn-soft" onclick="GuruExamO.SharePortal.launchBookmarked()">&#11088; Practice Starred (<span id="setGridStarCnt">0</span>)</button>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.SharePortal.refreshCloudLibrary()">&#9729;&#65039; Refresh Library</button>
+ <button class="btn btn-sm btn-soft" onclick="GuruExamO.SharePortal.launchBookmarked()">⭐ Practice Starred (<span id="setGridStarCnt">0</span>)</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.SharePortal.refreshCloudLibrary()">☁️ Refresh Library</button>
  </div>
  </div>
- <div id="visualSetGrid" class="set-grid"></div>
+ <div id="visualSetGrid" class="set-grid"><div class="set-card "><div class="set-card-head"><span class="set-card-title">Set 1</span><span class="badge b-info">Q1–6</span></div><div class="set-card-meta">6 Questions (Q1 to Q6)</div><div style="display:flex;gap:6px;margin-top:4px;"><button class="btn btn-sm btn-primary" style="flex:1;" onclick="GuruExamO.SharePortal.launchSet(0,'practice')">Practice</button><button class="btn btn-sm btn-outline" style="flex:1;" onclick="GuruExamO.SharePortal.launchSet(0,'exam')">Exam</button></div></div></div>
  </div>
  </div>
 
@@ -1574,12 +1569,12 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="grid-4" style="margin-bottom:16px;">
  <div class="stat-tile">
  <div class="stat-label">Vault Subjects</div>
- <div class="stat-val" id="statSubjects">0</div>
+ <div class="stat-val" id="statSubjects">1</div>
  <div class="stat-sub">IndexedDB 50+ MB Safe</div>
  </div>
  <div class="stat-tile">
  <div class="stat-label">Total Questions</div>
- <div class="stat-val" id="statQuestions">0</div>
+ <div class="stat-val" id="statQuestions">6</div>
  <div class="stat-sub" id="statDemoNote">Includes 6 Demo Formats</div>
  </div>
  <div class="stat-tile">
@@ -1590,7 +1585,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="stat-tile">
  <div class="stat-label">Option Sanitizer</div>
  <div class="stat-val" id="statSanitizer">ON</div>
- <div class="stat-sub" id="statTimerSummary">30 min &bull; Auto-Submit</div>
+ <div class="stat-sub" id="statTimerSummary">30 min • Auto-Submit</div>
  </div>
  </div>
 
@@ -1599,19 +1594,19 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#127919; Personal Test Setup</div>
+ <div class="card-title">🎯 Personal Test Setup</div>
  <div class="card-sub">Select subject, slice &amp; study mode</div>
  </div>
  </div>
 
  <div class="field" style="margin-bottom:12px;">
  <label for="personalSubjectSel">Subject Vault</label>
- <select id="personalSubjectSel" class="select" onchange="GuruExamO.UI.onPersonalSubjectChange()"></select>
+ <select id="personalSubjectSel" class="select" onchange="GuruExamO.UI.onPersonalSubjectChange()"><option value="sub_demo_showcase_v1">Demo Showcase — All 6 Smart Formats (6 Qs)</option></select>
  </div>
 
  <div class="field" style="margin-bottom:12px;">
  <label for="personalUnitSel">Unit / Section Filter</label>
- <select id="personalUnitSel" class="select" onchange="GuruExamO.UI.refreshPersonalPreview()"></select>
+ <select id="personalUnitSel" class="select" onchange="GuruExamO.UI.refreshPersonalPreview()"><option value="__ALL__">All Units (6 Qs)</option><option value="Unit 1: Computer Networks">Unit 1: Computer Networks (1)</option><option value="Unit 2: Operating Systems">Unit 2: Operating Systems (1)</option><option value="Unit 3: ICT Lab Case Study">Unit 3: ICT Lab Case Study (1)</option><option value="Unit 4: C &amp; Algorithms">Unit 4: C &amp; Algorithms (1)</option><option value="Unit 5: Discrete Math &amp; Matrices">Unit 5: Discrete Math &amp; Matrices (1)</option><option value="Unit 6: DBMS Normalization (Long-Q Scroll Test)">Unit 6: DBMS Normalization (Long-Q Scroll Test) (1)</option></select>
  </div>
 
  <div class="field" style="margin-bottom:12px;">
@@ -1621,14 +1616,14 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <option value="practice">Practice Mode (Instant Answer &amp; Explanation)</option>
  <option value="rapid">Rapid-Fire Mode (Per-Q Speed Drill)</option>
  <option value="wrong">Wrong / Skipped Retake Mode</option>
- <option value="bookmarked">&#11088; Bookmarked Questions Only</option>
+ <option value="bookmarked">⭐ Bookmarked Questions Only</option>
  </select>
  </div>
 
  <div class="field" style="margin-bottom:12px;">
- <label>Auto-Slice Set (<span id="sliceInfoLabel">30-Q Slices</span>)</label>
- <select id="personalSliceSel" class="select" onchange="GuruExamO.UI.refreshPersonalPreview()"></select>
- <span class="hint">Set size obeys Admin &rarr; Boss Limits &rarr; Section 2.</span>
+ <label>Auto-Slice Set (<span id="sliceInfoLabel">Up to 30 Qs</span>)</label>
+ <select id="personalSliceSel" class="select" onchange="GuruExamO.UI.refreshPersonalPreview()"><option value="0">Full Set (6 Qs)</option></select>
+ <span class="hint">Set size obeys Admin → Boss Limits → Section 2.</span>
  </div>
 
  <div class="toggle-row" style="margin-bottom:14px;">
@@ -1637,20 +1632,20 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="t-desc">Hide [hints], (proofs) in options</div>
  </div>
  <label class="switch">
- <input id="personalSanitizerToggle" type="checkbox" checked onchange="GuruExamO.UI.syncQuickSanitizer(this.checked)">
+ <input id="personalSanitizerToggle" type="checkbox" checked="" onchange="GuruExamO.UI.syncQuickSanitizer(this.checked)">
  <span class="slider"></span>
  </label>
  </div>
 
  <div style="display:flex;flex-direction:column;gap:8px;">
  <button class="btn btn-primary" onclick="GuruExamO.Exam.startPersonal()">
- &#9654;&#65039; Launch Full CBT Exam Room
+ ▶️ Launch Full CBT Exam Room
  </button>
  <button class="btn btn-outline admin-only-el" onclick="GuruExamO.UI.switchModule('admin','uploader')">
- &#128228; Upload New Question File
+ 📤 Upload New Question File
  </button>
  <button class="btn btn-soft admin-only-el" onclick="GuruExamO.UI.switchModule('admin','analytics')">
- &#128202; Open Analytical Dashboard
+ 📊 Open Analytical Dashboard
  </button>
  </div>
  </div>
@@ -1659,7 +1654,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="card" style="padding:14px;">
  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;">
  <div>
- <div class="card-title">&#128300; Live Smart Question Viewport (Pass 1 Verification)</div>
+ <div class="card-title">🔬 Live Smart Question Viewport (Pass 1 Verification)</div>
  <div class="card-sub">Tests all 6 special formats, pinned chrome, independent scroll &amp; Boss Limits styling live</div>
  </div>
  <div style="display:flex;align-items:center;gap:6px;flex-wrap:wrap;">
@@ -1671,7 +1666,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  </div>
 
  <!-- Question Selector Strip -->
- <div id="personalQStrip" class="q-strip"></div>
+ <div id="personalQStrip" class="q-strip"><button class="q-pill active" onclick="GuruExamO.UI.jumpPersonalQ(0)">Q1 • Match</button><button class="q-pill " onclick="GuruExamO.UI.jumpPersonalQ(1)">Q2 • A-R</button><button class="q-pill " onclick="GuruExamO.UI.jumpPersonalQ(2)">Q3 • Passage</button><button class="q-pill " onclick="GuruExamO.UI.jumpPersonalQ(3)">Q4 • Num</button><button class="q-pill " onclick="GuruExamO.UI.jumpPersonalQ(4)">Q5 • Multi</button><button class="q-pill " onclick="GuruExamO.UI.jumpPersonalQ(5)">Q6 • Long-Q</button></div>
 
  <!-- TCS iON / NTA Pinned-Chrome CBT Stage -->
  <div class="cbt-stage">
@@ -1679,29 +1674,29 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="cbt-h-left">
  <span class="cbt-q-num" id="stageQNum">Q 1 / 6</span>
  <div class="cbt-h-meta">
- <span id="stageUnitBadge" class="badge" style="background:rgba(255,255,255,0.18);color:#fff;">Unit</span>
- <span id="stageTypeBadge" class="badge" style="background:rgba(255,255,255,0.18);color:#fff;">Type</span>
- <span id="stageMarksBadge">+1.0 / -0.25</span>
+ <span id="stageUnitBadge" class="badge" style="background:rgba(255,255,255,0.18);color:#fff;">Unit 1: Computer Networks</span>
+ <span id="stageTypeBadge" class="badge" style="background:rgba(255,255,255,0.18);color:#fff;">MATCHING</span>
+ <span id="stageMarksBadge">+1 / -0.25</span>
  </div>
  </div>
- <div class="cbt-timer-pill" id="stageTimerPill">&#9201;&#65039; 30:00</div>
+ <div class="cbt-timer-pill" id="stageTimerPill">⏱️ 30:00</div>
  </div>
 
  <div class="cbt-toolbar">
- <span id="stageModeLabel">Mode: Exam Preview &bull; Sanitizer: ON</span>
+ <span id="stageModeLabel">Mode: EXAM • Sanitizer: ON</span>
  <span>Scroll Pane Height: <b id="stagePaneHeightLabel">440px</b> (Header &amp; Footer Pinned)</span>
  </div>
 
- <div id="stageViewport" class="cbt-viewport"></div>
+ <div id="stageViewport" class="cbt-viewport"><div class="cbt-single-scroll"><div class="q-stem"><p>Match List-I (Application Layer Protocols) with List-II (Standard Default TCP Port Numbers) and choose the correct code:</p></div><table class="match-table"><thead><tr><th>List-I</th><th>List-II</th></tr></thead><tbody><tr><td><span class="match-key">(A)</span>HTTP (Hypertext Transfer Protocol)</td><td><span class="match-key">(1)</span>Port 22</td></tr><tr><td><span class="match-key">(B)</span>HTTPS (HTTP Secure)</td><td><span class="match-key">(2)</span>Port 80</td></tr><tr><td><span class="match-key">(C)</span>FTP Control Channel</td><td><span class="match-key">(3)</span>Port 443</td></tr><tr><td><span class="match-key">(D)</span>SSH (Secure Shell)</td><td><span class="match-key">(4)</span>Port 21</td></tr></tbody></table><div class="opt-list"><div class="opt-item" onclick="GuruExamO.UI.selectDemoOption('A', false)"><div class="opt-key">A</div><div class="opt-text">A-2, B-3, C-4, D-1<span class="sanitized-tag" title="Bracketed hint hidden by Exam-Clean Sanitizer">Sanitized</span></div></div><div class="opt-item" onclick="GuruExamO.UI.selectDemoOption('B', false)"><div class="opt-key">B</div><div class="opt-text">A-3, B-2, C-4, D-1</div></div><div class="opt-item" onclick="GuruExamO.UI.selectDemoOption('C', false)"><div class="opt-key">C</div><div class="opt-text">A-2, B-3, C-1, D-4<span class="sanitized-tag" title="Bracketed hint hidden by Exam-Clean Sanitizer">Sanitized</span></div></div><div class="opt-item" onclick="GuruExamO.UI.selectDemoOption('D', false)"><div class="opt-key">D</div><div class="opt-text">A-4, B-1, C-2, D-3</div></div></div></div></div>
 
  <div class="cbt-pinned-footer">
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.UI.stepPersonalQ(-1)">&larr; Previous</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.UI.stepPersonalQ(-1)">← Previous</button>
  <button class="btn btn-sm btn-outline" onclick="GuruExamO.UI.clearDemoSelection()">Clear Response</button>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <span id="stageSelectionNote" style="font-size:12px;color:var(--text-soft);align-self:center;"></span>
- <button class="btn btn-sm btn-primary" onclick="GuruExamO.UI.stepPersonalQ(1)">Save &amp; Next &rarr;</button>
+ <span id="stageSelectionNote" style="font-size:12px;color:var(--text-soft);align-self:center;">No option selected</span>
+ <button class="btn btn-sm btn-primary" onclick="GuruExamO.UI.stepPersonalQ(1)">Save &amp; Next →</button>
  </div>
  </div>
  </div>
@@ -1714,10 +1709,10 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div id="sec-footer" class="portal-block" style="order:7;">
  <footer class="portal-footer">
  <div>
- <strong id="footerBrandTitle">TheGuru-EXamO</strong> &bull;
- <span id="footerCreditText">Crafted &amp; Mentored by GuruDatt Kaushik</span>
+ <strong id="footerBrandTitle">TheGuru-EXamO — Pro CBT &amp; Practice Portal</strong> •
+ <span id="footerCreditText">Mentored &amp; Curated by The Guru</span>
  </div>
- <div id="footerLinksWrap" class="footer-links"></div>
+ <div id="footerLinksWrap" class="footer-links"><a class="footer-link-pill" href="https://drive.google.com" target="_blank" rel="noopener">Study Notes ↗</a></div>
  </footer>
  </div>
  </div>
@@ -1728,63 +1723,63 @@ body.admin-hidden .admin-only-el { display: none !important; }
  ========================================================= -->
  <section id="mod-student" class="module-section">
  <div id="studentDisabledBanner" class="card hidden" style="border-color:var(--danger);background:var(--danger-soft);margin-bottom:16px;">
- <strong style="color:var(--danger);">&#128683; Student Portal is currently CLOSED by Admin (Boss Limits &rarr; Section 1).</strong>
- <p style="font-size:13px;margin-top:4px;">Enable "Student Login Portal" in Admin Panel &rarr; Boss Limits &rarr; Access &amp; Security to open student entry.</p>
+ <strong style="color:var(--danger);">🚫 Student Portal is currently CLOSED by Admin (Boss Limits → Section 1).</strong>
+ <p style="font-size:13px;margin-top:4px;">Enable "Student Login Portal" in Admin Panel → Boss Limits → Access &amp; Security to open student entry.</p>
  </div>
 
  <div class="grid-2">
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#127891; Student CBT Login Portal</div>
+ <div class="card-title">🎓 Student CBT Login Portal</div>
  <div class="card-sub">Roll No. / Name Dropdown + One-Time PIN Authentication</div>
  </div>
- <span id="studentWindowBadge" class="badge b-ok">Window Open</span>
+ <span id="studentWindowBadge" class="badge b-ok">Open (No Schedule Lock)</span>
  </div>
 
  <div class="field" style="margin-bottom:12px;">
  <label for="stuSubjectSel">Assigned Test / Subject</label>
- <select id="stuSubjectSel" class="select"></select>
+ <select id="stuSubjectSel" class="select"><option value="sub_demo_showcase_v1">Demo Showcase — All 6 Smart Formats (6 Qs)</option></select>
  </div>
 
  <div class="field" style="margin-bottom:12px;">
  <label for="stuRosterSel">Select Roll No. &amp; Student Name</label>
- <select id="stuRosterSel" class="select" onchange="GuruExamO.UI.onStudentSelect()"></select>
+ <select id="stuRosterSel" class="select" onchange="GuruExamO.UI.onStudentSelect()"><option value="101">101 — Aarav Sharma (Class 10-A) [Attempts: 0]</option><option value="102">102 — Priya Verma (Class 10-A) [Attempts: 0]</option><option value="103">103 — Rohan Meena (Class 10-B) [Attempts: 0]</option></select>
  <span class="hint">Loaded from local IndexedDB Roster (Google Sheet sync attaches in Pass 4).</span>
  </div>
 
  <div class="field" style="margin-bottom:12px;">
  <label for="stuPinInput">One-Time PIN (<span id="stuPinLenHint">6</span> digits)</label>
  <input id="stuPinInput" class="input" type="password" inputmode="numeric" placeholder="Enter your One-Time PIN">
- <span class="hint" id="stuDemoPinTip">Demo Roster PINs: Roll 101 &rarr; <b>482910</b> | Roll 102 &rarr; <b>739201</b> | Roll 103 &rarr; <b>550184</b></span>
+ <span class="hint" id="stuDemoPinTip">Demo Roster PINs: Roll 101 → <b>482910</b> | Roll 102 → <b>739201</b> | Roll 103 → <b>550184</b></span>
  </div>
 
  <div id="stuAuthMsg" style="font-size:12.5px;font-weight:700;min-height:20px;margin-bottom:10px;"></div>
 
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
  <button id="stuVerifyBtn" class="btn btn-primary" onclick="GuruExamO.UI.verifyStudentDemoLogin()">
- &#128272; Verify PIN &amp; Start Proctored Exam
+ 🔐 Verify PIN &amp; Start Proctored Exam
  </button>
  <button class="btn btn-outline" onclick="GuruExamO.UI.simulateAttemptLock()">
  Test 1-Attempt Lock
  </button>
- <button class="btn btn-soft" onclick="GuruExamO.Cloud.pullRoster()">&#9729;&#65039; Sync Roster from Sheet</button>
+ <button class="btn btn-soft" onclick="GuruExamO.Cloud.pullRoster()">☁️ Sync Roster from Sheet</button>
  </div>
  </div>
 
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#128737;&#65039; Active Exam &amp; Proctoring Policy</div>
+ <div class="card-title">🛡️ Active Exam &amp; Proctoring Policy</div>
  <div class="card-sub">Live mirror of Admin Boss Limits (Zero Hardcoded Rules)</div>
  </div>
  </div>
 
- <div id="studentPolicyGrid" style="display:flex;flex-direction:column;gap:9px;font-size:13px;"></div>
+ <div id="studentPolicyGrid" style="display:flex;flex-direction:column;gap:9px;font-size:13px;"><div style="display:flex;justify-content:space-between;gap:12px;padding:7px 10px;background:var(--surface-alt);border-radius:8px;border:1px solid var(--border);"><span style="font-weight:700;color:var(--text-muted);">Attempts per Roll No.</span><span style="font-weight:800;text-align:right;">Strict 1 Attempt(s)</span></div><div style="display:flex;justify-content:space-between;gap:12px;padding:7px 10px;background:var(--surface-alt);border-radius:8px;border:1px solid var(--border);"><span style="font-weight:700;color:var(--text-muted);">Marking Scheme</span><span style="font-weight:800;text-align:right;">+1 Correct / -0.25 Wrong (Pass 40%)</span></div><div style="display:flex;justify-content:space-between;gap:12px;padding:7px 10px;background:var(--surface-alt);border-radius:8px;border:1px solid var(--border);"><span style="font-weight:700;color:var(--text-muted);">Timer &amp; Pause</span><span style="font-weight:800;text-align:right;">30 mins • Pause: Locked</span></div><div style="display:flex;justify-content:space-between;gap:12px;padding:7px 10px;background:var(--surface-alt);border-radius:8px;border:1px solid var(--border);"><span style="font-weight:700;color:var(--text-muted);">Active Proctoring</span><span style="font-weight:800;text-align:right;">Fullscreen, Tab-Switch, Blur, No Copy/Paste, No Right-Click, No DevTools/Print</span></div><div style="display:flex;justify-content:space-between;gap:12px;padding:7px 10px;background:var(--surface-alt);border-radius:8px;border:1px solid var(--border);"><span style="font-weight:700;color:var(--text-muted);">Violation Threshold</span><span style="font-weight:800;text-align:right;">3 Warnings (3s grace) → AUTOSUBMIT</span></div><div style="display:flex;justify-content:space-between;gap:12px;padding:7px 10px;background:var(--surface-alt);border-radius:8px;border:1px solid var(--border);"><span style="font-weight:700;color:var(--text-muted);">Shuffling &amp; Visibility</span><span style="font-weight:800;text-align:right;">Q-Shuffle: OFF • Opt-Shuffle: OFF • Key: after_submit</span></div></div>
 
  <div style="margin-top:14px;padding:11px 13px;border-radius:9px;background:var(--accent-soft);border:1px solid var(--border);font-size:12.5px;">
  <strong style="color:var(--accent);">Automated Result Output (Pass 3 &amp; 4):</strong>
- Upon submission, the system logs the attempt to <b id="stuSheetTarget">Results</b> and generates ONE single PDF named <code id="stuPdfPatternPreview" class="inline-code">101_Aarav_Sharma_Demo.pdf</code> in Drive folder <b id="stuDriveTarget">TheGuru-EXamO_Project</b>.
+ Upon submission, the system logs the attempt to <b id="stuSheetTarget">Results</b> and generates ONE single PDF named <code id="stuPdfPatternPreview" class="inline-code">101_Aarav_Sharma_Demo_Showcase_Al.pdf</code> in Drive folder <b id="stuDriveTarget">TheGuru-EXamO_Project</b>.
  </div>
  </div>
  </div>
@@ -1793,63 +1788,63 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <!-- =========================================================
  MODULE 3: ADMIN PANEL (SELF-UPDATER CONTROL CENTER)
  ========================================================= -->
- <section id="mod-admin" class="module-section">
+ <section id="mod-admin" class="module-section active">
  <div class="subtabs">
- <button class="subtab active" data-admintab="boss" onclick="GuruExamO.UI.switchAdminTab('boss')">
- &#127899;&#65039; Boss Limits (7)
+ <button class="subtab" data-admintab="boss" onclick="GuruExamO.UI.switchAdminTab('boss')">
+ 🎛️ Boss Limits (7)
  </button>
  <button class="subtab" data-admintab="analytics" onclick="GuruExamO.UI.switchAdminTab('analytics')">
- &#128202; Analytical Dashboard
+ 📊 Analytical Dashboard
  </button>
  <button class="subtab" data-admintab="studio" onclick="GuruExamO.UI.switchAdminTab('studio')">
- &#9999;&#65039; Live Question Studio
+ ✏️ Live Question Studio
  </button>
  <button class="subtab" data-admintab="roster" onclick="GuruExamO.UI.switchAdminTab('roster')">
- &#128101; Roster &amp; PIN Manager
+ 👥 Roster &amp; PIN Manager
  </button>
  <button class="subtab" data-admintab="uploader" onclick="GuruExamO.UI.switchAdminTab('uploader')">
- &#128228; Universal Uploader
+ 📤 Universal Uploader
  </button>
  <button class="subtab" data-admintab="vault" onclick="GuruExamO.UI.switchAdminTab('vault')">
- &#128452;&#65039; Vault &amp; Cartridges
+ 🗄️ Vault &amp; Cartridges
  </button>
  <button class="subtab" data-admintab="brand" onclick="GuruExamO.UI.switchAdminTab('brand')">
- &#127912; Brand &amp; Layout
+ 🎨 Brand &amp; Layout
  </button>
- <button class="subtab" data-admintab="share" onclick="GuruExamO.UI.switchAdminTab('share')">
- &#128279; Share, Packs &amp; SEO
+ <button class="subtab active" data-admintab="share" onclick="GuruExamO.UI.switchAdminTab('share')">
+ 🔗 Share, Packs &amp; SEO
  </button>
  <button class="subtab" data-admintab="cloud" onclick="GuruExamO.UI.switchAdminTab('cloud')">
- &#9729;&#65039; Drive, Sheets &amp; Accounts
+ ☁️ Drive, Sheets &amp; Accounts
  </button>
  <button class="subtab" data-admintab="security" onclick="GuruExamO.UI.switchAdminTab('security')">
- &#128274; Security (SHA-256)
+ 🔒 Security (SHA-256)
  </button>
  </div>
 
  <!-- ---------- ADMIN TAB 1: BOSS OF EVERY LIMIT (7 SECTIONS) ---------- -->
- <div id="admin-boss" class="admin-pane active">
+ <div id="admin-boss" class="admin-pane">
  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:14px;">
  <div>
  <h2 style="font-size:17px;font-weight:900;">"Boss of Every Limit" — Full GUI Adjustability</h2>
  <p style="font-size:12.5px;color:var(--text-soft);">Every change persists live to IndexedDB and updates Personal &amp; Student views immediately.</p>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Config.exportJSON()">&#128190; Export Limits JSON</button>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Config.resetDefaults()">&#8634; Reset Defaults</button>
- <button class="btn btn-sm btn-success" onclick="GuruExamO.Config.saveFromUI(true)">&#9989; Save All Limits</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Config.exportJSON()">💾 Export Limits JSON</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Config.resetDefaults()">↺ Reset Defaults</button>
+ <button class="btn btn-sm btn-success" onclick="GuruExamO.Config.saveFromUI(true)">✅ Save All Limits</button>
  </div>
  </div>
 
  <div class="boss-layout">
  <div class="boss-nav" id="bossNav">
- <button class="boss-nav-btn active" data-bsec="1" onclick="GuruExamO.UI.switchBossSec(1)"><span>1. Access &amp; Security</span><span>&#128274;</span></button>
- <button class="boss-nav-btn" data-bsec="2" onclick="GuruExamO.UI.switchBossSec(2)"><span>2. Test &amp; Question Limits</span><span>&#128221;</span></button>
- <button class="boss-nav-btn" data-bsec="3" onclick="GuruExamO.UI.switchBossSec(3)"><span>3. Timer Controls</span><span>&#9201;&#65039;</span></button>
- <button class="boss-nav-btn" data-bsec="4" onclick="GuruExamO.UI.switchBossSec(4)"><span>4. Anti-Cheat &amp; Proctor</span><span>&#128737;&#65039;</span></button>
- <button class="boss-nav-btn" data-bsec="5" onclick="GuruExamO.UI.switchBossSec(5)"><span>5. Parser &amp; Uploads</span><span>&#128228;</span></button>
- <button class="boss-nav-btn" data-bsec="6" onclick="GuruExamO.UI.switchBossSec(6)"><span>6. UI &amp; Student View</span><span>&#127912;</span></button>
- <button class="boss-nav-btn" data-bsec="7" onclick="GuruExamO.UI.switchBossSec(7)"><span>7. Drive, Sheets &amp; PDF</span><span>&#9729;&#65039;</span></button>
+ <button class="boss-nav-btn active" data-bsec="1" onclick="GuruExamO.UI.switchBossSec(1)"><span>1. Access &amp; Security</span><span>🔒</span></button>
+ <button class="boss-nav-btn" data-bsec="2" onclick="GuruExamO.UI.switchBossSec(2)"><span>2. Test &amp; Question Limits</span><span>📝</span></button>
+ <button class="boss-nav-btn" data-bsec="3" onclick="GuruExamO.UI.switchBossSec(3)"><span>3. Timer Controls</span><span>⏱️</span></button>
+ <button class="boss-nav-btn" data-bsec="4" onclick="GuruExamO.UI.switchBossSec(4)"><span>4. Anti-Cheat &amp; Proctor</span><span>🛡️</span></button>
+ <button class="boss-nav-btn" data-bsec="5" onclick="GuruExamO.UI.switchBossSec(5)"><span>5. Parser &amp; Uploads</span><span>📤</span></button>
+ <button class="boss-nav-btn" data-bsec="6" onclick="GuruExamO.UI.switchBossSec(6)"><span>6. UI &amp; Student View</span><span>🎨</span></button>
+ <button class="boss-nav-btn" data-bsec="7" onclick="GuruExamO.UI.switchBossSec(7)"><span>7. Drive, Sheets &amp; PDF</span><span>☁️</span></button>
  </div>
 
  <div class="card" id="bossFormRoot">
@@ -2188,21 +2183,21 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#128202; Detailed Analytical Dashboard</div>
+ <div class="card-title">📊 Detailed Analytical Dashboard</div>
  <div class="card-sub">Class &amp; Personal metrics, Question accuracy, Time-Wasted Traps (&gt;60s wrong), Student drilldowns &amp; Exports</div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Analytics.seedDemoAttempts()">&#10024; Load 3 Sample Attempts</button>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Analytics.exportCsv()">&#128229; Export CSV</button>
- <button class="btn btn-sm btn-soft" onclick="GuruExamO.Cloud.pullRoster()">&#11015;&#65039; Pull Sheet</button>
- <button class="btn btn-sm btn-primary" onclick="GuruExamO.Cloud.pushRoster()">&#11014;&#65039; Push Sheet</button>
- <button class="btn btn-sm btn-accent" onclick="GuruExamO.PdfGen.printClassReport()">&#128424;&#65039; Print / Save Class PDF</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Analytics.seedDemoAttempts()">✨ Load 3 Sample Attempts</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Analytics.exportCsv()">📥 Export CSV</button>
+ <button class="btn btn-sm btn-soft" onclick="GuruExamO.Cloud.pullRoster()">⬇️ Pull Sheet</button>
+ <button class="btn btn-sm btn-primary" onclick="GuruExamO.Cloud.pushRoster()">⬆️ Push Sheet</button>
+ <button class="btn btn-sm btn-accent" onclick="GuruExamO.PdfGen.printClassReport()">🖨️ Print / Save Class PDF</button>
  </div>
  </div>
 
  <div class="toolbar-row">
  <div class="toolbar-group">
- <select id="anaSubjectSel" class="select" style="width:auto;min-width:210px;" onchange="GuruExamO.Analytics.render()"></select>
+ <select id="anaSubjectSel" class="select" style="width:auto;min-width:210px;" onchange="GuruExamO.Analytics.render()"><option value="__ALL__">All Subjects</option><option value="sub_demo_showcase_v1">Demo Showcase — All 6 Smart Formats</option></select>
  <select id="anaModeSel" class="select" style="width:auto;" onchange="GuruExamO.Analytics.render()">
  <option value="all">All Attempts (Class + Personal)</option>
  <option value="student">Student Tests Only</option>
@@ -2210,30 +2205,30 @@ body.admin-hidden .admin-only-el { display: none !important; }
  </select>
  </div>
  <div class="toolbar-group">
- <span id="anaCountBadge" class="badge b-info">0 Attempts</span>
+ <span id="anaCountBadge" class="badge b-info">0 Attempt(s)</span>
  <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Analytics.clearAllAttempts()">Clear All Attempts</button>
  </div>
  </div>
 
  <!-- KPI Overview Tiles -->
- <div id="anaKpiGrid" class="grid-4" style="margin-bottom:16px;"></div>
+ <div id="anaKpiGrid" class="grid-4" style="margin-bottom:16px;"><div class="stat-tile"><div class="stat-label">Class / Mean Score</div><div class="stat-val">0%</div><div class="stat-sub">Median: <b>0%</b></div></div><div class="stat-tile"><div class="stat-label">Topper Score</div><div class="stat-val" style="color:var(--success);">—</div><div class="stat-sub">No attempts yet</div></div><div class="stat-tile"><div class="stat-label">Pass / Fail Rate</div><div class="stat-val">0%</div><div class="stat-sub">Pass: 0 • Fail: 0</div></div><div class="stat-tile"><div class="stat-label">Traps &amp; Violations</div><div class="stat-val" style="color:var(--danger);">0 / 0</div><div class="stat-sub">Traps (&gt;60s wrong) / Breaches</div></div></div>
 
  <!-- Score Distribution + Quick Trap Summary -->
  <div class="grid-2" style="margin-bottom:16px;">
  <div class="card" style="padding:14px;background:var(--surface-alt);">
- <strong style="font-size:14px;">&#128200; Score Distribution (Buckets)</strong>
- <div id="anaDistChart" class="dist-bar-wrap"></div>
+ <strong style="font-size:14px;">📈 Score Distribution (Buckets)</strong>
+ <div id="anaDistChart" class="dist-bar-wrap"><div class="dist-row"><span>0 – 25%</span><div class="dist-track"><div class="dist-fill d0" style="width:0%;"></div></div><span>0 (0%)</span></div><div class="dist-row"><span>26 – 50%</span><div class="dist-track"><div class="dist-fill d1" style="width:0%;"></div></div><span>0 (0%)</span></div><div class="dist-row"><span>51 – 75%</span><div class="dist-track"><div class="dist-fill d2" style="width:0%;"></div></div><span>0 (0%)</span></div><div class="dist-row"><span>76 – 100%</span><div class="dist-track"><div class="dist-fill d3" style="width:0%;"></div></div><span>0 (0%)</span></div></div>
  </div>
  <div class="card" style="padding:14px;background:var(--surface-alt);">
- <strong style="font-size:14px;">&#9888;&#65039; Topper &amp; Time-Wasted Trap Summary</strong>
- <div id="anaHighlightsBox" style="margin-top:8px;display:flex;flex-direction:column;gap:8px;font-size:13px;"></div>
+ <strong style="font-size:14px;">⚠️ Topper &amp; Time-Wasted Trap Summary</strong>
+ <div id="anaHighlightsBox" style="margin-top:8px;display:flex;flex-direction:column;gap:8px;font-size:13px;"><div style="color:var(--text-soft);">No attempts recorded yet. Take a Personal/Student test or click <b>"Load 3 Sample Attempts"</b> above to preview full charts, traps &amp; PDF exports!</div></div>
  </div>
  </div>
 
  <!-- Student / Attempt Drilldown Table -->
  <div style="margin-bottom:18px;">
  <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:8px;">
- <strong style="font-size:14.5px;">&#127891; Student &amp; Personal Attempt Drilldown</strong>
+ <strong style="font-size:14.5px;">🎓 Student &amp; Personal Attempt Drilldown</strong>
  <span style="font-size:12px;color:var(--text-soft);">Click "Drilldown" for full sheet or "PDF" for Single-Student Result PDF</span>
  </div>
  <div class="table-wrap">
@@ -2251,7 +2246,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <th>Actions</th>
  </tr>
  </thead>
- <tbody id="anaAttemptsBody"></tbody>
+ <tbody id="anaAttemptsBody"><tr><td colspan="9" style="text-align:center;color:var(--text-soft);padding:16px;">No attempts match current filters.</td></tr></tbody>
  </table>
  </div>
  </div>
@@ -2259,7 +2254,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <!-- Question-Wise Accuracy & Time-Wasted Trap Detector -->
  <div style="margin-bottom:18px;">
  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:8px;margin-bottom:8px;">
- <strong style="font-size:14.5px;">&#127919; Question-Wise Accuracy &amp; Time-Wasted Trap Detector (&gt;60s Wrong)</strong>
+ <strong style="font-size:14.5px;">🎯 Question-Wise Accuracy &amp; Time-Wasted Trap Detector (&gt;60s Wrong)</strong>
  <label style="font-size:12.5px;font-weight:700;display:flex;align-items:center;gap:6px;">
  <input id="anaTrapsOnlyChk" type="checkbox" onchange="GuruExamO.Analytics.render()"> Show Trap Questions Only
  </label>
@@ -2276,14 +2271,14 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <th>Trap Hits (&gt;60s Wrong)</th>
  </tr>
  </thead>
- <tbody id="anaQuestionStatsBody"></tbody>
+ <tbody id="anaQuestionStatsBody"><tr><td colspan="6" style="text-align:center;color:var(--text-soft);padding:14px;">No question metrics yet.</td></tr></tbody>
  </table>
  </div>
  </div>
 
  <!-- Consolidated Anti-Cheat Violation Audit Log -->
  <div>
- <strong style="font-size:14.5px;display:block;margin-bottom:8px;">&#128737;&#65039; Consolidated Anti-Cheat Violation Audit Log</strong>
+ <strong style="font-size:14.5px;display:block;margin-bottom:8px;">🛡️ Consolidated Anti-Cheat Violation Audit Log</strong>
  <div class="table-wrap">
  <table class="data-table">
  <thead>
@@ -2296,7 +2291,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <th>At Q#</th>
  </tr>
  </thead>
- <tbody id="anaViolationsBody"></tbody>
+ <tbody id="anaViolationsBody"><tr><td colspan="6" style="text-align:center;color:var(--text-soft);padding:14px;">No proctoring violations recorded.</td></tr></tbody>
  </table>
  </div>
  </div>
@@ -2308,7 +2303,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#9999;&#65039; Live Question Studio (No-Code CRUD Editor)</div>
+ <div class="card-title">✏️ Live Question Studio (No-Code CRUD Editor)</div>
  <div class="card-sub">Add, edit, duplicate, preview, or delete Subjects, Units, Questions, Options, Code, Math &amp; Explanations</div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
@@ -2320,8 +2315,8 @@ body.admin-hidden .admin-only-el { display: none !important; }
 
  <div class="toolbar-row">
  <div class="toolbar-group">
- <select id="studioSubjectSel" class="select" style="width:auto;min-width:210px;" onchange="GuruExamO.Studio.onSubjectChange()"></select>
- <select id="studioUnitSel" class="select" style="width:auto;" onchange="GuruExamO.Studio.renderTable()"></select>
+ <select id="studioSubjectSel" class="select" style="width:auto;min-width:210px;" onchange="GuruExamO.Studio.onSubjectChange()"><option value="sub_demo_showcase_v1">Demo Showcase — All 6 Smart Formats (6)</option></select>
+ <select id="studioUnitSel" class="select" style="width:auto;" onchange="GuruExamO.Studio.renderTable()"><option value="__ALL__">All Units (6)</option><option value="Unit 1: Computer Networks">Unit 1: Computer Networks</option><option value="Unit 2: Operating Systems">Unit 2: Operating Systems</option><option value="Unit 3: ICT Lab Case Study">Unit 3: ICT Lab Case Study</option><option value="Unit 4: C &amp; Algorithms">Unit 4: C &amp; Algorithms</option><option value="Unit 5: Discrete Math &amp; Matrices">Unit 5: Discrete Math &amp; Matrices</option><option value="Unit 6: DBMS Normalization (Long-Q Scroll Test)">Unit 6: DBMS Normalization (Long-Q Scroll Test)</option></select>
  <select id="studioTypeSel" class="select" style="width:auto;" onchange="GuruExamO.Studio.renderTable()">
  <option value="__ALL__">All Types</option>
  <option value="mcq">MCQ</option>
@@ -2339,7 +2334,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  </div>
  <div class="toolbar-group">
  <input id="studioSearchInp" class="input" style="width:220px;" type="search" placeholder="Search question or answer..." oninput="GuruExamO.Studio.renderTable()">
- <span id="studioCountBadge" class="badge b-info">0 Qs</span>
+ <span id="studioCountBadge" class="badge b-info">6 Qs</span>
  </div>
  </div>
 
@@ -2355,7 +2350,8 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <th>Actions</th>
  </tr>
  </thead>
- <tbody id="studioTableBody"></tbody>
+ <tbody id="studioTableBody"><tr><td><b>1</b></td><td>Unit 1: Computer Networks</td><td><span class="badge b-info">MATCHING</span></td><td><div style="max-width:460px;">Match List-I (Application Layer Protocols) with List-II (Standard Default TCP Port Numbers) and choose the correct code:</div></td><td><b>A</b></td><td style="white-space:nowrap;"><button class="btn btn-sm btn-soft" onclick="GuruExamO.Studio.openEditor('demo_q1_matching')">Edit</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Studio.duplicateQuestion('demo_q1_matching')">Copy</button> <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Studio.deleteQuestion('demo_q1_matching')">×</button></td></tr><tr><td><b>2</b></td><td>Unit 2: Operating Systems</td><td><span class="badge b-info">ASSERTION</span></td><td><div style="max-width:460px;">Evaluate the following Assertion, Reason, and supporting Statements on Virtual Memory:
+Assertion (A): Severe thrashing causes CPU …</div></td><td><b>A</b></td><td style="white-space:nowrap;"><button class="btn btn-sm btn-soft" onclick="GuruExamO.Studio.openEditor('demo_q2_statement')">Edit</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Studio.duplicateQuestion('demo_q2_statement')">Copy</button> <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Studio.deleteQuestion('demo_q2_statement')">×</button></td></tr><tr><td><b>3</b></td><td>Unit 3: ICT Lab Case Study</td><td><span class="badge b-info">PASSAGE</span></td><td><div style="max-width:460px;">Based on the ICT Lab case study passage, which of the following statements is strictly TRUE regarding both the unplugged cable and…</div></td><td><b>B</b></td><td style="white-space:nowrap;"><button class="btn btn-sm btn-soft" onclick="GuruExamO.Studio.openEditor('demo_q3_passage')">Edit</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Studio.duplicateQuestion('demo_q3_passage')">Copy</button> <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Studio.deleteQuestion('demo_q3_passage')">×</button></td></tr><tr><td><b>4</b></td><td>Unit 4: C &amp; Algorithms</td><td><span class="badge b-info">NUMERICAL</span></td><td><div style="max-width:460px;">Trace the following C program carefully. What exact integer value will be printed to `stdout`? (Enter numeric value only)</div></td><td><b>16</b></td><td style="white-space:nowrap;"><button class="btn btn-sm btn-soft" onclick="GuruExamO.Studio.openEditor('demo_q4_code')">Edit</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Studio.duplicateQuestion('demo_q4_code')">Copy</button> <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Studio.deleteQuestion('demo_q4_code')">×</button></td></tr><tr><td><b>5</b></td><td>Unit 5: Discrete Math &amp; Matrices</td><td><span class="badge b-info">MULTISELECT</span></td><td><div style="max-width:460px;">Let matrix A = [[2, 1, 0], [0, 3, 1], [0, 0, 4]] and recurrence T(n) = 2T(\frac{n}{2}) + n with T(1) = 1. Which of the following m…</div></td><td><b>A,B,C</b></td><td style="white-space:nowrap;"><button class="btn btn-sm btn-soft" onclick="GuruExamO.Studio.openEditor('demo_q5_math')">Edit</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Studio.duplicateQuestion('demo_q5_math')">Copy</button> <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Studio.deleteQuestion('demo_q5_math')">×</button></td></tr><tr><td><b>6</b></td><td>Unit 6: DBMS Normalization (Long-Q Scroll Test)</td><td><span class="badge b-info">LONG</span></td><td><div style="max-width:460px;">A university examination portal maintains a relational table `ExamRecord(RollNo, CourseCode, StudentName, DeptName, DeptHead, Mark…</div></td><td><b>A</b></td><td style="white-space:nowrap;"><button class="btn btn-sm btn-soft" onclick="GuruExamO.Studio.openEditor('demo_q6_long')">Edit</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Studio.duplicateQuestion('demo_q6_long')">Copy</button> <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Studio.deleteQuestion('demo_q6_long')">×</button></td></tr></tbody>
  </table>
  </div>
  </div>
@@ -2366,16 +2362,16 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#128101; Student Roster, One-Time PIN &amp; Publish Control</div>
+ <div class="card-title">👥 Student Roster, One-Time PIN &amp; Publish Control</div>
  <div class="card-sub">Manage Roll Numbers, auto-generate PINs, reset 1-attempt locks, import/export CSV &amp; open/close student exam</div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button id="rosterPublishBtn" class="btn btn-sm btn-success" onclick="GuruExamO.Roster.togglePublish()">&#128994; Test Published (Open)</button>
- <button class="btn btn-sm btn-accent" onclick="GuruExamO.Roster.regenerateAllPins()">&#128273; Regenerate All PINs</button>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Roster.resetAllAttempts()">&#8634; Reset All Locks</button>
+ <button id="rosterPublishBtn" class="btn btn-sm btn-success" onclick="GuruExamO.Roster.togglePublish()">🟢 Test Published (Open)</button>
+ <button class="btn btn-sm btn-accent" onclick="GuruExamO.Roster.regenerateAllPins()">🔑 Regenerate All PINs</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Roster.resetAllAttempts()">↺ Reset All Locks</button>
  <input id="rosterCsvFile" type="file" accept=".csv" class="hidden" onchange="GuruExamO.Roster.importCsv(this.files[0])">
- <button class="btn btn-sm btn-outline" onclick="document.getElementById('rosterCsvFile').click()">&#128228; Import CSV</button>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Roster.exportCsv()">&#128229; Export CSV</button>
+ <button class="btn btn-sm btn-outline" onclick="document.getElementById('rosterCsvFile').click()">📤 Import CSV</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Roster.exportCsv()">📥 Export CSV</button>
  </div>
  </div>
 
@@ -2418,7 +2414,7 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <th>Actions</th>
  </tr>
  </thead>
- <tbody id="rosterTableBody"></tbody>
+ <tbody id="rosterTableBody"><tr><td><b>101</b></td><td>Aarav Sharma</td><td>Class 10-A</td><td><span class="pin-chip">482910</span></td><td>0 / 1 <span class="badge b-ok">OPEN</span></td><td style="white-space:nowrap;"><button class="btn btn-sm btn-soft" onclick="GuruExamO.Roster.editStudent('101')">Edit</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Roster.newPin('101')">New PIN</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Roster.resetOne('101')">Unlock</button> <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Roster.deleteStudent('101')">×</button></td></tr><tr><td><b>102</b></td><td>Priya Verma</td><td>Class 10-A</td><td><span class="pin-chip">739201</span></td><td>0 / 1 <span class="badge b-ok">OPEN</span></td><td style="white-space:nowrap;"><button class="btn btn-sm btn-soft" onclick="GuruExamO.Roster.editStudent('102')">Edit</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Roster.newPin('102')">New PIN</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Roster.resetOne('102')">Unlock</button> <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Roster.deleteStudent('102')">×</button></td></tr><tr><td><b>103</b></td><td>Rohan Meena</td><td>Class 10-B</td><td><span class="pin-chip">550184</span></td><td>0 / 1 <span class="badge b-ok">OPEN</span></td><td style="white-space:nowrap;"><button class="btn btn-sm btn-soft" onclick="GuruExamO.Roster.editStudent('103')">Edit</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Roster.newPin('103')">New PIN</button> <button class="btn btn-sm btn-outline" onclick="GuruExamO.Roster.resetOne('103')">Unlock</button> <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Roster.deleteStudent('103')">×</button></td></tr></tbody>
  </table>
  </div>
  </div>
@@ -2429,15 +2425,15 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#128228; Universal Question File Uploader</div>
+ <div class="card-title">📤 Universal Question File Uploader</div>
  <div class="card-sub">100% Offline Pure-JS Parser for .xlsx, .csv, .docx, .txt, .json + Built-in/Hybrid .pdf Extractor</div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
  <button class="btn btn-sm btn-accent" onclick="GuruExamO.Parser.downloadExcelTemplate()">
- &#128229; Download Excel Template (.xlsx)
+ 📥 Download Excel Template (.xlsx)
  </button>
  <button class="btn btn-sm btn-outline" onclick="GuruExamO.Parser.downloadCsvTemplate()">
- &#128196; Download CSV Template
+ 📄 Download CSV Template
  </button>
  </div>
  </div>
@@ -2456,12 +2452,12 @@ body.admin-hidden .admin-only-el { display: none !important; }
  <div id="dropzone" class="dropzone" onclick="document.getElementById('universalFileInput').click()">
  <h3>Drop Question Files Here or Click to Browse</h3>
  <p>Auto-detects Match-the-Column, Statement I/II, Assertion-Reason, Passage, Code Blocks, Math/Matrices, TF &amp; Numerical</p>
- <div id="allowedFmtChips" class="fmt-chips"></div>
- <input id="universalFileInput" type="file" multiple class="hidden" accept=".xlsx,.csv,.pdf,.docx,.txt,.json" onchange="GuruExamO.Parser.handleFiles(this.files)">
+ <div id="allowedFmtChips" class="fmt-chips"><span class="fmt-chip ">.XLSX</span><span class="fmt-chip ">.CSV</span><span class="fmt-chip ">.PDF</span><span class="fmt-chip ">.DOCX</span><span class="fmt-chip ">.TXT</span><span class="fmt-chip ">.JSON</span></div>
+ <input id="universalFileInput" type="file" multiple="" class="hidden" accept=".xlsx,.csv,.pdf,.docx,.txt,.json" onchange="GuruExamO.Parser.handleFiles(this.files)">
  </div>
 
  <details style="margin-top:14px;border:1px solid var(--border);border-radius:10px;padding:10px 14px;background:var(--surface-alt);">
- <summary style="font-size:13px;font-weight:800;cursor:pointer;">&#128203; Or Paste Raw Questions Text / JSON Directly (Quick Scan)</summary>
+ <summary style="font-size:13px;font-weight:800;cursor:pointer;">📋 Or Paste Raw Questions Text / JSON Directly (Quick Scan)</summary>
  <div style="margin-top:10px;">
  <textarea id="rawPasteInput" class="textarea" placeholder="Q1. Which data structure uses LIFO?
 A) Queue
@@ -2482,7 +2478,7 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div id="scanInspectorCard" class="card hidden" style="margin-top:16px;">
  <div class="card-header">
  <div>
- <div class="card-title">&#128270; Pre-Test Scan Inspector</div>
+ <div class="card-title">🔎 Pre-Test Scan Inspector</div>
  <div class="card-sub" id="scanSourceSummary">Review parsed items before committing to IndexedDB Vault</div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
@@ -2494,7 +2490,7 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <option value="clean">Clean Only</option>
  <option value="flagged">Flagged Only</option>
  </select>
- <button class="btn btn-sm btn-success" onclick="GuruExamO.Parser.commitScanned(true)">&#9989; Commit Clean Only</button>
+ <button class="btn btn-sm btn-success" onclick="GuruExamO.Parser.commitScanned(true)">✅ Commit Clean Only</button>
  <button class="btn btn-sm btn-primary" onclick="GuruExamO.Parser.commitScanned(false)">Commit All</button>
  <button class="btn btn-sm btn-outline" onclick="GuruExamO.Parser.clearInspector()">Clear</button>
  </div>
@@ -2524,34 +2520,34 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#128452;&#65039; IndexedDB Multi-Subject Vault</div>
- <div class="card-sub">Offline high-capacity storage (50+ MB safe) &bull; Instant subject management</div>
+ <div class="card-title">🗄️ IndexedDB Multi-Subject Vault</div>
+ <div class="card-sub">Offline high-capacity storage (50+ MB safe) • Instant subject management</div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-accent" onclick="GuruExamO.DemoData.restoreDemoPack()">&#8635; Re-Seed 6 Demo Questions</button>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.DB.exportQuickBackup()">&#128230; Export Vault JSON</button>
+ <button class="btn btn-sm btn-accent" onclick="GuruExamO.DemoData.restoreDemoPack()">↻ Re-Seed 6 Demo Questions</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.DB.exportQuickBackup()">📦 Export Vault JSON</button>
  </div>
  </div>
 
- <div id="vaultStatsBar" class="grid-3" style="margin-bottom:14px;"></div>
+ <div id="vaultStatsBar" class="grid-3" style="margin-bottom:14px;"><div class="stat-tile"><div class="stat-label">Stored Subjects</div><div class="stat-val">1</div></div><div class="stat-tile"><div class="stat-label">Stored Questions</div><div class="stat-val">6</div></div><div class="stat-tile"><div class="stat-label">Vault Footprint</div><div class="stat-val">7 KB</div></div></div>
 
  <!-- Vault Cartridge Export / Import / Merge (.guruexam.json) -->
  <div class="grid-2" style="margin-bottom:16px;">
  <div class="cartridge-box">
- <strong style="font-size:14px;">&#128230; Export Vault Cartridge (.guruexam.json)</strong>
+ <strong style="font-size:14px;">📦 Export Vault Cartridge (.guruexam.json)</strong>
  <div class="field">
  <label for="cartExportScope">Scope</label>
- <select id="cartExportScope" class="select"></select>
+ <select id="cartExportScope" class="select"><option value="__ALL__">Full Vault (All Subjects)</option><option value="sub_demo_showcase_v1">Only: Demo Showcase — All 6 Smart Formats (6 Qs)</option></select>
  </div>
  <div style="display:flex;gap:12px;flex-wrap:wrap;font-size:12.5px;font-weight:700;">
- <label style="display:flex;align-items:center;gap:5px;"><input id="cartIncConfig" type="checkbox" checked> Include Boss Limits</label>
- <label style="display:flex;align-items:center;gap:5px;"><input id="cartIncRoster" type="checkbox" checked> Include Student Roster</label>
+ <label style="display:flex;align-items:center;gap:5px;"><input id="cartIncConfig" type="checkbox" checked=""> Include Boss Limits</label>
+ <label style="display:flex;align-items:center;gap:5px;"><input id="cartIncRoster" type="checkbox" checked=""> Include Student Roster</label>
  </div>
- <button class="btn btn-sm btn-primary" onclick="GuruExamO.Cartridge.exportCartridge()">&#128229; Download .guruexam.json Cartridge</button>
+ <button class="btn btn-sm btn-primary" onclick="GuruExamO.Cartridge.exportCartridge()">📥 Download .guruexam.json Cartridge</button>
  </div>
 
  <div class="cartridge-box">
- <strong style="font-size:14px;">&#128228; Import / Merge Cartridge (.guruexam.json)</strong>
+ <strong style="font-size:14px;">📤 Import / Merge Cartridge (.guruexam.json)</strong>
  <div class="field">
  <label for="cartImportMode">Import Strategy</label>
  <select id="cartImportMode" class="select">
@@ -2561,7 +2557,7 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
  <input id="cartImportFile" type="file" accept=".json,.guruexam.json" class="hidden" onchange="GuruExamO.Cartridge.importCartridge(this.files[0])">
- <button class="btn btn-sm btn-accent" onclick="document.getElementById('cartImportFile').click()">&#128194; Choose .guruexam.json File</button>
+ <button class="btn btn-sm btn-accent" onclick="document.getElementById('cartImportFile').click()">📂 Choose .guruexam.json File</button>
  <span id="cartImportStatus" style="font-size:11.5px;color:var(--text-soft);">Supports Pass 1/2/3 cartridges</span>
  </div>
  </div>
@@ -2578,7 +2574,7 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <th>Actions</th>
  </tr>
  </thead>
- <tbody id="vaultSubjectsBody"></tbody>
+ <tbody id="vaultSubjectsBody"><tr><td><b>Demo Showcase — All 6 Smart Formats</b><div style="font-size:11.5px;color:var(--text-soft);">Pre-loaded verification pack (Matching, Statement/Assertion, Passage, Code/Numerical, Math/Matrix Multi-Select, Scrollable Long-Q)</div></td><td><span class="badge b-info">6 Qs</span></td><td>6 Unit(s)</td><td>11/24/2026, 1:47:34 AM</td><td style="white-space:nowrap;"><button class="btn btn-sm btn-soft" onclick="GuruExamO.UI.openSubjectInPersonal('sub_demo_showcase_v1')">Open</button> <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.UI.deleteSubject('sub_demo_showcase_v1')">Delete</button></td></tr></tbody>
  </table>
  </div>
  </div>
@@ -2591,13 +2587,13 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#127912; Brand, Quality &amp; Full Layout Control Studio</div>
+ <div class="card-title">🎨 Brand, Quality &amp; Full Layout Control Studio</div>
  <div class="card-sub">Control 3 Quality Modes (Low/Medium/Premium), Quotes &amp; Shayaris, Photos, Section Placement &amp; Colors without touching code</div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.pullFromCloud()">&#11015;&#65039; Pull Cloud Brand</button>
- <button class="btn btn-sm btn-accent" onclick="GuruExamO.Brand.publishToCloud()">&#9729;&#65039; Publish Live to Cloud</button>
- <button class="btn btn-sm btn-success" onclick="GuruExamO.Brand.saveFromUI(true)">&#9989; Save Locally</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.pullFromCloud()">⬇️ Pull Cloud Brand</button>
+ <button class="btn btn-sm btn-accent" onclick="GuruExamO.Brand.publishToCloud()">☁️ Publish Live to Cloud</button>
+ <button class="btn btn-sm btn-success" onclick="GuruExamO.Brand.saveFromUI(true)">✅ Save Locally</button>
  </div>
  </div>
 
@@ -2621,14 +2617,14 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  </div>
  <div class="toggle-row">
  <div><div class="t-title">Let Users Switch Quality</div><div class="t-desc">Show Low/Med/Premium pill in topbar</div></div>
- <label class="switch"><input id="brAllowUserQuality" type="checkbox" checked onchange="GuruExamO.Brand.saveFromUI(false)"><span class="slider"></span></label>
+ <label class="switch"><input id="brAllowUserQuality" type="checkbox" checked="" onchange="GuruExamO.Brand.saveFromUI(false)"><span class="slider"></span></label>
  </div>
  </div>
 
  <div class="grid-2" style="margin-bottom:16px;">
  <!-- Left: Identity, Photo & Placement -->
  <div class="card" style="padding:14px;background:var(--surface-alt);">
- <strong style="font-size:14px;display:block;margin-bottom:10px;">&#128100; Personal Identity, Hero Photo &amp; Watermark</strong>
+ <strong style="font-size:14px;display:block;margin-bottom:10px;">👤 Personal Identity, Hero Photo &amp; Watermark</strong>
  <div class="grid-2" style="margin-bottom:10px;">
  <div class="field"><label for="brTitle">Portal Title</label><input id="brTitle" class="input" type="text"></div>
  <div class="field"><label for="brMentor">Your Name / Brand</label><input id="brMentor" class="input" type="text"></div>
@@ -2640,7 +2636,7 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div class="field" style="margin-bottom:10px;">
  <label for="brPhotoUrl">Profile / Hero Photo URL (Paste Google Drive Share Link or Image URL)</label>
  <div style="display:flex;gap:6px;">
- <input id="brPhotoUrl" class="input" type="text" placeholder="https://drive.google.com/file/d/... or upload ->">
+ <input id="brPhotoUrl" class="input" type="text" placeholder="https://drive.google.com/file/d/... or upload -&gt;">
  <input id="brPhotoFile" type="file" accept="image/*" class="hidden" onchange="GuruExamO.Brand.uploadPhotoFile(this.files[0], 'hero')">
  <button class="btn btn-sm btn-outline" onclick="document.getElementById('brPhotoFile').click()">Upload</button>
  </div>
@@ -2680,16 +2676,16 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
 
  <!-- Right: Section Placement & Visibility Order -->
  <div class="card" style="padding:14px;background:var(--surface-alt);">
- <strong style="font-size:14px;display:block;margin-bottom:4px;">&#129513; Page Section Order &amp; Placement Controller</strong>
+ <strong style="font-size:14px;display:block;margin-bottom:4px;">🧩 Page Section Order &amp; Placement Controller</strong>
  <div style="font-size:12px;color:var(--text-soft);margin-bottom:10px;">Move any section Up or Down and toggle ON/OFF — updates the front-end immediately!</div>
- <div id="brandSectionOrderList"></div>
+ <div id="brandSectionOrderList"><div class="order-row"><label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;cursor:pointer;"><input type="checkbox" checked="" onchange="GuruExamO.Brand.toggleSection(0,this.checked)"> Hero Welcome &amp; Mentor Spotlight</label><div style="display:flex;gap:4px;"><button class="btn btn-sm btn-outline" disabled="" onclick="GuruExamO.Brand.moveSection(0,-1)">↑</button><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(0,1)">↓</button></div></div><div class="order-row"><label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;cursor:pointer;"><input type="checkbox" checked="" onchange="GuruExamO.Brand.toggleSection(1,this.checked)"> Announcement &amp; Exam Countdown Bar</label><div style="display:flex;gap:4px;"><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(1,-1)">↑</button><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(1,1)">↓</button></div></div><div class="order-row"><label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;cursor:pointer;"><input type="checkbox" checked="" onchange="GuruExamO.Brand.toggleSection(2,this.checked)"> Quotes &amp; Shayari Corner</label><div style="display:flex;gap:4px;"><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(2,-1)">↑</button><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(2,1)">↓</button></div></div><div class="order-row"><label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;cursor:pointer;"><input type="checkbox" onchange="GuruExamO.Brand.toggleSection(3,this.checked)"> Photo Showcase &amp; Gallery Strip</label><div style="display:flex;gap:4px;"><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(3,-1)">↑</button><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(3,1)">↓</button></div></div><div class="order-row"><label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;cursor:pointer;"><input type="checkbox" checked="" onchange="GuruExamO.Brand.toggleSection(4,this.checked)"> Visual 30-Q Set-Grid Tracker (1000-Q Ready)</label><div style="display:flex;gap:4px;"><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(4,-1)">↑</button><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(4,1)">↓</button></div></div><div class="order-row"><label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;cursor:pointer;"><input type="checkbox" checked="" onchange="GuruExamO.Brand.toggleSection(5,this.checked)"> Personal Test Setup &amp; Smart Question Viewport</label><div style="display:flex;gap:4px;"><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(5,-1)">↑</button><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(5,1)">↓</button></div></div><div class="order-row"><label style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:700;cursor:pointer;"><input type="checkbox" checked="" onchange="GuruExamO.Brand.toggleSection(6,this.checked)"> Branded Footer &amp; Resource Links</label><div style="display:flex;gap:4px;"><button class="btn btn-sm btn-outline" onclick="GuruExamO.Brand.moveSection(6,-1)">↑</button><button class="btn btn-sm btn-outline" disabled="" onclick="GuruExamO.Brand.moveSection(6,1)">↓</button></div></div></div>
  </div>
  </div>
 
  <!-- 2. Quotes & Shayari Manager + Score-Based Smart Shayari -->
  <div class="grid-2" style="margin-bottom:16px;">
  <div class="card" style="padding:14px;background:var(--surface-alt);">
- <strong style="font-size:14px;display:block;margin-bottom:8px;">&#9997;&#65039; Your Quotes &amp; Shayari Collection (Hindi / Hinglish / English)</strong>
+ <strong style="font-size:14px;display:block;margin-bottom:8px;">✍️ Your Quotes &amp; Shayari Collection (Hindi / Hinglish / English)</strong>
  <div class="field" style="margin-bottom:8px;">
  <textarea id="brNewShayariText" class="textarea" style="min-height:66px;font-family:inherit;" placeholder="Apni shayari ya motivational quote yahan likhein..."></textarea>
  </div>
@@ -2697,13 +2693,13 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <input id="brNewShayariAuthor" class="input" type="text" placeholder="Author (e.g. GuruDatt Kaushik)">
  <button class="btn btn-sm btn-primary" onclick="GuruExamO.Brand.addShayari()">+ Add</button>
  </div>
- <div id="brandShayariList" style="max-height:210px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;"></div>
+ <div id="brandShayariList" style="max-height:210px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;"><div style="padding:8px 10px;border-radius:8px;background:var(--surface);border:1px solid var(--border);display:flex;justify-content:space-between;gap:8px;font-size:12.5px;"><div><div style="white-space:pre-line;font-weight:600;">Consistency beats intensity — 30 focused questions every day build an unstoppable rank.</div><div style="font-size:11px;color:var(--text-soft);">— GuruDatt Kaushik</div></div><button class="btn btn-sm btn-outline" style="color:var(--danger);height:28px;" onclick="GuruExamO.Brand.deleteShayari(0)">×</button></div></div>
  </div>
 
  <div class="card" style="padding:14px;background:var(--surface-alt);">
- <strong style="font-size:14px;display:block;margin-bottom:8px;">&#127942; Score-Based Smart Shayari (Shown on Result Screen)</strong>
+ <strong style="font-size:14px;display:block;margin-bottom:8px;">🏆 Score-Based Smart Shayari (Shown on Result Screen)</strong>
  <div class="field" style="margin-bottom:8px;">
- <label for="brShayariTop">Topper Score (&ge; 80%)</label>
+ <label for="brShayariTop">Topper Score (≥ 80%)</label>
  <textarea id="brShayariTop" class="textarea" style="min-height:54px;font-family:inherit;"></textarea>
  </div>
  <div class="field" style="margin-bottom:8px;">
@@ -2720,7 +2716,7 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <!-- 3. Photo Gallery Manager + Footer Resource Links -->
  <div class="grid-2">
  <div class="card" style="padding:14px;background:var(--surface-alt);">
- <strong style="font-size:14px;display:block;margin-bottom:8px;">&#128444;&#65039; Photo Gallery Manager</strong>
+ <strong style="font-size:14px;display:block;margin-bottom:8px;">🖼️ Photo Gallery Manager</strong>
  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
  <input id="brGalUrl" class="input" style="flex:1;min-width:160px;" placeholder="Image URL or Google Drive Share Link">
  <input id="brGalCap" class="input" style="flex:1;min-width:130px;" placeholder="Caption">
@@ -2728,36 +2724,36 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <button class="btn btn-sm btn-outline" onclick="document.getElementById('brGalFile').click()">Upload</button>
  <button class="btn btn-sm btn-primary" onclick="GuruExamO.Brand.addGalleryPhoto()">+ Add</button>
  </div>
- <div id="brandGalleryList" style="max-height:190px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;"></div>
+ <div id="brandGalleryList" style="max-height:190px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;"><div style="font-size:12px;color:var(--text-soft);">No gallery photos added yet.</div></div>
  </div>
 
  <div class="card" style="padding:14px;background:var(--surface-alt);">
- <strong style="font-size:14px;display:block;margin-bottom:8px;">&#128279; Footer Quick Resource Links</strong>
+ <strong style="font-size:14px;display:block;margin-bottom:8px;">🔗 Footer Quick Resource Links</strong>
  <div style="display:flex;gap:6px;flex-wrap:wrap;margin-bottom:8px;">
  <input id="brLinkLabel" class="input" style="flex:1;min-width:120px;" placeholder="Label (e.g. Study Notes)">
  <input id="brLinkUrl" class="input" style="flex:1.4;min-width:160px;" placeholder="https://...">
  <button class="btn btn-sm btn-primary" onclick="GuruExamO.Brand.addResourceLink()">+ Add</button>
  </div>
- <div id="brandLinksList" style="max-height:190px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;"></div>
+ <div id="brandLinksList" style="max-height:190px;overflow-y:auto;display:flex;flex-direction:column;gap:6px;"><div style="padding:6px 9px;border-radius:8px;background:var(--surface);border:1px solid var(--border);display:flex;align-items:center;justify-content:space-between;gap:8px;font-size:12px;"><div><b>Study Notes</b> <span style="color:var(--text-soft);">(https://drive.google.com)</span></div><button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Brand.deleteResourceLink(0)">×</button></div></div>
  </div>
  </div>
  </div>
  </div>
 
  <!-- ---------- ADMIN TAB: SHAREABLE LINKS, CLOUD PACKS & SEO/GITHUB ---------- -->
- <div id="admin-share" class="admin-pane">
+ <div id="admin-share" class="admin-pane active">
  <div class="grid-2" style="margin-bottom:16px;">
  <!-- LEFT: 1-Click Cloud Pack Publisher -->
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#128640; Publish Practice Pack to Cloud (1,000-Q Ready)</div>
+ <div class="card-title">🚀 Publish Practice Pack to Cloud (1,000-Q Ready)</div>
  <div class="card-sub">Saves inside <b>🟣 03_Shared_Practice_Sets_&amp;_Quizzes</b> for 1-click friend/student auto-load</div>
  </div>
  </div>
  <div class="field" style="margin-bottom:10px;">
  <label for="pubSubjectSel">Select Subject from Vault</label>
- <select id="pubSubjectSel" class="select"></select>
+ <select id="pubSubjectSel" class="select"><option value="sub_demo_showcase_v1">Demo Showcase — All 6 Smart Formats (6 Qs)</option></select>
  </div>
  <div class="grid-3" style="margin-bottom:10px;">
  <div class="field"><label for="pubPackId">Short Pack ID</label><input id="pubPackId" class="input" placeholder="e.g. CS_1000Q"></div>
@@ -2772,8 +2768,8 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  </div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
- <button class="btn btn-primary" onclick="GuruExamO.SharePortal.publishSelectedPack()">&#9729;&#65039; Publish Pack to Cloud</button>
- <button class="btn btn-outline" onclick="GuruExamO.SharePortal.refreshCloudLibrary()">&#8635; Refresh Published List</button>
+ <button class="btn btn-primary" onclick="GuruExamO.SharePortal.publishSelectedPack()">☁️ Publish Pack to Cloud</button>
+ <button class="btn btn-outline" onclick="GuruExamO.SharePortal.refreshCloudLibrary()">↻ Refresh Published List</button>
  </div>
  <div class="table-wrap" style="max-height:220px;overflow-y:auto;">
  <table class="data-table">
@@ -2789,7 +2785,7 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#128279; Smart Shareable Link Generator</div>
+ <div class="card-title">🔗 Smart Shareable Link Generator</div>
  <div class="card-sub">Give friends/students ONE link — auto-loads questions, shayaris &amp; branding with zero imports</div>
  </div>
  </div>
@@ -2827,11 +2823,11 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  </div>
  <div class="field" style="margin-bottom:10px;">
  <label for="generatedShareLink">Ready-to-Share Link</label>
- <textarea id="generatedShareLink" class="textarea" style="min-height:64px;" readonly></textarea>
+ <textarea id="generatedShareLink" class="textarea" style="min-height:64px;" readonly=""></textarea>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;">
- <button class="btn btn-primary" onclick="GuruExamO.SharePortal.copyShareLink()">&#128203; Copy Link</button>
- <button class="btn btn-success" onclick="GuruExamO.SharePortal.whatsappShare()">&#128172; Share on WhatsApp</button>
+ <button class="btn btn-primary" onclick="GuruExamO.SharePortal.copyShareLink()">📋 Copy Link</button>
+ <button class="btn btn-success" onclick="GuruExamO.SharePortal.whatsappShare()">💬 Share on WhatsApp</button>
  </div>
  </div>
  </div>
@@ -2840,10 +2836,10 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#128269; Google Search Visibility &amp; GitHub Pages Launch Kit</div>
+ <div class="card-title">🔍 Google Search Visibility &amp; GitHub Pages Launch Kit</div>
  <div class="card-sub">Decide whether Google Search shows your site or keeps it private (link-only), and export ready-to-upload GitHub files</div>
  </div>
- <span id="seoStatusBadge" class="badge b-warn">Private (Hidden from Google)</span>
+ <span id="seoStatusBadge" class="badge b-ok">Public (Searchable on Google)</span>
  </div>
 
  <div class="grid-2" style="margin-bottom:12px;">
@@ -2863,9 +2859,9 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  </div>
 
  <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:12px;">
- <button class="btn btn-primary" onclick="GuruExamO.SEO.downloadGitHubIndex()">&#128229; Download Ready index.html (with SEO + Bridge Baked In)</button>
- <button class="btn btn-outline" onclick="GuruExamO.SEO.downloadRobotsTxt()">&#128196; Download robots.txt</button>
- <button class="btn btn-outline" onclick="GuruExamO.SEO.downloadSitemapXml()">&#128506;&#65039; Download sitemap.xml</button>
+ <button class="btn btn-primary" onclick="GuruExamO.SEO.downloadGitHubIndex()">📥 Download Ready index.html (with SEO + Bridge Baked In)</button>
+ <button class="btn btn-outline" onclick="GuruExamO.SEO.downloadRobotsTxt()">📄 Download robots.txt</button>
+ <button class="btn btn-outline" onclick="GuruExamO.SEO.downloadSitemapXml()">🗺️ Download sitemap.xml</button>
  </div>
 
  <div style="padding:11px 14px;border-radius:10px;background:var(--surface-alt);border:1px solid var(--border);font-size:12.5px;color:var(--text-muted);">
@@ -2879,13 +2875,13 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div class="card">
  <div class="card-header">
  <div>
- <div class="card-title">&#9729;&#65039; Live Google Drive &amp; Google Sheets Control Center</div>
- <div class="card-sub">Powered by TheGuru-Bridge.gs &bull; Manage Drive folders/files, sync Student Roster/Results &amp; auto-save 1 PDF per student</div>
+ <div class="card-title">☁️ Live Google Drive &amp; Google Sheets Control Center</div>
+ <div class="card-sub">Powered by TheGuru-Bridge.gs • Manage Drive folders/files, sync Student Roster/Results &amp; auto-save 1 PDF per student</div>
  </div>
  <div style="display:flex;gap:8px;flex-wrap:wrap;align-items:center;">
- <span id="cloudConnBadge" class="badge b-warn">Not Connected</span>
- <button class="btn btn-sm btn-accent" onclick="GuruExamO.Cloud.testConnection()">&#128268; Test Connection (Ping)</button>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Cloud.downloadBridgeTemplate()">&#128229; Setup Instructions</button>
+ <span id="cloudConnBadge" class="badge b-info">URL Saved (Click Ping)</span>
+ <button class="btn btn-sm btn-accent" onclick="GuruExamO.Cloud.testConnection()">🔌 Test Connection (Ping)</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Cloud.downloadBridgeTemplate()">📥 Setup Instructions</button>
  </div>
  </div>
 
@@ -2894,16 +2890,16 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div class="card" style="padding:14px;background:var(--surface-alt);margin-bottom:14px;">
  <div style="display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:10px;">
  <div>
- <strong style="font-size:14px;">&#128260; Multi-Account / Gmail Profile Switcher</strong>
+ <strong style="font-size:14px;">🔄 Multi-Account / Gmail Profile Switcher</strong>
  <div style="font-size:12px;color:var(--text-soft);">Switch this entire project to another Gmail account anytime &amp; migrate all data in 1 click</div>
  </div>
  <div style="display:flex;gap:6px;flex-wrap:wrap;">
  <button class="btn btn-sm btn-primary" onclick="GuruExamO.Accounts.saveCurrentProfile()">+ Save Current as Profile</button>
- <button class="btn btn-sm btn-accent" onclick="GuruExamO.Accounts.migrateAllToActive()">&#128640; Migrate All Data to Active Account</button>
+ <button class="btn btn-sm btn-accent" onclick="GuruExamO.Accounts.migrateAllToActive()">🚀 Migrate All Data to Active Account</button>
  </div>
  </div>
  <div style="display:flex;flex-wrap:wrap;gap:8px;align-items:center;">
- <select id="accountProfileSel" class="select" style="max-width:340px;" onchange="GuruExamO.Accounts.switchProfile(this.value)"></select>
+ <select id="accountProfileSel" class="select" style="max-width:340px;" onchange="GuruExamO.Accounts.switchProfile(this.value)"><option value="">— Saved Google Account Profiles (0) —</option></select>
  <input id="accountLabelInp" class="input" style="max-width:220px;" placeholder="Profile label (e.g. School Gmail)">
  <button class="btn btn-sm btn-outline" style="color:var(--danger);" onclick="GuruExamO.Accounts.deleteProfile()">Remove Profile</button>
  </div>
@@ -2930,10 +2926,10 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
 
  <!-- 3-Step One-Time Deploy Guide -->
  <details id="cloudDeployGuide" style="margin-bottom:14px;border:1px solid var(--border);border-radius:10px;padding:10px 14px;background:var(--surface-alt);">
- <summary style="font-size:13px;font-weight:800;cursor:pointer;">&#128640; 3-Step One-Time Setup for TheGuru-Bridge.gs (Zero Server Required)</summary>
+ <summary style="font-size:13px;font-weight:800;cursor:pointer;">🚀 3-Step One-Time Setup for TheGuru-Bridge.gs (Zero Server Required)</summary>
  <ol style="margin:10px 0 4px 20px;font-size:12.5px;color:var(--text-muted);display:flex;flex-direction:column;gap:5px;">
- <li>Open <a href="https://script.google.com" target="_blank" rel="noopener"><b>script.google.com</b></a> &rarr; click <b>New Project</b> &rarr; paste the contents of <b>TheGuru-Bridge.gs</b> (already uploaded in your Drive folder <code>TheGuru-EXamO_Project</code>) and Save.</li>
- <li>Click <b>Deploy &rarr; New deployment &rarr; Web app</b> &rarr; set <b>Execute as: Me</b> and <b>Who has access: Anyone</b> &rarr; Deploy &amp; authorize Drive + Sheets access.</li>
+ <li>Open <a href="https://script.google.com" target="_blank" rel="noopener"><b>script.google.com</b></a> → click <b>New Project</b> → paste the contents of <b>TheGuru-Bridge.gs</b> (already uploaded in your Drive folder <code>TheGuru-EXamO_Project</code>) and Save.</li>
+ <li>Click <b>Deploy → New deployment → Web app</b> → set <b>Execute as: Me</b> and <b>Who has access: Anyone</b> → Deploy &amp; authorize Drive + Sheets access.</li>
  <li>Copy the generated Web App URL (ending in <code>/exec</code>), paste it above, and click <b>Save &amp; Connect</b>. Every student submission will now auto-log to Google Sheets and save ONE Result PDF per student inside your selected Drive folder!</li>
  </ol>
  </details>
@@ -2941,10 +2937,10 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <!-- Offline Sync Queue Banner -->
  <div id="cloudQueueBox" class="hidden" style="margin-bottom:14px;padding:11px 14px;border-radius:10px;background:var(--warn-soft);border:1px solid var(--warn);display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;">
  <div>
- <strong style="color:var(--warn);">&#9203; Offline Sync Queue: <span id="cloudQueueCount">0</span> Pending Attempt(s)</strong>
+ <strong style="color:var(--warn);">⏳ Offline Sync Queue: <span id="cloudQueueCount">0</span> Pending Attempt(s)</strong>
  <div style="font-size:12px;color:var(--text-muted);">Saved safely in IndexedDB when offline. Click Sync Now to push to Sheet &amp; generate Drive PDFs.</div>
  </div>
- <button class="btn btn-sm btn-primary" onclick="GuruExamO.Cloud.flushQueue()">&#9729;&#65039; Sync Queued Attempts Now</button>
+ <button class="btn btn-sm btn-primary" onclick="GuruExamO.Cloud.flushQueue()">☁️ Sync Queued Attempts Now</button>
  </div>
 
  <!-- Split Workspace: Google Drive Browser + Google Sheets Manager -->
@@ -2953,11 +2949,11 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div class="card" style="padding:14px;">
  <div class="card-header" style="margin-bottom:10px;">
  <div>
- <div class="card-title">&#128193; Google Drive Folder &amp; File Manager</div>
+ <div class="card-title">📁 Google Drive Folder &amp; File Manager</div>
  <div class="card-sub">Browse, create folders, select PDF target &amp; backup Vault directly to Drive</div>
  </div>
  <div style="display:flex;gap:6px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Cloud.browseDrive()">&#8635; Refresh</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Cloud.browseDrive()">↻ Refresh</button>
  <button class="btn btn-sm btn-primary" onclick="GuruExamO.Cloud.createDriveFolder()">+ New Folder</button>
  </div>
  </div>
@@ -2965,12 +2961,12 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div class="drive-crumb">
  <div>
  <b>Current Folder:</b> <span id="driveCurrentName">Not loaded</span>
- <a id="driveCurrentLink" href="#" target="_blank" rel="noopener" class="hidden" style="margin-left:6px;font-size:12px;font-weight:700;">Open in Drive &#8599;</a>
+ <a id="driveCurrentLink" href="#" target="_blank" rel="noopener" class="hidden" style="margin-left:6px;font-size:12px;font-weight:700;">Open in Drive ↗</a>
  </div>
  <div style="display:flex;gap:6px;flex-wrap:wrap;">
- <button id="driveUpBtn" class="btn btn-sm btn-outline hidden" onclick="GuruExamO.Cloud.browseParent()">&uarr; Up</button>
- <button id="driveSetTargetBtn" class="btn btn-sm btn-success hidden" onclick="GuruExamO.Cloud.setAsActiveTarget()">&#9989; Use as PDF Target</button>
- <button class="btn btn-sm btn-soft" onclick="GuruExamO.Cloud.backupVaultToDrive()">&#128230; Backup Vault Here</button>
+ <button id="driveUpBtn" class="btn btn-sm btn-outline hidden" onclick="GuruExamO.Cloud.browseParent()">↑ Up</button>
+ <button id="driveSetTargetBtn" class="btn btn-sm btn-success hidden" onclick="GuruExamO.Cloud.setAsActiveTarget()">✅ Use as PDF Target</button>
+ <button class="btn btn-sm btn-soft" onclick="GuruExamO.Cloud.backupVaultToDrive()">📦 Backup Vault Here</button>
  </div>
  </div>
 
@@ -2995,12 +2991,12 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <div class="card" style="padding:14px;">
  <div class="card-header" style="margin-bottom:10px;">
  <div>
- <div class="card-title">&#128202; Google Sheets Live Manager</div>
+ <div class="card-title">📊 Google Sheets Live Manager</div>
  <div class="card-sub">Auto-provisioned Results, Students &amp; Violations tabs</div>
  </div>
  <div style="display:flex;gap:6px;flex-wrap:wrap;">
- <button class="btn btn-sm btn-accent" onclick="GuruExamO.Cloud.ensureSheet()">&#9889; Init / Link Sheet</button>
- <a id="sheetOpenLink" href="#" target="_blank" rel="noopener" class="btn btn-sm btn-outline hidden">Open Sheet &#8599;</a>
+ <button class="btn btn-sm btn-accent" onclick="GuruExamO.Cloud.ensureSheet()">⚡ Init / Link Sheet</button>
+ <a id="sheetOpenLink" href="#" target="_blank" rel="noopener" class="btn btn-sm btn-outline hidden">Open Sheet ↗</a>
  </div>
  </div>
 
@@ -3011,11 +3007,11 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
  <option value="Students">Students</option>
  <option value="Violations">Violations</option>
  </select>
- <button class="btn btn-sm btn-outline" onclick="GuruExamO.Cloud.loadSheetPreview()">&#8635; Load Rows</button>
+ <button class="btn btn-sm btn-outline" onclick="GuruExamO.Cloud.loadSheetPreview()">↻ Load Rows</button>
  </div>
  <div class="toolbar-group">
- <button class="btn btn-sm btn-soft" onclick="GuruExamO.Cloud.pullRoster()">&#11015;&#65039; Pull Roster</button>
- <button class="btn btn-sm btn-primary" onclick="GuruExamO.Cloud.pushRoster()">&#11014;&#65039; Push Roster</button>
+ <button class="btn btn-sm btn-soft" onclick="GuruExamO.Cloud.pullRoster()">⬇️ Pull Roster</button>
+ <button class="btn btn-sm btn-primary" onclick="GuruExamO.Cloud.pushRoster()">⬆️ Push Roster</button>
  </div>
  </div>
 
@@ -3040,14 +3036,14 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
      <div class="card">
        <div class="card-header">
          <div>
-           <div class="card-title">&#128274; Private Admin Credentials (Zero Hardcoded)</div>
+           <div class="card-title">🔒 Private Admin Credentials (Zero Hardcoded)</div>
            <div class="card-sub">Salted SHA-256 in IndexedDB + Private Apps Script Properties (never stored in code)</div>
          </div>
-         <span id="secCloudSyncBadge" class="badge b-warn">Local Only</span>
+         <span id="secCloudSyncBadge" class="badge b-info">Bridge Ready (Click Sync)</span>
        </div>
 
        <div style="padding:10px 12px;border-radius:9px;background:var(--success-soft);border:1px solid var(--success);font-size:12.5px;margin-bottom:12px;">
-         <strong style="color:var(--success);">&#128737;&#65039; Admin Panel is Hidden by Default on ALL URLs</strong><br>
+         <strong style="color:var(--success);">🛡️ Admin Panel is Hidden by Default on ALL URLs</strong><br>
          Only you can open Admin Login using: <b>5-tap on GE Logo</b>, <b>Ctrl + Shift + A</b>, or <b>?admin=1</b>.
        </div>
 
@@ -3081,17 +3077,17 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
          </div>
        </div>
        <div style="display:flex;gap:8px;flex-wrap:wrap;">
-         <button class="btn btn-primary" onclick="GuruExamO.Security.updateCredentials()">&#9989; Change ID &amp; Password</button>
-         <button class="btn btn-accent" onclick="GuruExamO.Security.syncAuthToCloud()">&#9729;&#65039; Sync Lock to Cloud</button>
-         <button class="btn btn-danger" onclick="GuruExamO.Security.lockAndHideAdmin()">&#128274; Lock &amp; Hide Admin</button>
+         <button class="btn btn-primary" onclick="GuruExamO.Security.updateCredentials()">✅ Change ID &amp; Password</button>
+         <button class="btn btn-accent" onclick="GuruExamO.Security.syncAuthToCloud()">☁️ Sync Lock to Cloud</button>
+         <button class="btn btn-danger" onclick="GuruExamO.Security.lockAndHideAdmin()">🔒 Lock &amp; Hide Admin</button>
        </div>
-       <div id="secHashInfo" style="margin-top:12px;font-size:11.5px;color:var(--text-soft);word-break:break-all;"></div>
+       <div id="secHashInfo" style="margin-top:12px;font-size:11.5px;color:var(--text-soft);word-break:break-all;">Admin ID: <b>admin</b> • SHA-256 Digest: <code class="inline-code">d38a096898655ef5e87dbb…</code> (Updated: 11/24/2026, 1:47:34 AM)</div>
      </div>
 
      <div class="card">
        <div class="card-header">
          <div>
-           <div class="card-title">&#128273; Recovery Code &amp; Gmail OTP Reset</div>
+           <div class="card-title">🔑 Recovery Code &amp; Gmail OTP Reset</div>
            <div class="card-sub">2 safe ways to reset your ID/Password if you ever forget it</div>
          </div>
        </div>
@@ -3107,7 +3103,7 @@ Explanation: Stack operates on Last-In-First-Out principle."></textarea>
        </div>
 
        <div style="padding:12px;border-radius:10px;background:var(--surface-alt);border:1px solid var(--border);font-size:12.5px;">
-         <strong>&#9993;&#65039; Method 2 (Gmail Reset OTP via TheGuru-Bridge_v5.1.gs):</strong><br>
+         <strong>✉️ Method 2 (Gmail Reset OTP via TheGuru-Bridge_v5.1.gs):</strong><br>
          When your Bridge URL is connected, clicking <b>Gmail OTP Reset</b> on the Admin Login screen sends a 6-digit reset OTP directly to the Gmail account that deployed your Apps Script — no email is hardcoded in the website!
        </div>
      </div>
@@ -8646,5 +8642,5 @@ Explanation: B+ Trees keep internal nodes purely for routing keys and link all l
  document.addEventListener('DOMContentLoaded', boot);
 })();
 </script>
-</body>
-</html>
+
+</body></html>
