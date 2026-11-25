@@ -1,24 +1,42 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="light" data-quality="3d" data-lang="en" style="--font-en-head: 'Plus Jakarta Sans', system-ui, sans-serif; --font-en-body: 'Inter', system-ui, sans-serif; --font-hi-head: 'Noto Sans Devanagari', 'Nirmala UI', sans-serif; --font-hi-body: 'Noto Sans Devanagari', 'Nirmala UI', sans-serif; --font-shayari: 'Kalam', 'Noto Sans Devanagari', cursive; --font-code: 'JetBrains Mono', Consolas, monospace; --base-size: 15px; --hi-lh: 1.72;"><head>
+<html lang="en" data-theme="light" data-quality="3d" data-lang="en">
+<head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover">
 <meta name="robots" content="index, follow">
-<meta name="description" content="Flagship 3D Bilingual Pro CBT Exam, Practice &amp; Assessment Portal.">
+<meta name="description" content="TheGuru-EXamO — Flagship 3D Bilingual Pro CBT Exam, Practice & Assessment Portal for DSSSB, UP PGT, UGC NET & Competitive Exams.">
 <meta name="theme-color" content="#0f172a">
 <meta name="mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-capable" content="yes">
 <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-<meta property="og:title" content="TheGuru-EXamO — Pro CBT &amp; Practice Portal">
-<meta property="og:description" content="Flagship 3D Bilingual Pro CBT Exam, Practice &amp; Assessment Portal.">
+<meta property="og:title" content="TheGuru-EXamO — Pro CBT Portal">
+<meta property="og:description" content="Interactive Bilingual Pro CBT Exam & Practice Portal with 3D UI, Pinch-Zoom Code Viewer & Forensic Analytics.">
 <meta property="og:type" content="website">
 <!--GSC_META_TAG-->
-<title>TheGuru-EXamO — Pro CBT &amp; Practice Portal</title>
+<title>TheGuru-EXamO — Pro CBT Portal</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
-<link id="guruFontsLink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus%20Jakarta%20Sans:wght@400;600;700;800&amp;family=Inter:wght@400;600;700;800&amp;family=Noto%20Sans%20Devanagari:wght@400;600;700;800&amp;family=Kalam:wght@400;600;700;800&amp;family=JetBrains%20Mono:wght@400;600;700;800&amp;display=swap">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link id="guruFontsLink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;600&family=Kalam:wght@400;700&family=Noto+Sans+Devanagari:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap">
 <script id="guruJsonLd" type="application/ld+json">{"@context":"https://schema.org","@type":"EducationalOrganization","name":"TheGuru-EXamO","description":"Bilingual Pro CBT Exam & Practice Portal"}</script>
-<style id="guruBrandVars">:root, [data-theme="light"] { --primary: #1e3a8a; --primary-2: #1e3a8a; --accent: #0ea5e9; }</style>
 <style>
+:root, [data-theme="light"] {
+  --primary: #1e3a8a;
+  --primary-2: #2563eb;
+  --accent: #0ea5e9;
+  --gold: #f59e0b;
+  --emerald: #10b981;
+  --rose: #e11d48;
+  --bg: #f1f5f9;
+  --bg-2: #e2e8f0;
+  --surface: #ffffff;
+  --surface-2: #f8fafc;
+  --surface-glass: rgba(255,255,255,0.96);
+  --text: #0f172a;
+  --text-2: #475569;
+  --border: rgba(15,23,42,0.10);
+  --shadow-3d: 0 14px 32px -12px rgba(15,23,42,0.18), 0 4px 10px -2px rgba(30,58,138,0.08);
+  --shadow-btn: 0 6px 0 #172554, 0 10px 18px rgba(30,58,138,0.28);
+}
 :root {
   --font-en-head: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
   --font-en-body: 'Inter', system-ui, -apple-system, sans-serif;
@@ -44,7 +62,7 @@
   --bg-2: #0f172a;
   --surface: #111c32;
   --surface-2: #16233d;
-  --surface-glass: rgba(17,28,50,0.86);
+  --surface-glass: rgba(17,28,50,0.96);
   --text: #f1f5f9;
   --text-2: #94a3b8;
   --border: rgba(148,163,184,0.18);
@@ -62,7 +80,7 @@
   --bg-2: #e9dec4;
   --surface: #fbf7ec;
   --surface-2: #f3ead5;
-  --surface-glass: rgba(251,247,236,0.9);
+  --surface-glass: rgba(251,247,236,0.97);
   --text: #292014;
   --text-2: #5c4b37;
   --border: rgba(120,53,15,0.16);
@@ -96,16 +114,17 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 }
 .hidden, .admin-hidden { display: none !important; }
 
-/* GPU-Composited Ambient 3D Backdrop */
-.ambient-3d { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; }
+/* Zero-Blur GPU Ambient 3D Glow (soft radial-gradient replaces costly blur(68px)) */
+.ambient-3d { position: fixed; inset: 0; pointer-events: none; z-index: 0; overflow: hidden; contain: strict; }
 .ambient-3d .orb {
-  position: absolute; border-radius: 50%; filter: blur(68px); opacity: 0.22;
-  will-change: transform; transform: translate3d(0,0,0);
+  position: absolute; border-radius: 50%; opacity: 0.24;
+  transform: translate3d(0,0,0); will-change: transform;
 }
-.ambient-3d .o1 { width: 420px; height: 420px; background: var(--primary-2); top: -120px; left: -90px; animation: orbFloat 14s ease-in-out infinite alternate; }
-.ambient-3d .o2 { width: 380px; height: 380px; background: var(--accent); bottom: -110px; right: -80px; animation: orbFloat 18s ease-in-out infinite alternate-reverse; }
-.ambient-3d .o3 { width: 260px; height: 260px; background: var(--gold); top: 42%; left: 55%; opacity: 0.12; animation: orbFloat 16s ease-in-out infinite alternate; }
-@keyframes orbFloat { from { transform: translate3d(0,0,0) scale(1); } to { transform: translate3d(38px,26px,0) scale(1.1); } }
+.ambient-3d .o1 { width: 520px; height: 520px; background: radial-gradient(circle, var(--primary-2) 0%, transparent 68%); top: -160px; left: -130px; animation: orbFloat 22s ease-in-out infinite alternate; }
+.ambient-3d .o2 { width: 480px; height: 480px; background: radial-gradient(circle, var(--accent) 0%, transparent 68%); bottom: -150px; right: -120px; animation: orbFloat 26s ease-in-out infinite alternate-reverse; }
+.ambient-3d .o3 { width: 360px; height: 360px; background: radial-gradient(circle, var(--gold) 0%, transparent 68%); top: 38%; left: 52%; opacity: 0.14; animation: orbFloat 24s ease-in-out infinite alternate; }
+@keyframes orbFloat { from { transform: translate3d(0,0,0); } to { transform: translate3d(28px,20px,0); } }
+body.is-scrolling .ambient-3d .orb, [data-quality="balanced"] .ambient-3d .orb { animation-play-state: paused !important; }
 [data-quality="lite"] .ambient-3d { display: none !important; }
 [data-quality="lite"] * { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 
@@ -169,7 +188,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 .splash-skip {
   position: absolute; bottom: max(22px, env(safe-area-inset-bottom)); right: 22px; z-index: 3;
   background: rgba(255,255,255,0.12); color: #e2e8f0; border: 1px solid rgba(255,255,255,0.22);
-  padding: 8px 16px; border-radius: 999px; font-weight: 700; cursor: pointer; backdrop-filter: blur(8px);
+  padding: 8px 16px; border-radius: 999px; font-weight: 700; cursor: pointer;
 }
 @keyframes flyLeft { to { transform: translate3d(0,0,0) rotateY(0); opacity: 1; } }
 @keyframes flyRight { to { transform: translate3d(0,0,0) rotateY(0); opacity: 1; } }
@@ -185,14 +204,14 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 }
 .offline-card {
   max-width: 520px; width: 100%; text-align: center; padding: 34px 26px; border-radius: 24px;
-  background: rgba(15,23,42,0.82); border: 1px solid rgba(96,165,250,0.3);
-  box-shadow: 0 28px 60px rgba(0,0,0,0.55); backdrop-filter: blur(14px);
+  background: rgba(15,23,42,0.96); border: 1px solid rgba(96,165,250,0.3);
+  box-shadow: 0 28px 60px rgba(0,0,0,0.55);
 }
 
 /* ==================== TOPBAR & NAVIGATION SHELL ==================== */
 #topBar {
   position: sticky; top: 0; z-index: 400;
-  background: var(--surface-glass); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px);
+  background: var(--surface-glass); box-shadow: 0 2px 10px rgba(15,23,42,0.06);
   border-bottom: 1px solid var(--border);
   padding: 8px clamp(10px, 2.5vw, 24px);
   display: flex; align-items: center; justify-content: space-between; gap: 10px; flex-wrap: wrap;
@@ -239,7 +258,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
   display: inline-flex; align-items: center; justify-content: center; gap: 7px;
   transition: transform 0.14s ease, box-shadow 0.14s ease, filter 0.14s ease;
 }
-.btn:active { transform: translateY(2px); }
+.btn:active { transform: translate3d(0, 2px, 0); }
+.btn.is-busy { opacity: 0.72; pointer-events: none; cursor: wait; }
 .btn-3d {
   background: linear-gradient(135deg, var(--primary) 0%, var(--primary-2) 55%, var(--accent) 100%);
   color: #fff; box-shadow: var(--shadow-btn);
@@ -325,11 +345,11 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 .slice-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(225px, 1fr)); gap: 14px; }
 .slice-card {
   position: relative; padding: 16px; border-radius: 16px; background: var(--surface);
-  border: 1px solid var(--border); box-shadow: 0 10px 22px -12px rgba(15,23,42,0.18);
-  transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
-  transform-style: preserve-3d;
+  border: 1px solid var(--border); box-shadow: 0 8px 18px -10px rgba(15,23,42,0.16);
+  transition: transform 0.14s ease, border-color 0.14s ease;
+  contain: layout style paint;
 }
-.slice-card:hover { transform: translateY(-4px) perspective(700px) rotateX(2deg); border-color: var(--primary-2); box-shadow: 0 18px 30px -14px rgba(37,99,235,0.28); }
+.slice-card:hover { transform: translate3d(0, -3px, 0); border-color: var(--primary-2); }
 .slice-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 8px; }
 .slice-tag { padding: 3px 9px; border-radius: 999px; font-size: 0.72rem; font-weight: 800; background: rgba(37,99,235,0.12); color: var(--primary-2); }
 .slice-done { background: rgba(16,185,129,0.16); color: var(--emerald); }
@@ -348,7 +368,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
   position: fixed; inset: 0; z-index: 5000;
   width: 100vw; height: 100dvh; max-height: 100dvh;
   display: flex; flex-direction: column;
-  background: var(--bg); color: var(--text);
+  background: var(--bg, #f1f5f9); color: var(--text, #0f172a);
   padding-top: env(safe-area-inset-top);
   padding-bottom: env(safe-area-inset-bottom);
   overflow: hidden;
@@ -417,7 +437,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 .opts-list { display: grid; gap: 10px; margin-top: 10px; }
 .opt-card {
   display: flex; align-items: flex-start; gap: 11px; padding: var(--opt-pad);
-  border-radius: 13px; border: 2px solid var(--border); background: var(--surface);
+  border-radius: 13px; border: 2px solid var(--border, rgba(15,23,42,0.12)); background: var(--surface, #ffffff);
   cursor: pointer; transition: transform 0.12s ease, border-color 0.14s ease, background 0.14s ease;
   min-height: 48px;
 }
@@ -438,11 +458,11 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 /* Hideable Question Palette + Dimmed Tap-Outside Backdrop */
 #paletteBackdrop {
   position: fixed; inset: 0; z-index: 5050; background: rgba(2,6,23,0.56);
-  backdrop-filter: blur(2px); display: none;
+  display: none;
 }
 #paletteBackdrop.open { display: block; }
 #examPalettePane {
-  flex: 0 0 285px; width: 285px; background: var(--surface); border-left: 1px solid var(--border);
+  flex: 0 0 285px; width: 285px; background: var(--surface, #ffffff); border-left: 1px solid var(--border, rgba(15,23,42,0.12));
   display: flex; flex-direction: column; overflow: hidden;
   transition: transform 0.24s cubic-bezier(0.16, 1, 0.3, 1);
 }
@@ -471,7 +491,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 .pal-foot { padding: 10px; border-top: 1px solid var(--border); display: grid; gap: 7px; }
 .exam-ftr {
   flex: 0 0 auto; display: flex; align-items: center; justify-content: space-between; gap: 6px;
-  padding: 8px 12px; background: var(--surface); border-top: 1px solid var(--border);
+  padding: 8px 12px; background: var(--surface, #ffffff); border-top: 1px solid var(--border, rgba(15,23,42,0.12));
 }
 .exam-ftr-group { display: flex; gap: 6px; align-items: center; }
 
@@ -516,6 +536,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 .adm-card {
   padding: clamp(14px, 2.2vw, 22px); border-radius: 18px; background: var(--surface);
   border: 1px solid var(--border); box-shadow: var(--shadow-3d); margin-bottom: 14px;
+  contain: layout style;
 }
 .form-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); gap: 12px; }
 .field label { display: block; font-size: 0.76rem; font-weight: 800; color: var(--text-2); margin-bottom: 4px; text-transform: uppercase; }
@@ -558,11 +579,11 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 
 .modal-bg {
   position: fixed; inset: 0; z-index: 6500; background: rgba(2,6,23,0.68);
-  backdrop-filter: blur(4px); display: flex; align-items: center; justify-content: center; padding: 14px;
+  display: flex; align-items: center; justify-content: center; padding: 14px;
 }
 .modal-card {
   width: min(680px, 100%); max-height: 90dvh; overflow-y: auto;
-  padding: 20px; border-radius: 20px; background: var(--surface); border: 1px solid var(--border);
+  padding: 20px; border-radius: 20px; background: var(--surface, #ffffff); border: 1px solid var(--border, rgba(15,23,42,0.12));
   box-shadow: 0 28px 60px rgba(0,0,0,0.45);
 }
 .drive-img-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(125px, 1fr)); gap: 10px; margin-top: 10px; }
@@ -588,6 +609,15 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
   position: fixed; bottom: 10px; left: 14px; z-index: 120; pointer-events: none;
   font-size: 0.78rem; font-weight: 800; opacity: 0.24; letter-spacing: 0.06em;
 }
+
+/* Full Exam Layer Isolation: physically hide portal underneath during active exam */
+body.exam-active { overflow: hidden !important; height: 100dvh; }
+body.exam-active #topBar,
+body.exam-active #appMain,
+body.exam-active .ambient-3d { display: none !important; }
+</style>
+<style id="guruBrandVars">
+html[data-theme="light"] { --primary: #1e3a8a; --primary-2: #2563eb; --accent: #0ea5e9; }
 </style>
 </head>
 <body>
@@ -596,16 +626,16 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 </div>
 
 <!-- ==================== 3D SPARKLE LAUNCH INTRO ==================== -->
-<div id="guruSplash" role="dialog" aria-label="TheGuru-EXamO Intro" class="">
-  <canvas id="splashCanvas" width="1920" height="868"></canvas>
+<div id="guruSplash" role="dialog" aria-label="TheGuru-EXamO Intro">
+  <canvas id="splashCanvas"></canvas>
   <div class="splash-stage">
-    <span class="sp-word sp-guru" style="">TheGuru</span>
-    <span class="sp-word sp-dash" style="">-</span>
-    <span class="sp-word sp-exam" style="">Exam</span>
-    <span class="sp-word sp-o-wrap" style=""><span class="sp-ring" style=""></span><span class="sp-o">O</span></span>
+    <span class="sp-word sp-guru">TheGuru</span>
+    <span class="sp-word sp-dash">-</span>
+    <span class="sp-word sp-exam">Exam</span>
+    <span class="sp-word sp-o-wrap"><span class="sp-ring"></span><span class="sp-o">O</span></span>
   </div>
-  <div class="splash-sheen" id="splashTagline" style="">BEAST MODE PRO CBT • BILINGUAL ENGINE</div>
-  <button class="splash-skip" id="btnSkipSplash" type="button">Skip ⏭</button>
+  <div class="splash-sheen" id="splashTagline">BEAST MODE PRO CBT &bull; BILINGUAL ENGINE</div>
+  <button class="splash-skip" id="btnSkipSplash" type="button">Skip &#9197;</button>
 </div>
 
 <!-- ==================== LIVE SITE KILL-SWITCH / MAINTENANCE OVERLAY ==================== -->
@@ -624,16 +654,16 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 <!-- ==================== TOPBAR ==================== -->
 <header id="topBar">
   <div class="brand-wrap" id="brandLogoTrigger" title="TheGuru-EXamO">
-    <div class="brand-cube" id="brandCubeText">T</div>
+    <div class="brand-cube" id="brandCubeText">G</div>
     <div>
       <div class="brand-title" id="topBrandTitle">TheGuru-EXamO</div>
-      <div class="brand-sub"><span class="sync-dot" id="syncDot"></span><span id="syncStatusText">Live • Rev #1</span></div>
+      <div class="brand-sub"><span class="sync-dot" id="syncDot"></span><span id="syncStatusText">Ready &bull; Rev #1</span></div>
     </div>
   </div>
   <nav class="nav-pills" id="mainNav">
-    <button class="pill-btn" data-view="practice" id="navPractice" type="button">📚 <span data-i18n="navPractice">Practice Portal</span></button>
-    <button class="pill-btn" data-view="student" id="navStudent" type="button">🎓 <span data-i18n="navStudent">Student CBT</span></button>
-    <button class="pill-btn active admin-hidden" data-view="admin" id="navAdmin" type="button">⚙️ Admin Studio</button>
+    <button class="pill-btn active" data-view="practice" id="navPractice" type="button">&#128218; <span data-i18n="navPractice">Practice Portal</span></button>
+    <button class="pill-btn" data-view="student" id="navStudent" type="button">&#127891; <span data-i18n="navStudent">Student CBT</span></button>
+    <button class="pill-btn admin-hidden" data-view="admin" id="navAdmin" type="button">&#9881;&#65039; Admin Studio</button>
   </nav>
   <div class="top-tools">
     <select class="tool-sel" id="selLangMode" title="UI Language">
@@ -642,12 +672,12 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       <option value="hi">हिंदी</option>
     </select>
     <select class="tool-sel" id="selTheme" title="Theme">
-      <option value="light">☀️ Light</option>
-      <option value="dark">🌙 Dark</option>
-      <option value="sepia">📖 Sepia</option>
+      <option value="light">&#9728;&#65039; Light</option>
+      <option value="dark">&#127769; Dark</option>
+      <option value="sepia">&#128214; Sepia</option>
     </select>
     <select class="tool-sel" id="selQuality" title="3D Visual Quality">
-      <option value="3d">✨ 3D Ultra</option>
+      <option value="3d">&#10024; 3D Ultra</option>
       <option value="balanced">Balanced</option>
       <option value="lite">Lite Fast</option>
     </select>
@@ -656,61 +686,58 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 
 <main id="appMain">
   <!-- ==================== MODULE 1: UNIFIED SEAMLESS PRACTICE PORTAL ==================== -->
-  <section id="practiceView" class="">
+  <section id="practiceView">
     <div class="seamless-canvas" id="portalCanvas">
-      
-
-      
-
-      
-
-      
-
-      
-
-      
-    <div class="portal-section" data-sec="hero" id="secHero">
-        <div class="hero-grid" id="heroLayoutGrid" style="flex-direction: row;">
+      <div class="portal-section" data-sec="hero" id="secHero">
+        <div class="hero-grid" id="heroLayoutGrid">
           <div class="hero-copy">
-            <div class="hero-badge" id="heroBadge">PRO CBT • BILINGUAL ENGINE</div>
+            <div class="hero-badge" id="heroBadge">&#9889; PRO CBT &bull; BILINGUAL ENGINE</div>
             <h1 class="hero-h1" id="heroTitle">TheGuru-EXamO Assessment Portal</h1>
-            <p class="hero-desc" id="heroSubtitle">High-speed bilingual mock tests, pinch-to-zoom code &amp; match viewer, and instant forensic analytics.</p>
+            <p class="hero-desc" id="heroSubtitle">High-speed bilingual mock tests, PYQ drills, pinch-to-zoom code &amp; match viewer, and instant forensic analytics.</p>
             <div class="hero-kpis">
-              <span class="kpi-chip">📖 <span id="heroQCount">80</span> <span data-i18n="questionsWord">Questions</span></span>
-              <span class="kpi-chip">📂 <span id="heroSubCount">1</span> <span data-i18n="subjectsWord">Subjects</span></span>
-              <span class="kpi-chip">🎯 <span id="heroPackCount">3</span> <span data-i18n="packsWord">Cloud Packs</span></span>
+              <span class="kpi-chip">&#128214; <span id="heroQCount">0</span> <span data-i18n="questionsWord">Questions</span></span>
+              <span class="kpi-chip">&#128194; <span id="heroSubCount">0</span> <span data-i18n="subjectsWord">Subjects</span></span>
+              <span class="kpi-chip">&#127919; <span id="heroPackCount">0</span> <span data-i18n="packsWord">Cloud Packs</span></span>
             </div>
           </div>
           <div class="hero-media-wrap hidden" id="heroMediaWrap">
             <img id="heroPhotoImg" class="hero-photo" alt="Portal Hero Photo">
           </div>
         </div>
-      </div><div class="portal-section notice-bar" data-sec="notice" id="secNotice" style="padding-top:12px;padding-bottom:12px;">
-        <div style="font-weight:700;font-size:0.9rem;" id="noticeText">Welcome to TheGuru-EXamO v6.0 — Select any Subject &amp; Set below to begin.</div>
+      </div>
+
+      <div class="portal-section notice-bar" data-sec="notice" id="secNotice" style="padding-top:12px;padding-bottom:12px;">
+        <div style="font-weight:700;font-size:0.9rem;" id="noticeText">&#128226; Welcome to TheGuru-EXamO v6.0 — Select any Subject &amp; 30-Q Set below to begin.</div>
         <div class="countdown-pill hidden" id="examCountdownPill"></div>
-      </div><div class="portal-section shayari-box" data-sec="shayari" id="secShayari">
+      </div>
+
+      <div class="portal-section shayari-box" data-sec="shayari" id="secShayari">
         <div id="shayariText">“मंज़िल उन्हीं को मिलती है, जिनके सपनों में जान होती है; पंखों से कुछ नहीं होता, हौसलों से उड़ान होती है।”</div>
-      </div><div class="portal-section alt-tone hidden" data-sec="gallery" id="secGallery">
+      </div>
+
+      <div class="portal-section alt-tone hidden" data-sec="gallery" id="secGallery">
         <div class="gallery-stage" id="publicGalleryStage"></div>
-      </div><div class="portal-section" data-sec="portal" id="secPortal">
+      </div>
+
+      <div class="portal-section" data-sec="portal" id="secPortal">
         <div class="cmd-strip">
           <div>
             <label data-i18n="lblCloudPack">Cloud Library Pack</label>
-            <select class="sel" id="pubCloudPackSel"><option value="">-- Local Vault (1) --</option><option value="C_LANGUAGE">☁️ DSSSB TGT Computer Science (80 Qs)</option><option value="UP_PGT_CIVICS">☁️ UP PGT CIVICS (465 Qs)</option><option value="DSSSB_TGT_Computer_Sci">☁️ DSSSB TGT Computer Science (80 Qs)</option></select>
+            <select class="sel" id="pubCloudPackSel"><option value="">-- Local Vault --</option></select>
           </div>
           <div>
             <label data-i18n="lblSubject">Subject</label>
-            <select class="sel" id="pubSubjectSel"><option value="sub_mwvgmj6d_dqflv">DSSSB TGT Computer Science (80 Qs)</option></select>
+            <select class="sel" id="pubSubjectSel"></select>
           </div>
           <div>
             <label data-i18n="lblUnit">Unit / Chapter</label>
-            <select class="sel" id="pubUnitSel"><option value="ALL">All Units (80)</option><option value="MOCK-2: Structs, Padding, enum &amp; Strings">MOCK-2: Structs, Padding, enum &amp; Strings (15)</option><option value="PYQ-1: Scope, Functions &amp; Arrays">PYQ-1: Scope, Functions &amp; Arrays (23)</option><option value="PYQ-2: Pointers, Strings &amp; I/O">PYQ-2: Pointers, Strings &amp; I/O (18)</option><option value="MOCK-1: Pointers, const &amp; DMA">MOCK-1: Pointers, const &amp; DMA (15)</option><option value="PYQ-3: Structs, Storage &amp; Files">PYQ-3: Structs, Storage &amp; Files (9)</option></select>
+            <select class="sel" id="pubUnitSel"><option value="ALL">All Units</option></select>
           </div>
           <div>
             <label data-i18n="lblSliceSize">Questions / Set</label>
             <select class="sel" id="pubSliceSizeSel">
               <option value="20">20 Qs / Set</option>
-              <option value="30" selected="">30 Qs / Set</option>
+              <option value="30" selected>30 Qs / Set</option>
               <option value="50">50 Qs / Set</option>
               <option value="100">100 Qs / Set</option>
               <option value="9999">Full Paper</option>
@@ -721,7 +748,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
             <input class="inp" id="pubSearchInp" type="search" placeholder="Search topic / keyword...">
           </div>
           <div style="display:flex;align-items:flex-end;gap:6px;">
-            <button class="btn btn-3d" id="btnLaunchFullPractice" style="flex:1;" type="button">▶️ <span data-i18n="btnStartCustom">Start Test</span></button>
+            <button class="btn btn-3d" id="btnLaunchFullPractice" style="flex:1;" type="button">&#9654;&#65039; <span data-i18n="btnStartCustom">Start Test</span></button>
           </div>
         </div>
 
@@ -730,71 +757,35 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
           <div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;font-size:0.8rem;">
             <label style="display:inline-flex;align-items:center;gap:4px;cursor:pointer;"><input type="checkbox" id="chkShuffleQ"> <span data-i18n="lblShuffleQ">Shuffle Qs</span></label>
             <label style="display:inline-flex;align-items:center;gap:4px;cursor:pointer;"><input type="checkbox" id="chkShuffleO"> <span data-i18n="lblShuffleO">Shuffle Opts</span></label>
-            <label style="display:inline-flex;align-items:center;gap:4px;cursor:pointer;"><input type="checkbox" id="chkForceProFs" checked=""> <span data-i18n="lblProFs">Pro CBT Fullscreen</span></label>
+            <label style="display:inline-flex;align-items:center;gap:4px;cursor:pointer;"><input type="checkbox" id="chkForceProFs" checked> <span data-i18n="lblProFs">Pro CBT Fullscreen</span></label>
           </div>
         </div>
         <div id="resumeBanner" class="dup-banner hidden"></div>
-        <div class="slice-grid" id="pubSliceGrid">
-        <div class="slice-card">
-          <div class="slice-top">
-            <span class="slice-tag">Set 01</span>
-            <span class="slice-tag ">30 Qs</span>
-          </div>
-          <div style="font-weight:800;font-size:0.94rem;margin-bottom:4px;">DSSSB TGT Computer Science</div>
-          <div style="font-size:0.78rem;color:var(--text-2);">Q.1 – Q.30 • MOCK-2: Structs, Padding, enum &amp; Strings</div>
-          <div class="slice-actions">
-            <button class="btn btn-ghost" data-launch-set="0" data-mode="practice" type="button">📖 Practice</button>
-            <button class="btn btn-3d" data-launch-set="0" data-mode="exam" type="button">⚡ Pro CBT</button>
-          </div>
-        </div>
-      
-        <div class="slice-card">
-          <div class="slice-top">
-            <span class="slice-tag">Set 02</span>
-            <span class="slice-tag ">30 Qs</span>
-          </div>
-          <div style="font-weight:800;font-size:0.94rem;margin-bottom:4px;">DSSSB TGT Computer Science</div>
-          <div style="font-size:0.78rem;color:var(--text-2);">Q.31 – Q.60 • MOCK-1: Pointers, const &amp; DMA</div>
-          <div class="slice-actions">
-            <button class="btn btn-ghost" data-launch-set="1" data-mode="practice" type="button">📖 Practice</button>
-            <button class="btn btn-3d" data-launch-set="1" data-mode="exam" type="button">⚡ Pro CBT</button>
-          </div>
-        </div>
-      
-        <div class="slice-card">
-          <div class="slice-top">
-            <span class="slice-tag">Set 03</span>
-            <span class="slice-tag ">20 Qs</span>
-          </div>
-          <div style="font-weight:800;font-size:0.94rem;margin-bottom:4px;">DSSSB TGT Computer Science</div>
-          <div style="font-size:0.78rem;color:var(--text-2);">Q.61 – Q.80 • MOCK-1: Pointers, const &amp; DMA</div>
-          <div class="slice-actions">
-            <button class="btn btn-ghost" data-launch-set="2" data-mode="practice" type="button">📖 Practice</button>
-            <button class="btn btn-3d" data-launch-set="2" data-mode="exam" type="button">⚡ Pro CBT</button>
-          </div>
-        </div>
+        <div class="slice-grid" id="pubSliceGrid"></div>
       </div>
-      </div><footer class="portal-section alt-tone" data-sec="footer" id="secFooter" style="text-align:center;font-size:0.84rem;color:var(--text-2);">
-        <div id="footerText" style="font-weight:700;">TheGuru-EXamO Pro v6.0 • Curated by GuruDatt Kaushik</div>
+
+      <footer class="portal-section alt-tone" data-sec="footer" id="secFooter" style="text-align:center;font-size:0.84rem;color:var(--text-2);">
+        <div id="footerText" style="font-weight:700;">TheGuru-EXamO Pro v6.0 &bull; Curated by GuruDatt Kaushik</div>
         <div id="footerLinks" style="margin-top:6px;display:flex;gap:12px;justify-content:center;flex-wrap:wrap;"></div>
-      </footer></div>
+      </footer>
+    </div>
   </section>
 
   <!-- ==================== MODULE 2: PROCTORED STUDENT CBT GATE ==================== -->
   <section id="studentView" class="hidden">
     <div class="student-gate-card">
-      <div class="hero-badge">🔒 <span data-i18n="stuBadge">LIVE SERVER-VERIFIED PROCTORED CBT</span></div>
+      <div class="hero-badge">&#128274; <span data-i18n="stuBadge">LIVE SERVER-VERIFIED PROCTORED CBT</span></div>
       <h2 style="font-size:1.45rem;margin-bottom:6px;" data-i18n="stuTitle">Student Exam Login</h2>
       <p style="color:var(--text-2);font-size:0.88rem;margin:0 0 16px;" data-i18n="stuSub">Enter your Roll Number &amp; One-Time PIN issued by your teacher. Verification runs live against Cloud Sheets.</p>
       <div class="form-grid">
         <div class="field"><label data-i18n="lblRollNo">Roll Number</label><input class="inp" id="stuRollInp" placeholder="e.g. 101" autocomplete="off"></div>
         <div class="field"><label data-i18n="lblPin">One-Time PIN</label><input class="inp" id="stuPinInp" type="password" placeholder="6-digit PIN" autocomplete="off"></div>
       </div>
-      <div class="field" style="margin-top:12px;"><label data-i18n="lblSelectPaper">Select Assessment Paper</label><select class="sel" id="stuSubjectSel"><option value="sub_mwvgmj6d_dqflv">DSSSB TGT Computer Science (80 Qs)</option></select></div>
+      <div class="field" style="margin-top:12px;"><label data-i18n="lblSelectPaper">Select Assessment Paper</label><select class="sel" id="stuSubjectSel"></select></div>
       <div id="stuVerifyMsg" style="margin-top:12px;font-size:0.86rem;font-weight:700;"></div>
       <div style="display:flex;gap:10px;margin-top:16px;flex-wrap:wrap;">
-        <button class="btn btn-ghost" id="btnStuVerify" type="button">🔍 <span data-i18n="btnVerifyPin">Verify Roll &amp; PIN Live</span></button>
-        <button class="btn btn-3d hidden" id="btnStuStartExam" style="flex:1;" type="button">🚀 <span data-i18n="btnStartProCbt">Start Fullscreen Pro CBT</span></button>
+        <button class="btn btn-ghost" id="btnStuVerify" type="button">&#128269; <span data-i18n="btnVerifyPin">Verify Roll &amp; PIN Live</span></button>
+        <button class="btn btn-3d hidden" id="btnStuStartExam" style="flex:1;" type="button">&#128640; <span data-i18n="btnStartProCbt">Start Fullscreen Pro CBT</span></button>
       </div>
     </div>
   </section>
@@ -808,9 +799,9 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
           <div id="scSubMeta" style="font-size:0.84rem;color:var(--text-2);"></div>
         </div>
         <div style="display:flex;gap:8px;flex-wrap:wrap;">
-          <button class="btn btn-gold btn-sm" id="btnRetakeWrong" type="button">🔄 <span data-i18n="btnRetakeWrong">Retake Wrong &amp; Skipped</span></button>
-          <button class="btn btn-ghost btn-sm" id="btnPrintScore" type="button">🖨️ Print / PDF</button>
-          <button class="btn btn-3d btn-sm" id="btnBackToPortal" type="button">← <span data-i18n="btnBackHome">Back to Portal</span></button>
+          <button class="btn btn-gold btn-sm" id="btnRetakeWrong" type="button">&#128260; <span data-i18n="btnRetakeWrong">Retake Wrong &amp; Skipped</span></button>
+          <button class="btn btn-ghost btn-sm" id="btnPrintScore" type="button">&#128424;&#65039; Print / PDF</button>
+          <button class="btn btn-3d btn-sm" id="btnBackToPortal" type="button">&#8592; <span data-i18n="btnBackHome">Back to Portal</span></button>
         </div>
       </div>
       <div id="scCloudBadge" class="dup-banner hidden"></div>
@@ -824,7 +815,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
           <button class="pill-btn" data-rf="wrong" type="button">Wrong</button>
           <button class="pill-btn" data-rf="skipped" type="button">Skipped</button>
           <button class="pill-btn" data-rf="correct" type="button">Correct</button>
-          <button class="pill-btn" data-rf="trap" type="button">Trap ≥60s</button>
+          <button class="pill-btn" data-rf="trap" type="button">Trap &ge;60s</button>
         </div>
         <input class="inp" id="scSearchInp" style="max-width:240px;" placeholder="Filter review questions...">
       </div>
@@ -836,38 +827,38 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
   <section id="adminView" class="admin-hidden">
     <div id="adminPublishBar">
       <div>
-        <div style="font-weight:900;font-size:0.96rem;">⚡ BEAST MODE ADMIN COMMAND <span id="admRevBadge" style="opacity:0.85;font-size:0.8rem;">(Rev #2)</span></div>
-        <div id="admPendingText" style="font-size:0.78rem;color:#bae6fd;"><span style="color:#6ee7b7;">✓ Confirmed Live Synced (Rev #2)</span> — Reflected immediately on frontend.</div>
+        <div style="font-weight:900;font-size:0.96rem;">&#9889; BEAST MODE ADMIN COMMAND <span id="admRevBadge" style="opacity:0.85;font-size:0.8rem;">(Rev #1)</span></div>
+        <div id="admPendingText" style="font-size:0.78rem;color:#bae6fd;">All changes synced live with Cloud &amp; Frontend.</div>
       </div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
-        <button class="btn btn-ghost btn-sm" id="btnAdmRollback" type="button" style="background:rgba(255,255,255,0.12);color:#fff;border-color:rgba(255,255,255,0.25);">↺ Rollback</button>
-        <button class="btn btn-emerald btn-sm" id="btnSubmitPublishLive" type="button" style="min-height:38px;padding:7px 16px;">✔️ SUBMIT &amp; PUBLISH LIVE</button>
-        <button class="btn btn-rose btn-sm" id="btnAdminLock" type="button">🔒 Lock</button>
+        <button class="btn btn-ghost btn-sm" id="btnAdmRollback" type="button" style="background:rgba(255,255,255,0.12);color:#fff;border-color:rgba(255,255,255,0.25);">&#8634; Rollback</button>
+        <button class="btn btn-emerald btn-sm" id="btnSubmitPublishLive" type="button" style="min-height:38px;padding:7px 16px;">&#10004;&#65039; SUBMIT &amp; PUBLISH LIVE</button>
+        <button class="btn btn-rose btn-sm" id="btnAdminLock" type="button">&#128274; Lock</button>
       </div>
     </div>
 
     <div class="adm-tabs" id="adminTabs">
-      <button class="adm-tab-btn" data-tab="controls" type="button">🎫 Live ON/OFF &amp; Boss</button>
-      <button class="adm-tab-btn" data-tab="uploader" type="button">📤 Power Detector</button>
-      <button class="adm-tab-btn" data-tab="studio" type="button">📝 Vault &amp; Translator</button>
-      <button class="adm-tab-btn" data-tab="brand" type="button">🎨 3D Visual, Photo &amp; Fonts</button>
-      <button class="adm-tab-btn" data-tab="roster" type="button">👥 Roster &amp; PINs</button>
-      <button class="adm-tab-btn" data-tab="cloud" type="button">☁️ Sheets &amp; Packs CRUD</button>
-      <button class="adm-tab-btn active" data-tab="seo" type="button">🔎 Manual SEO Exporter</button>
-      <button class="adm-tab-btn" data-tab="security" type="button">🔐 Auth &amp; Security</button>
+      <button class="adm-tab-btn active" data-tab="controls" type="button">&#127915; Live ON/OFF &amp; Boss</button>
+      <button class="adm-tab-btn" data-tab="uploader" type="button">&#128228; Power Detector</button>
+      <button class="adm-tab-btn" data-tab="studio" type="button">&#128221; Vault &amp; Translator</button>
+      <button class="adm-tab-btn" data-tab="brand" type="button">&#127912; 3D Visual, Photo &amp; Fonts</button>
+      <button class="adm-tab-btn" data-tab="roster" type="button">&#128101; Roster &amp; PINs</button>
+      <button class="adm-tab-btn" data-tab="cloud" type="button">&#9729;&#65039; Sheets &amp; Packs CRUD</button>
+      <button class="adm-tab-btn" data-tab="seo" type="button">&#128270; Manual SEO Exporter</button>
+      <button class="adm-tab-btn" data-tab="security" type="button">&#128272; Auth &amp; Security</button>
     </div>
 
     <!-- TAB 1: 3-LEVEL LIVE ON/OFF CONTROL MATRIX & BOSS LIMITS -->
-    <div class="adm-pane hidden" id="pane-controls">
+    <div class="adm-pane" id="pane-controls">
       <div class="adm-card">
         <h3 style="margin-bottom:10px;">Level 1 — Master Website Kill Switch (Instant Cloud Enforcement)</h3>
         <div class="form-grid">
           <div class="field">
             <label>Website Live Status</label>
             <select class="sel" id="ctrlSiteMode">
-              <option value="LIVE">🟢 LIVE — Public &amp; Students Active</option>
-              <option value="MAINTENANCE">🔴 MAINTENANCE OFF — Offline Screen to Visitors</option>
-              <option value="PRIVATE">🔒 PRIVATE — Admin Only Access</option>
+              <option value="LIVE">&#128994; LIVE — Public &amp; Students Active</option>
+              <option value="MAINTENANCE">&#128308; MAINTENANCE OFF — Offline Screen to Visitors</option>
+              <option value="PRIVATE">&#128274; PRIVATE — Admin Only Access</option>
             </select>
           </div>
           <div class="field"><label>Maintenance / Offline Heading</label><input class="inp" id="ctrlOfflineTitle" value="Portal Under Upgrade"></div>
@@ -878,77 +869,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 
       <div class="adm-card">
         <h3 style="margin-bottom:10px;">Level 2 — Module &amp; UI Feature Switches</h3>
-        <div class="toggle-grid" id="featureToggleGrid">
-      <label class="toggle-row">
-        <span>Practice Portal Tab</span>
-        <input type="checkbox" data-feat="practicePortal" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>Student CBT Tab</span>
-        <input type="checkbox" data-feat="studentPortal" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>3D Sparkle Intro</span>
-        <input type="checkbox" data-feat="splashIntro" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>Hero Spotlight</span>
-        <input type="checkbox" data-feat="hero" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>Notice &amp; Countdown</span>
-        <input type="checkbox" data-feat="notice" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>Shayari Corner</span>
-        <input type="checkbox" data-feat="shayari" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>Photo Gallery</span>
-        <input type="checkbox" data-feat="gallery" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>30-Q Visual Set Grid</span>
-        <input type="checkbox" data-feat="setGrid" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>Website Footer</span>
-        <input type="checkbox" data-feat="footer" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>Watermark Stamp</span>
-        <input type="checkbox" data-feat="watermark" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>Cloud Pack Dropdown</span>
-        <input type="checkbox" data-feat="cloudLibrary" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>Forced Mobile Fullscreen</span>
-        <input type="checkbox" data-feat="proFullscreenLock" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>3D Quality Selector</span>
-        <input type="checkbox" data-feat="qualitySwitcher" checked="">
-      </label>
-    
-      <label class="toggle-row">
-        <span>Theme Switcher</span>
-        <input type="checkbox" data-feat="themeSwitcher" checked="">
-      </label>
-    </div>
+        <div class="toggle-grid" id="featureToggleGrid"></div>
       </div>
 
       <div class="adm-card">
@@ -974,35 +895,9 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       <div class="adm-card">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
           <h3>Level 3 — Subject, Cloud Pack &amp; Micro-Unit Visibility Matrix</h3>
-          <button class="btn btn-ghost btn-sm" id="btnRefreshUnitMatrix" type="button">🔄 Refresh Matrix</button>
+          <button class="btn btn-ghost btn-sm" id="btnRefreshUnitMatrix" type="button">&#128260; Refresh Matrix</button>
         </div>
-        <div id="unitVisibilityContainer" style="display:grid;gap:10px;"><div style="padding:10px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);">
-        <div style="font-weight:800;margin-bottom:8px;">☁️ Cloud Library Packs Visibility</div>
-        <div class="toggle-grid">
-          <label class="toggle-row"><span>DSSSB TGT Computer Science (80)</span>
-            <input type="checkbox" data-vis-pack="C_LANGUAGE" checked="">
-          </label>
-          <label class="toggle-row"><span>UP PGT CIVICS (465)</span>
-            <input type="checkbox" data-vis-pack="UP_PGT_CIVICS" checked="">
-          </label>
-          <label class="toggle-row"><span>DSSSB TGT Computer Science (80)</span>
-            <input type="checkbox" data-vis-pack="DSSSB_TGT_Computer_Sci" checked="">
-          </label></div></div><div style="padding:10px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);">
-        <label style="display:flex;align-items:center;justify-content:space-between;font-weight:800;margin-bottom:8px;cursor:pointer;">
-          <span>📚 DSSSB TGT Computer Science (80 Qs)</span>
-          <span><input type="checkbox" data-vis-sub="sub_mwvgmj6d_dqflv" checked=""> LIVE</span>
-        </label>
-        <div class="toggle-grid"><label class="toggle-row" style="background:var(--surface);"><span>MOCK-2: Structs, Padding, enum &amp; Strings (15)</span>
-            <input type="checkbox" data-vis-unit="sub_mwvgmj6d_dqflv::MOCK-2: Structs, Padding, enum &amp; Strings" checked="">
-          </label><label class="toggle-row" style="background:var(--surface);"><span>PYQ-1: Scope, Functions &amp; Arrays (23)</span>
-            <input type="checkbox" data-vis-unit="sub_mwvgmj6d_dqflv::PYQ-1: Scope, Functions &amp; Arrays" checked="">
-          </label><label class="toggle-row" style="background:var(--surface);"><span>PYQ-2: Pointers, Strings &amp; I/O (18)</span>
-            <input type="checkbox" data-vis-unit="sub_mwvgmj6d_dqflv::PYQ-2: Pointers, Strings &amp; I/O" checked="">
-          </label><label class="toggle-row" style="background:var(--surface);"><span>MOCK-1: Pointers, const &amp; DMA (15)</span>
-            <input type="checkbox" data-vis-unit="sub_mwvgmj6d_dqflv::MOCK-1: Pointers, const &amp; DMA" checked="">
-          </label><label class="toggle-row" style="background:var(--surface);"><span>PYQ-3: Structs, Storage &amp; Files (9)</span>
-            <input type="checkbox" data-vis-unit="sub_mwvgmj6d_dqflv::PYQ-3: Structs, Storage &amp; Files" checked="">
-          </label></div></div></div>
+        <div id="unitVisibilityContainer" style="display:grid;gap:10px;"></div>
       </div>
     </div>
 
@@ -1024,23 +919,23 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
           </div>
         </div>
         <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:10px;font-size:0.82rem;font-weight:700;">
-          <label><input type="checkbox" id="chkAutoCaps" checked=""> Auto-Format Subject/Pack/Unit in ALL CAPS</label>
-          <label><input type="checkbox" id="chkAutoSanitize" checked=""> Auto-Strip Option Hints</label>
-          <label><input type="checkbox" id="chkAutoDetectCode" checked=""> Auto-Extract Unfenced Code Blocks</label>
+          <label><input type="checkbox" id="chkAutoCaps" checked> Auto-Format Subject/Pack/Unit in ALL CAPS</label>
+          <label><input type="checkbox" id="chkAutoSanitize" checked> Auto-Strip Option Hints</label>
+          <label><input type="checkbox" id="chkAutoDetectCode" checked> Auto-Extract Unfenced Code Blocks</label>
         </div>
         <div class="drop-zone" id="upDropZone">
-          <div style="font-size:1.8rem;">📂</div>
+          <div style="font-size:1.8rem;">&#128194;</div>
           <div style="font-weight:800;margin:4px 0;">Drop .XLSX, .CSV, .DOCX, .PDF, .TXT, or .JSON Here — or Click to Browse</div>
           <div style="font-size:0.8rem;color:var(--text-2);">Supports Word Tables, Hindi Devanagari, Inline Options, Bottom Answer Keys &amp; Shared Passages</div>
-          <input type="file" id="upFileInput" accept=".xlsx,.csv,.docx,.pdf,.txt,.json" multiple="" class="hidden">
+          <input type="file" id="upFileInput" accept=".xlsx,.csv,.docx,.pdf,.txt,.json" multiple class="hidden">
         </div>
         <div style="margin-top:10px;">
           <label style="font-size:0.76rem;font-weight:800;color:var(--text-2);">OR PASTE RAW QUESTIONS (ENGLISH / HINDI / CODE / ANSWER KEY)</label>
           <textarea class="txt" id="upPasteArea" placeholder="Paste questions directly here and click Detect..."></textarea>
           <div style="display:flex;gap:8px;margin-top:8px;flex-wrap:wrap;">
-            <button class="btn btn-3d btn-sm" id="btnParsePaste" type="button">⚡ Run Power Detector</button>
-            <button class="btn btn-ghost btn-sm" id="btnAutoFixStaged" type="button">🔧 1-Click Auto-Fix All</button>
-            <button class="btn btn-gold btn-sm" id="btnTranslateStaged" type="button">🌐 Translate Staged (EN ↔ हिंदी)</button>
+            <button class="btn btn-3d btn-sm" id="btnParsePaste" type="button">&#9889; Run Power Detector</button>
+            <button class="btn btn-ghost btn-sm" id="btnAutoFixStaged" type="button">&#128295; 1-Click Auto-Fix All</button>
+            <button class="btn btn-gold btn-sm" id="btnTranslateStaged" type="button">&#127760; Translate Staged (EN &harr; हिंदी)</button>
           </div>
         </div>
       </div>
@@ -1049,8 +944,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:8px;">
           <h3 id="upStatsTitle">Pre-Test Scan Report</h3>
           <div style="display:flex;gap:8px;flex-wrap:wrap;">
-            <button class="btn btn-emerald btn-sm" id="btnCommitClean" type="button">✅ Commit Clean to Vault</button>
-            <button class="btn btn-3d btn-sm" id="btnCommitAndPublish" type="button">☁️ Commit + Publish Pack Live</button>
+            <button class="btn btn-emerald btn-sm" id="btnCommitClean" type="button">&#9989; Commit Clean to Vault</button>
+            <button class="btn btn-3d btn-sm" id="btnCommitAndPublish" type="button">&#9729;&#65039; Commit + Publish Pack Live</button>
             <button class="btn btn-ghost btn-sm" id="btnClearStaged" type="button">Clear</button>
           </div>
         </div>
@@ -1071,15 +966,15 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
           <h3>Question Vault Studio (Paginated Zero-Lag Editor)</h3>
           <div style="display:flex;gap:7px;flex-wrap:wrap;">
-            <button class="btn btn-gold btn-sm" id="btnTranslateSubject" type="button">🌐 Translate Subject (EN → हिंदी)</button>
+            <button class="btn btn-gold btn-sm" id="btnTranslateSubject" type="button">&#127760; Translate Subject (EN &rarr; हिंदी)</button>
             <button class="btn btn-3d btn-sm" id="btnAddSingleQ" type="button">+ Add Question</button>
-            <button class="btn btn-ghost btn-sm" id="btnExportVaultJson" type="button">📥 Export JSON</button>
-            <button class="btn btn-rose btn-sm" id="btnDeleteSubject" type="button">🗑️ Delete Subject</button>
+            <button class="btn btn-ghost btn-sm" id="btnExportVaultJson" type="button">&#128229; Export JSON</button>
+            <button class="btn btn-rose btn-sm" id="btnDeleteSubject" type="button">&#128465;&#65039; Delete Subject</button>
           </div>
         </div>
         <div class="form-grid" style="margin-bottom:10px;">
-          <div class="field"><label>Subject</label><select class="sel" id="stSubjectSel"><option value="sub_mwvgmj6d_dqflv">DSSSB TGT Computer Science (80 Qs)</option></select></div>
-          <div class="field"><label>Filter Unit</label><select class="sel" id="stUnitSel"><option value="ALL">All Units (80)</option><option value="MOCK-2: Structs, Padding, enum &amp; Strings">MOCK-2: Structs, Padding, enum &amp; Strings</option><option value="PYQ-1: Scope, Functions &amp; Arrays">PYQ-1: Scope, Functions &amp; Arrays</option><option value="PYQ-2: Pointers, Strings &amp; I/O">PYQ-2: Pointers, Strings &amp; I/O</option><option value="MOCK-1: Pointers, const &amp; DMA">MOCK-1: Pointers, const &amp; DMA</option><option value="PYQ-3: Structs, Storage &amp; Files">PYQ-3: Structs, Storage &amp; Files</option></select></div>
+          <div class="field"><label>Subject</label><select class="sel" id="stSubjectSel"></select></div>
+          <div class="field"><label>Filter Unit</label><select class="sel" id="stUnitSel"><option value="ALL">All Units</option></select></div>
           <div class="field"><label>Search Question</label><input class="inp" id="stSearchInp" placeholder="Search text..."></div>
         </div>
         <div class="tbl-wrap">
@@ -1088,11 +983,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
             <tbody id="stTbody"></tbody>
           </table>
         </div>
-        <div id="stPager" style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:0.82rem;"><span>Page 1 / 2 (80 Qs)</span>
-      <div style="display:flex;gap:6px;">
-        <button class="btn btn-ghost btn-sm" id="btnStPrev" disabled="" type="button">← Prev</button>
-        <button class="btn btn-ghost btn-sm" id="btnStNext" type="button">Next →</button>
-      </div></div>
+        <div id="stPager" style="display:flex;justify-content:space-between;align-items:center;margin-top:10px;font-size:0.82rem;"></div>
       </div>
     </div>
 
@@ -1104,7 +995,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
             <h3 style="margin-bottom:10px;">Brand Identity &amp; Scoped Colors</h3>
             <div class="form-grid">
               <div class="field"><label>Brand Name</label><input class="inp" id="brName" value="TheGuru-EXamO"></div>
-              <div class="field"><label>Hero Badge</label><input class="inp" id="brBadge" value="PRO CBT • BILINGUAL ENGINE"></div>
+              <div class="field"><label>Hero Badge</label><input class="inp" id="brBadge" value="PRO CBT &bull; BILINGUAL ENGINE"></div>
               <div class="field"><label>Primary Color (Light Theme)</label><input class="inp" id="brPrimary" type="color" value="#1e3a8a"></div>
               <div class="field"><label>Accent Color (Light Theme)</label><input class="inp" id="brAccent" type="color" value="#0ea5e9"></div>
               <div class="field"><label>Exam Countdown Target</label><input class="inp" id="brCountdownDate" type="datetime-local"></div>
@@ -1114,14 +1005,14 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
             <div class="field" style="margin-top:8px;"><label>Hero Subtitle</label><input class="inp" id="brHeroSub" value="High-speed bilingual mock tests, pinch-zoom code viewer &amp; forensic analytics."></div>
             <div class="field" style="margin-top:8px;"><label>Notice Ribbon Text</label><input class="inp" id="brNotice" value="Welcome to TheGuru-EXamO v6.0 — Select any Subject &amp; Set below."></div>
             <div class="field" style="margin-top:8px;"><label>Shayari / Motivation Quote</label><textarea class="txt" id="brShayari" style="min-height:58px;"></textarea></div>
-            <div class="field" style="margin-top:8px;"><label>Footer Text</label><input class="inp" id="brFooter" value="TheGuru-EXamO Pro v6.0 • GuruDatt Kaushik"></div>
+            <div class="field" style="margin-top:8px;"><label>Footer Text</label><input class="inp" id="brFooter" value="TheGuru-EXamO Pro v6.0 &bull; GuruDatt Kaushik"></div>
           </div>
 
           <div class="adm-card">
-            <h3 style="margin-bottom:10px;">Photo Manager (Device → Drive + Google Drive Picker + Manual Size)</h3>
+            <h3 style="margin-bottom:10px;">Photo Manager (Device &rarr; Drive + Google Drive Picker + Manual Size)</h3>
             <div style="display:flex;gap:8px;flex-wrap:wrap;margin-bottom:10px;">
-              <button class="btn btn-3d btn-sm" id="btnUploadHeroDevice" type="button">📷 Upload Photo (Auto-Saves to Drive)</button>
-              <button class="btn btn-gold btn-sm" id="btnPickHeroDrive" type="button">📁 Pick from Google Drive</button>
+              <button class="btn btn-3d btn-sm" id="btnUploadHeroDevice" type="button">&#128247; Upload Photo (Auto-Saves to Drive)</button>
+              <button class="btn btn-gold btn-sm" id="btnPickHeroDrive" type="button">&#128193; Pick from Google Drive</button>
               <button class="btn btn-emerald btn-sm" id="btnAddGalleryPhoto" type="button">+ Add Gallery Photo</button>
               <button class="btn btn-rose btn-sm" id="btnRemoveHeroPhoto" type="button">Remove Hero Photo</button>
               <input type="file" id="heroPhotoFileInp" accept="image/*" class="hidden">
@@ -1133,8 +1024,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
               <div class="field"><label>Border Radius (<span id="lblHeroR">20</span>px)</label><input id="rngHeroR" type="range" min="0" max="200" value="20" style="width:100%;"></div>
               <div class="field"><label>Hero Layout Direction</label>
                 <select class="sel" id="selHeroDir">
-                  <option value="row">Text Left • Photo Right</option>
-                  <option value="row-reverse">Photo Left • Text Right</option>
+                  <option value="row">Text Left &bull; Photo Right</option>
+                  <option value="row-reverse">Photo Left &bull; Text Right</option>
                   <option value="column">Photo Below Text (Centered)</option>
                   <option value="column-reverse">Photo Above Text (Banner)</option>
                 </select>
@@ -1144,50 +1035,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
           </div>
 
           <div class="adm-card">
-            <h3 style="margin-bottom:10px;">Drag-and-Drop Section Order (or Use ↑ ↓ Arrows)</h3>
-            <div class="drag-list" id="sectionDragList">
-      <div class="drag-item" draggable="true" data-sidx="0">
-        <span>☰ 🌟 Hero Spotlight &amp; Photo</span>
-        <div style="display:flex;gap:4px;">
-          <button class="btn btn-ghost btn-sm" data-move-sec="0" data-dir="-1" disabled="" type="button">↑</button>
-          <button class="btn btn-ghost btn-sm" data-move-sec="0" data-dir="1" type="button">↓</button>
-        </div>
-      </div>
-      <div class="drag-item" draggable="true" data-sidx="1">
-        <span>☰ 📢 Notice &amp; Countdown Ribbon</span>
-        <div style="display:flex;gap:4px;">
-          <button class="btn btn-ghost btn-sm" data-move-sec="1" data-dir="-1" type="button">↑</button>
-          <button class="btn btn-ghost btn-sm" data-move-sec="1" data-dir="1" type="button">↓</button>
-        </div>
-      </div>
-      <div class="drag-item" draggable="true" data-sidx="2">
-        <span>☰ ✨ Shayari / Quote Strip</span>
-        <div style="display:flex;gap:4px;">
-          <button class="btn btn-ghost btn-sm" data-move-sec="2" data-dir="-1" type="button">↑</button>
-          <button class="btn btn-ghost btn-sm" data-move-sec="2" data-dir="1" type="button">↓</button>
-        </div>
-      </div>
-      <div class="drag-item" draggable="true" data-sidx="3">
-        <span>☰ 🖼️ Custom Photo Gallery</span>
-        <div style="display:flex;gap:4px;">
-          <button class="btn btn-ghost btn-sm" data-move-sec="3" data-dir="-1" type="button">↑</button>
-          <button class="btn btn-ghost btn-sm" data-move-sec="3" data-dir="1" type="button">↓</button>
-        </div>
-      </div>
-      <div class="drag-item" draggable="true" data-sidx="4">
-        <span>☰ 📚 Unified Command &amp; Set Grid</span>
-        <div style="display:flex;gap:4px;">
-          <button class="btn btn-ghost btn-sm" data-move-sec="4" data-dir="-1" type="button">↑</button>
-          <button class="btn btn-ghost btn-sm" data-move-sec="4" data-dir="1" type="button">↓</button>
-        </div>
-      </div>
-      <div class="drag-item" draggable="true" data-sidx="5">
-        <span>☰ 📌 Website Footer</span>
-        <div style="display:flex;gap:4px;">
-          <button class="btn btn-ghost btn-sm" data-move-sec="5" data-dir="-1" type="button">↑</button>
-          <button class="btn btn-ghost btn-sm" data-move-sec="5" data-dir="1" disabled="" type="button">↓</button>
-        </div>
-      </div></div>
+            <h3 style="margin-bottom:10px;">Drag-and-Drop Section Order (or Use &uarr; &darr; Arrows)</h3>
+            <div class="drag-list" id="sectionDragList"></div>
           </div>
 
           <div class="adm-card">
@@ -1260,19 +1109,12 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
           <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;flex-wrap:wrap;gap:6px;">
             <h3>Live Website Preview</h3>
             <div style="display:flex;gap:6px;">
-              <button class="btn btn-ghost btn-sm" id="btnPrevDesktop" type="button">💻 Desktop</button>
-              <button class="btn btn-ghost btn-sm" id="btnPrevMobile" type="button">📱 Mobile</button>
-              <button class="btn btn-3d btn-sm" id="btnReplayIntro" type="button">✨ Replay 3D Intro</button>
+              <button class="btn btn-ghost btn-sm" id="btnPrevDesktop" type="button">&#128187; Desktop</button>
+              <button class="btn btn-ghost btn-sm" id="btnPrevMobile" type="button">&#128241; Mobile</button>
+              <button class="btn btn-3d btn-sm" id="btnReplayIntro" type="button">&#10024; Replay 3D Intro</button>
             </div>
           </div>
-          <div class="preview-frame-wrap" id="brandPreviewFrame"><div class="seamless-canvas"><div style="padding:14px;border-bottom:1px solid var(--border);display:flex;flex-direction:row;gap:12px;align-items:center;justify-content:space-between;flex-wrap:wrap;">
-        <div style="flex:1;min-width:160px;">
-          <div class="hero-badge" style="font-size:0.66rem;">PRO CBT • BILINGUAL ENGINE</div>
-          <div style="font-weight:900;font-size:1.1rem;">TheGuru-EXamO Assessment Portal</div>
-          <div style="font-size:0.78rem;color:var(--text-2);margin-top:4px;">High-speed bilingual mock tests, pinch-to-zoom code &amp; match viewer, and instant forensic analytics.</div>
-        </div>
-        
-      </div><div class="notice-bar" style="font-size:0.78rem;border-bottom:1px solid var(--border);">Welcome to TheGuru-EXamO v6.0 — Select any Subject &amp; Set below to begin.</div><div class="shayari-box" style="font-size:0.88rem;border-bottom:1px solid var(--border);">“मंज़िल उन्हीं को मिलती है, जिनके सपनों में जान होती है; पंखों से कुछ नहीं होता, हौसलों से उड़ान होती है।”</div><div style="padding:12px;border-bottom:1px solid var(--border);font-size:0.8rem;font-weight:700;color:var(--primary-2);">📚 Unified Subject Filter + 30-Q Visual Set Grid</div><div style="padding:10px;text-align:center;font-size:0.74rem;color:var(--text-2);">TheGuru-EXamO Pro v6.0 • Curated by GuruDatt Kaushik</div></div></div>
+          <div class="preview-frame-wrap" id="brandPreviewFrame"></div>
         </div>
       </div>
     </div>
@@ -1283,10 +1125,10 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:12px;">
           <h3>Student Roster &amp; Live One-Time PINs</h3>
           <div style="display:flex;gap:7px;flex-wrap:wrap;">
-            <button class="btn btn-ghost btn-sm" id="btnPullRoster" type="button">⬇️ Pull Live</button>
-            <button class="btn btn-gold btn-sm" id="btnRegenAllPins" type="button">🔄 Rotate All PINs</button>
-            <button class="btn btn-ghost btn-sm" id="btnPrintPinSlips" type="button">🖨️ Print PIN Slips</button>
-            <button class="btn btn-emerald btn-sm" id="btnPushRosterNow" type="button">☁️ Sync Roster Live Now</button>
+            <button class="btn btn-ghost btn-sm" id="btnPullRoster" type="button">&#11015;&#65039; Pull Live</button>
+            <button class="btn btn-gold btn-sm" id="btnRegenAllPins" type="button">&#128260; Rotate All PINs</button>
+            <button class="btn btn-ghost btn-sm" id="btnPrintPinSlips" type="button">&#128424;&#65039; Print PIN Slips</button>
+            <button class="btn btn-emerald btn-sm" id="btnPushRosterNow" type="button">&#9729;&#65039; Sync Roster Live Now</button>
           </div>
         </div>
         <div class="form-grid" style="margin-bottom:12px;">
@@ -1315,21 +1157,21 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
           <div class="field"><label>Master Spreadsheet ID (Auto-Detected)</label><input class="inp" id="cloudSheetId" placeholder="Auto-filled on Ping"></div>
         </div>
         <div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap;">
-          <button class="btn btn-3d btn-sm" id="btnSavePingBridge" type="button">⚡ Save &amp; Test v6.0 Bridge</button>
-          <button class="btn btn-ghost btn-sm" id="btnForceCloudPull" type="button">🔄 Force Full Cloud Pull</button>
-          <a class="btn btn-ghost btn-sm" id="lnkOpenSheet" target="_blank" rel="noopener" href="https://docs.google.com/spreadsheets/d/1oM1G9p6Ndudya7jG0vEVYdwRvetm8N7vzfZAIQr0Kv0/edit">📊 Open Master Sheet</a>
+          <button class="btn btn-3d btn-sm" id="btnSavePingBridge" type="button">&#9889; Save &amp; Test v6.0 Bridge</button>
+          <button class="btn btn-ghost btn-sm" id="btnForceCloudPull" type="button">&#128260; Force Full Cloud Pull</button>
+          <a class="btn btn-ghost btn-sm hidden" id="lnkOpenSheet" target="_blank" rel="noopener">&#128202; Open Master Sheet</a>
         </div>
-        <div id="bridgeHealthOut" style="margin-top:8px;font-size:0.82rem;color:var(--text-2);">✅ <b>Connected: TheGuru-Bridge v6.0.0</b> • Rev #1 • Sheet: <a href="https://docs.google.com/spreadsheets/d/1oM1G9p6Ndudya7jG0vEVYdwRvetm8N7vzfZAIQr0Kv0/edit" target="_blank">TheGuru-EXamO_Master_Sheet</a></div>
+        <div id="bridgeHealthOut" style="margin-top:8px;font-size:0.82rem;color:var(--text-2);"></div>
       </div>
 
       <div class="adm-card">
         <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;margin-bottom:10px;">
           <h3>Published Cloud Packs (Publish / Copy Link / Delete from Sheet + Drive)</h3>
           <div style="display:flex;gap:7px;flex-wrap:wrap;">
-            <select class="tool-sel" id="pubFromSubjectSel"><option value="sub_mwvgmj6d_dqflv">DSSSB TGT Computer Science (80 Qs)</option></select>
+            <select class="tool-sel" id="pubFromSubjectSel"></select>
             <input class="inp" id="pubNewPackId" style="width:170px;" placeholder="PACK_ID">
-            <button class="btn btn-emerald btn-sm" id="btnPublishPackNow" type="button">☁️ Publish Pack</button>
-            <button class="btn btn-ghost btn-sm" id="btnRefreshPacks" type="button">🔄 Refresh</button>
+            <button class="btn btn-emerald btn-sm" id="btnPublishPackNow" type="button">&#9729;&#65039; Publish Pack</button>
+            <button class="btn btn-ghost btn-sm" id="btnRefreshPacks" type="button">&#128260; Refresh</button>
           </div>
         </div>
         <div class="tbl-wrap">
@@ -1350,8 +1192,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
               <option value="Published_Packs">Published_Packs</option>
               <option value="Violations">Violations</option>
             </select>
-            <button class="btn btn-ghost btn-sm" id="btnLoadSheetTab" type="button">🔄 Load Tab</button>
-            <button class="btn btn-rose btn-sm" id="btnDeleteSelectedRows" type="button">🗑️ Delete Selected Rows</button>
+            <button class="btn btn-ghost btn-sm" id="btnLoadSheetTab" type="button">&#128260; Load Tab</button>
+            <button class="btn btn-rose btn-sm" id="btnDeleteSelectedRows" type="button">&#128465;&#65039; Delete Selected Rows</button>
           </div>
         </div>
         <div class="tbl-wrap">
@@ -1364,7 +1206,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     </div>
 
     <!-- TAB 7: FIXED CLEAN MANUAL SEO & GITHUB EXPORTER -->
-    <div class="adm-pane" id="pane-seo">
+    <div class="adm-pane hidden" id="pane-seo">
       <div class="adm-card">
         <h3 style="margin-bottom:8px;">Clean Manual SEO &amp; GitHub Pages Exporter (Zero PIN/DOM Leaks)</h3>
         <p style="font-size:0.84rem;color:var(--text-2);margin:0 0 12px;">Bakes your Bridge URL, SEO tags, GSC verification tag &amp; JSON-LD into a clean reset HTML template with Admin hidden and all runtime PIN/table data stripped.</p>
@@ -1381,10 +1223,10 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
         </div>
         <div class="field" style="margin-top:10px;"><label>Meta Description</label><textarea class="txt" id="seoDesc" style="min-height:60px;"></textarea></div>
         <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
-          <button class="btn btn-ghost btn-sm" id="btnInspectSeo" type="button">🔍 Inspect Baked Head Before Download</button>
-          <button class="btn btn-3d btn-sm" id="btnDownloadIndex" type="button">📥 Download Clean index.html</button>
-          <button class="btn btn-ghost btn-sm" id="btnDownloadRobots" type="button">📄 Download robots.txt</button>
-          <button class="btn btn-ghost btn-sm" id="btnDownloadSitemap" type="button">🗺️ Download sitemap.xml</button>
+          <button class="btn btn-ghost btn-sm" id="btnInspectSeo" type="button">&#128269; Inspect Baked Head Before Download</button>
+          <button class="btn btn-3d btn-sm" id="btnDownloadIndex" type="button">&#128229; Download Clean index.html</button>
+          <button class="btn btn-ghost btn-sm" id="btnDownloadRobots" type="button">&#128196; Download robots.txt</button>
+          <button class="btn btn-ghost btn-sm" id="btnDownloadSitemap" type="button">&#128506;&#65039; Download sitemap.xml</button>
         </div>
       </div>
     </div>
@@ -1399,8 +1241,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
           <div class="field"><label>New Password</label><input class="inp" id="secNewPw" type="password" placeholder="Min 6 chars"></div>
         </div>
         <div style="display:flex;gap:8px;margin-top:12px;flex-wrap:wrap;">
-          <button class="btn btn-3d btn-sm" id="btnUpdateAdminCreds" type="button">🔑 Update Cloud Admin Login</button>
-          <button class="btn btn-gold btn-sm" id="btnRotateRecovery" type="button">🔄 Rotate Recovery Code</button>
+          <button class="btn btn-3d btn-sm" id="btnUpdateAdminCreds" type="button">&#128273; Update Cloud Admin Login</button>
+          <button class="btn btn-gold btn-sm" id="btnRotateRecovery" type="button">&#128260; Rotate Recovery Code</button>
         </div>
         <div id="secStatusOut" style="margin-top:10px;font-size:0.84rem;font-weight:700;"></div>
       </div>
@@ -1419,8 +1261,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       <button class="btn btn-sm hidden" id="btnExLangToggle" type="button">EN | हिंदी</button>
       <button class="btn btn-sm" id="btnExFontMinus" type="button">A-</button>
       <button class="btn btn-sm" id="btnExFontPlus" type="button">A+</button>
-      <button class="btn btn-sm" id="btnExPause" type="button">⏸️</button>
-      <button class="btn btn-sm" id="btnExPaletteToggle" type="button">☰ <span data-i18n="btnPalette">Palette</span></button>
+      <button class="btn btn-sm" id="btnExPause" type="button">&#9208;&#65039;</button>
+      <button class="btn btn-sm" id="btnExPaletteToggle" type="button">&#9776; <span data-i18n="btnPalette">Palette</span></button>
     </div>
   </div>
   <div class="exam-body">
@@ -1429,7 +1271,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     <aside id="examPalettePane" aria-label="Question Palette">
       <div class="pal-hdr">
         <span data-i18n="palTitle">Question Palette</span>
-        <button class="btn btn-rose btn-sm" id="btnExPaletteClose" type="button">✕ <span data-i18n="btnHide">Hide</span></button>
+        <button class="btn btn-rose btn-sm" id="btnExPaletteClose" type="button">&#10005; <span data-i18n="btnHide">Hide</span></button>
       </div>
       <div class="pal-legend" id="exPalLegend">
         <span><i class="pal-dot" style="background:#10b981;"></i><span data-i18n="legAns">Answered</span></span>
@@ -1438,23 +1280,23 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
         <span><i class="pal-dot" style="background:var(--bg-2);border:1px solid var(--border);"></i><span data-i18n="legUnv">Unvisited</span></span>
       </div>
       <div style="padding:6px 10px;border-bottom:1px solid var(--border);font-size:0.75rem;">
-        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;"><input type="checkbox" id="chkAutoHidePal" checked=""> <span data-i18n="lblAutoHidePal">Auto-hide palette after pick</span></label>
+        <label style="display:flex;align-items:center;gap:6px;cursor:pointer;"><input type="checkbox" id="chkAutoHidePal" checked> <span data-i18n="lblAutoHidePal">Auto-hide palette after pick</span></label>
       </div>
       <div class="pal-grid" id="exPalGrid"></div>
       <div class="pal-foot">
-        <button class="btn btn-ghost btn-sm" id="btnExFullPaper" type="button">📄 <span data-i18n="btnFullPaper">Full Question Paper</span></button>
-        <button class="btn btn-emerald btn-sm" id="btnExSubmitPal" type="button">✅ <span data-i18n="btnSubmitExam">Submit Exam</span></button>
+        <button class="btn btn-ghost btn-sm" id="btnExFullPaper" type="button">&#128196; <span data-i18n="btnFullPaper">Full Question Paper</span></button>
+        <button class="btn btn-emerald btn-sm" id="btnExSubmitPal" type="button">&#9989; <span data-i18n="btnSubmitExam">Submit Exam</span></button>
       </div>
     </aside>
   </div>
   <div class="exam-ftr">
     <div class="exam-ftr-group">
-      <button class="btn btn-ghost btn-sm" id="btnExPrev" type="button">← <span data-i18n="btnPrev">Prev</span></button>
+      <button class="btn btn-ghost btn-sm" id="btnExPrev" type="button">&larr; <span data-i18n="btnPrev">Prev</span></button>
       <button class="btn btn-ghost btn-sm" id="btnExClear" type="button"><span data-i18n="btnClear">Clear</span></button>
-      <button class="btn btn-gold btn-sm" id="btnExMark" type="button">🔖 <span data-i18n="btnMark">Mark</span></button>
+      <button class="btn btn-gold btn-sm" id="btnExMark" type="button">&#128278; <span data-i18n="btnMark">Mark</span></button>
     </div>
     <div class="exam-ftr-group">
-      <button class="btn btn-3d btn-sm" id="btnExNext" type="button"><span data-i18n="btnSaveNext">Save &amp; Next</span> →</button>
+      <button class="btn btn-3d btn-sm" id="btnExNext" type="button"><span data-i18n="btnSaveNext">Save &amp; Next</span> &rarr;</button>
       <button class="btn btn-emerald btn-sm" id="btnExSubmit" type="button"><span data-i18n="btnSubmit">Submit</span></button>
     </div>
   </div>
@@ -1463,11 +1305,11 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 <!-- Forced Fullscreen Re-Entry Shield -->
 <div id="fsForceShield" class="hidden">
   <div class="offline-card">
-    <div style="font-size:2.4rem;margin-bottom:8px;">🔒</div>
+    <div style="font-size:2.4rem;margin-bottom:8px;">&#128274;</div>
     <h2 style="margin-bottom:8px;" data-i18n="fsShieldTitle">Pro CBT Fullscreen Required</h2>
     <p id="fsShieldMsg" style="color:#cbd5e1;font-size:0.9rem;margin-bottom:16px;">Pro CBT mode enforces full-window exam lock. Tap below to resume fullscreen immediately.</p>
     <div style="display:flex;gap:10px;justify-content:center;flex-wrap:wrap;">
-      <button class="btn btn-3d" id="btnReenterFs" type="button">⛶ <span data-i18n="btnReenterFs">Re-Enter Fullscreen Exam</span></button>
+      <button class="btn btn-3d" id="btnReenterFs" type="button">&#9974; <span data-i18n="btnReenterFs">Re-Enter Fullscreen Exam</span></button>
       <button class="btn btn-rose btn-sm" id="btnExitExamFromShield" type="button">Submit &amp; Exit</button>
     </div>
   </div>
@@ -1477,8 +1319,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 <div id="authModal" class="modal-bg hidden">
   <div class="modal-card" style="max-width:440px;">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:12px;">
-      <h3 id="authTitle">🔐 Private Admin Unlock</h3>
-      <button class="btn btn-ghost btn-sm" id="btnCloseAuth" type="button">✕</button>
+      <h3 id="authTitle">&#128272; Private Admin Unlock</h3>
+      <button class="btn btn-ghost btn-sm" id="btnCloseAuth" type="button">&#10005;</button>
     </div>
     <div id="authBody">
       <div class="field" style="margin-bottom:10px;"><label>Admin ID</label><input class="inp" id="authIdInp" autocomplete="username"></div>
@@ -1488,10 +1330,10 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
         <div class="field" style="margin-bottom:8px;"><label>New Admin ID</label><input class="inp" id="authNewIdInp"></div>
         <div class="field"><label>New Password</label><input class="inp" id="authNewPwInp" type="password"></div>
       </div>
-      <div id="authErrMsg" style="color: var(--rose); font-size: 0.82rem; font-weight: 700; margin-bottom: 8px;"></div>
+      <div id="authErrMsg" style="color:var(--rose);font-size:0.82rem;font-weight:700;margin-bottom:8px;"></div>
       <div style="display:flex;gap:8px;flex-wrap:wrap;">
         <button class="btn btn-3d" id="btnAuthSubmit" style="flex:1;" type="button">Unlock Admin</button>
-        <button class="btn btn-ghost btn-sm" id="btnAuthSendOtp" type="button">📧 Gmail OTP</button>
+        <button class="btn btn-ghost btn-sm" id="btnAuthSendOtp" type="button">&#128231; Gmail OTP</button>
         <button class="btn btn-ghost btn-sm" id="btnAuthToggleReset" type="button">Forgot?</button>
       </div>
     </div>
@@ -1501,8 +1343,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 <div id="driveImgModal" class="modal-bg hidden">
   <div class="modal-card">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-      <h3>📁 Google Drive Photo Picker (07_Media_Assets)</h3>
-      <button class="btn btn-ghost btn-sm" id="btnCloseDriveImg" type="button">✕</button>
+      <h3>&#128193; Google Drive Photo Picker (07_Media_Assets)</h3>
+      <button class="btn btn-ghost btn-sm" id="btnCloseDriveImg" type="button">&#10005;</button>
     </div>
     <div id="driveImgStatus" style="font-size:0.82rem;color:var(--text-2);">Loading Drive images...</div>
     <div class="drive-img-grid" id="driveImgGrid"></div>
@@ -1513,7 +1355,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
   <div class="modal-card" style="width:min(820px,100%);">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
       <h3 data-i18n="btnFullPaper">Full Question Paper</h3>
-      <button class="btn btn-ghost btn-sm" id="btnCloseQPaper" type="button">✕</button>
+      <button class="btn btn-ghost btn-sm" id="btnCloseQPaper" type="button">&#10005;</button>
     </div>
     <div id="qPaperBody" style="display:grid;gap:12px;"></div>
   </div>
@@ -1522,8 +1364,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 <div id="qEditModal" class="modal-bg hidden">
   <div class="modal-card" style="width:min(760px,100%);">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-      <h3>✏️ Edit Question</h3>
-      <button class="btn btn-ghost btn-sm" id="btnCloseQEdit" type="button">✕</button>
+      <h3>&#9999;&#65039; Edit Question</h3>
+      <button class="btn btn-ghost btn-sm" id="btnCloseQEdit" type="button">&#10005;</button>
     </div>
     <input type="hidden" id="qeId">
     <div class="form-grid">
@@ -1546,7 +1388,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     </div>
     <div class="field" style="margin-top:8px;"><label>Explanation</label><textarea class="txt" id="qeExp"></textarea></div>
     <div style="display:flex;gap:8px;justify-content:flex-end;margin-top:12px;">
-      <button class="btn btn-emerald" id="btnSaveQEdit" type="button">✔️ Save Changes</button>
+      <button class="btn btn-emerald" id="btnSaveQEdit" type="button">&#10004;&#65039; Save Changes</button>
     </div>
   </div>
 </div>
@@ -1554,43 +1396,10 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 <div id="seoPreviewModal" class="modal-bg hidden">
   <div class="modal-card" style="width:min(760px,100%);">
     <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:10px;">
-      <h3>🔍 Pre-Download SEO &amp; Clean HTML Inspection</h3>
-      <button class="btn btn-ghost btn-sm" id="btnCloseSeoPrev" type="button">✕</button>
+      <h3>&#128269; Pre-Download SEO &amp; Clean HTML Inspection</h3>
+      <button class="btn btn-ghost btn-sm" id="btnCloseSeoPrev" type="button">&#10005;</button>
     </div>
-    <pre id="seoPreviewCode" style="background:#0b1220;color:#e2e8f0;padding:12px;border-radius:12px;overflow:auto;font-size:0.78rem;max-height:58dvh;">/* SECURITY AUDIT: Admin Hidden = TRUE | PIN Leak Check = ZERO LEAKS ✓ | Bridge Baked = YES ✓ */
-
-&lt;!DOCTYPE html&gt;
-&lt;html lang="en" data-theme="light" data-quality="3d" data-lang="en" style="--font-en-head: 'Plus Jakarta Sans', system-ui, sans-serif; --font-en-body: 'Inter', system-ui, sans-serif; --font-hi-head: 'Noto Sans Devanagari', 'Nirmala UI', sans-serif; --font-hi-body: 'Noto Sans Devanagari', 'Nirmala UI', sans-serif; --font-shayari: 'Kalam', 'Noto Sans Devanagari', cursive; --font-code: 'JetBrains Mono', Consolas, monospace; --base-size: 15px; --hi-lh: 1.72;"&gt;&lt;head&gt;
-&lt;meta charset="UTF-8"&gt;
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, viewport-fit=cover"&gt;
-&lt;meta name="robots" content="index, follow"&gt;
-&lt;meta name="description" content="Flagship 3D Bilingual Pro CBT Exam, Practice &amp;amp; Assessment Portal."&gt;
-&lt;meta name="theme-color" content="#0f172a"&gt;
-&lt;meta name="mobile-web-app-capable" content="yes"&gt;
-&lt;meta name="apple-mobile-web-app-capable" content="yes"&gt;
-&lt;meta name="apple-mobile-web-app-status-bar-style" content="black-translucent"&gt;
-&lt;meta property="og:title" content="TheGuru-EXamO — Pro CBT &amp;amp; Practice Portal"&gt;
-&lt;meta property="og:description" content="Flagship 3D Bilingual Pro CBT Exam, Practice &amp;amp; Assessment Portal."&gt;
-&lt;meta property="og:type" content="website"&gt;
-&lt;!--GSC_META_TAG--&gt;
-&lt;title&gt;TheGuru-EXamO — Pro CBT &amp;amp; Practice Portal&lt;/title&gt;
-&lt;link rel="preconnect" href="https://fonts.googleapis.com"&gt;
-&lt;link rel="preconnect" href="https://fonts.gstatic.com" crossorigin=""&gt;
-&lt;link id="guruFontsLink" rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus%20Jakarta%20Sans:wght@400;600;700;800&amp;amp;family=Inter:wght@400;600;700;800&amp;amp;family=Noto%20Sans%20Devanagari:wght@400;600;700;800&amp;amp;family=Kalam:wght@400;600;700;800&amp;amp;family=JetBrains%20Mono:wght@400;600;700;800&amp;amp;display=swap"&gt;
-&lt;script id="guruJsonLd" type="application/ld+json"&gt;{"@context":"https://schema.org","@type":"EducationalOrganization","name":"TheGuru-EXamO","description":"Bilingual Pro CBT Exam &amp; Practice Portal"}&lt;/script&gt;
-&lt;style id="guruBrandVars"&gt;:root, [data-theme="light"] { --primary: #1e3a8a; --primary-2: #1e3a8a; --accent: #0ea5e9; }&lt;/style&gt;
-&lt;style&gt;
-:root {
-  --font-en-head: 'Plus Jakarta Sans', 'Inter', system-ui, sans-serif;
-  --font-en-body: 'Inter', system-ui, -apple-system, sans-serif;
-  --font-hi-head: 'Noto Sans Devanagari', 'Nirmala UI', sans-serif;
-  --font-hi-body: 'Noto Sans Devanagari', 'Nirmala UI', sans-serif;
-  --font-shayari: 'Kalam', 'Noto Sans Devanagari', cursive;
-  --font-code: 'JetBrains Mono', Consolas, monospace;
-  --base-size: 15px;
-  --hi-lh: 1.72;
-  --head-weight: 800;
-  --letter-sp: 0px</pre>
+    <pre id="seoPreviewCode" style="background:#0b1220;color:#e2e8f0;padding:12px;border-radius:12px;overflow:auto;font-size:0.78rem;max-height:58dvh;"></pre>
   </div>
 </div>
 
@@ -1608,7 +1417,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 
   /* ---------- DEFAULT BAKED CONFIG (REPLACED CLEANLY BY SEO EXPORTER) ---------- */
   const BAKED_DEFAULTS = {
-    bridgeUrl: 'https://script.google.com/macros/s/AKfycbxxTGrnICq1ci30k1bajRhUWiTwo0Cwgm_5CfJ6ASX3bSddajIBNrN-pbJeGTMNAUykrg/exec',
+    bridgeUrl: '/*__BAKED_BRIDGE_URL__*/'.replace(/^\/\*__BAKED_BRIDGE_URL__\*\/$/, ''),
     rootFolder: 'TheGuru-EXamO_Project',
     sheetId: '',
     siteUrl: ''
@@ -1770,6 +1579,18 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     el.textContent = msg;
     stack.appendChild(el);
     setTimeout(() => { el.style.opacity = '0'; setTimeout(() => el.remove(), 260); }, ms);
+  }
+
+  /* Instant visual feedback + double-click guard on async/cloud buttons */
+  async function withBusy(btn, busyLabel, fn) {
+    if (!btn) return fn();
+    if (btn.classList.contains('is-busy')) return;
+    const prevHtml = btn.innerHTML;
+    btn.classList.add('is-busy');
+    btn.disabled = true;
+    if (busyLabel) btn.textContent = busyLabel;
+    try { return await fn(); }
+    finally { btn.innerHTML = prevHtml; btn.disabled = false; btn.classList.remove('is-busy'); }
   }
 
   /* ---------- INDEXEDDB VAULT (100% COMPATIBLE WITH v5.1 SCHEMA) ---------- */
@@ -2067,13 +1888,17 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     return 'en';
   }
 
-  function applyI18n(lang) {
-    AppState.activeLang = lang === 'hi' ? 'hi' : 'en';
-    document.documentElement.setAttribute('data-lang', AppState.activeLang);
-    const dict = I18N[AppState.activeLang];
+  let _lastAppliedLang = '';
+  function applyI18n(lang, force = false) {
+    const next = lang === 'hi' ? 'hi' : 'en';
+    AppState.activeLang = next;
+    if (!force && _lastAppliedLang === next) return;
+    _lastAppliedLang = next;
+    document.documentElement.setAttribute('data-lang', next);
+    const dict = I18N[next];
     document.querySelectorAll('[data-i18n]').forEach((el) => {
       const k = el.getAttribute('data-i18n');
-      if (dict[k]) el.textContent = dict[k];
+      if (dict[k] && el.textContent !== dict[k]) el.textContent = dict[k];
     });
   }
 
@@ -2102,7 +1927,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     // Scope custom brand colors strictly to Light Theme so Dark & Sepia never break!
     const styleEl = $('guruBrandVars');
     if (styleEl) {
-      styleEl.textContent = `:root, [data-theme="light"] { --primary: ${b.primary || '#1e3a8a'}; --primary-2: ${b.primary || '#2563eb'}; --accent: ${b.accent || '#0ea5e9'}; }`;
+      styleEl.textContent = `html[data-theme="light"] { --primary: ${b.primary || '#1e3a8a'}; --primary-2: ${b.primary || '#2563eb'}; --accent: ${b.accent || '#0ea5e9'}; }`;
     }
 
     if ($('topBrandTitle')) $('topBrandTitle').textContent = b.name || 'TheGuru-EXamO';
@@ -2150,10 +1975,12 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       }
     }
 
-    // Reorder sections inside Seamless Canvas
+    // Reorder sections inside Seamless Canvas ONLY when sectionOrder actually changed
     const canvas = $('portalCanvas');
     const order = Array.isArray(b.sectionOrder) ? b.sectionOrder : DEFAULT_BRAND.sectionOrder;
-    if (canvas) {
+    const orderKey = order.join(',');
+    if (canvas && canvas.dataset.orderKey !== orderKey) {
+      canvas.dataset.orderKey = orderKey;
       order.forEach((secKey) => {
         const node = canvas.querySelector('[data-sec="' + secKey + '"]');
         if (node) canvas.appendChild(node);
@@ -2162,7 +1989,11 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     startCountdownClock();
   }
 
+  let _lastCountdownKey = '';
   function startCountdownClock() {
+    const cKey = String(AppState.brand.countdownDate || '') + '|' + String(AppState.control.reopenAt || '');
+    if (AppState.countdownTimer && _lastCountdownKey === cKey) return;
+    _lastCountdownKey = cKey;
     if (AppState.countdownTimer) clearInterval(AppState.countdownTimer);
     const update = () => {
       const targetStr = AppState.brand.countdownDate;
@@ -2252,7 +2083,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     const subMap = {};
     (rawSubs || []).forEach((s) => {
       const id = String(s.id || s.name);
-      subMap[id] = { id, name: s.name || id, questions: Array.isArray(s.questions) ? s.questions : [] };
+      subMap[id] = { id, name: s.name || id, packId: s.packId || '', packVersion: Number(s.packVersion || 0), questions: Array.isArray(s.questions) ? s.questions : [] };
     });
     (rawQs || []).forEach((q) => {
       const sid = String(q.subjectId || q.subject || 'DEFAULT_BANK');
@@ -2278,12 +2109,16 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     const subName = String((meta && meta.title) || cartridge.subjectName || cartridge.title || 'CLOUD PACK').trim();
     const subId = 'PACK_' + String((meta && meta.packId) || subName).replace(/[^A-Za-z0-9_-]+/g, '_').toUpperCase();
     const normQs = qs.map((q, idx) => normalizeQuestionObj(q, idx, subName));
+    const packIdVal = String((meta && meta.packId) || cartridge.packId || '').trim();
+    const packVerVal = Number((meta && meta.version) || 1);
     const existing = AppState.subjects.find((s) => s.id === subId || s.name.toLowerCase() === subName.toLowerCase());
     if (existing) {
       existing.name = subName;
+      existing.packId = packIdVal || existing.packId || '';
+      existing.packVersion = packVerVal;
       existing.questions = normQs;
     } else {
-      AppState.subjects.push({ id: subId, name: subName, questions: normQs });
+      AppState.subjects.push({ id: subId, name: subName, packId: packIdVal, packVersion: packVerVal, questions: normQs });
     }
     await saveSubjectsToVault();
   }
@@ -2434,45 +2269,45 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       `);
     }
     grid.innerHTML = html.join('');
-    grid.querySelectorAll('[data-launch-set]').forEach((btn) => {
-      btn.addEventListener('click', () => {
-        const idx = Number(btn.getAttribute('data-launch-set'));
-        const mode = btn.getAttribute('data-mode');
-        const sliceQs = qs.slice(idx * size, (idx + 1) * size);
-        const sliceKey = `${sub.id}::${$('pubUnitSel').value}::${size}::${idx}`;
-        // CRITICAL: Trigger fullscreen synchronously inside click handler before any async work!
-        ExamEngine.launch({
-          subjectName: sub.name,
-          title: `${sub.name} — ${dict.setWord} ${idx + 1}`,
-          questions: sliceQs,
-          mode,
-          sliceKey,
-          isStudent: false,
-          forceFullscreen: mode === 'exam' && $('chkForceProFs').checked && AppState.control.features.proFullscreenLock !== false
-        });
-      });
-    });
+    // Store active slice context for single-listener event delegation (zero per-card listeners!)
+    grid._sliceCtx = { sub, qs, size, dict, unitVal: $('pubUnitSel').value };
+  }
+
+  function loadSavedExamSession() {
+    try {
+      const rawBase = localStorage.getItem('guru_v6_saved_base');
+      if (rawBase) {
+        const base = JSON.parse(rawBase);
+        const rawDelta = localStorage.getItem('guru_v6_saved_delta');
+        const delta = rawDelta ? JSON.parse(rawDelta) : {};
+        return Object.assign(base, delta);
+      }
+      const leg = localStorage.getItem('guru_v6_saved_session');
+      return leg ? JSON.parse(leg) : null;
+    } catch (_) { return null; }
+  }
+
+  function clearSavedExamSession() {
+    localStorage.removeItem('guru_v6_saved_base');
+    localStorage.removeItem('guru_v6_saved_delta');
+    clearTimeout(this._saveTimer); clearSavedExamSession();
   }
 
   function checkResumeBanner() {
     const ban = $('resumeBanner');
     if (!ban) return;
-    const raw = localStorage.getItem('guru_v6_saved_session');
-    if (!raw) { ban.classList.add('hidden'); return; }
-    try {
-      const s = JSON.parse(raw);
-      if (!s || !Array.isArray(s.questions) || !s.questions.length) { ban.classList.add('hidden'); return; }
-      ban.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
-        <span>⏸️ <b>Saved Session Found:</b> ${esc(s.title)} (Q.${s.curIdx + 1}/${s.questions.length})</span>
-        <div style="display:flex;gap:6px;">
-          <button class="btn btn-emerald btn-sm" id="btnResumeNow" type="button">▶ Resume</button>
-          <button class="btn btn-ghost btn-sm" id="btnDiscardResume" type="button">Discard</button>
-        </div>
-      </div>`;
-      ban.classList.remove('hidden');
-      $('btnResumeNow').onclick = () => ExamEngine.resumeSaved(s);
-      $('btnDiscardResume').onclick = () => { localStorage.removeItem('guru_v6_saved_session'); ban.classList.add('hidden'); };
-    } catch (_) { ban.classList.add('hidden'); }
+    const s = loadSavedExamSession();
+    if (!s || !Array.isArray(s.questions) || !s.questions.length) { ban.classList.add('hidden'); return; }
+    ban.innerHTML = `<div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;">
+      <span>⏸️ <b>Saved Session Found:</b> ${esc(s.title)} (Q.${(s.curIdx || 0) + 1}/${s.questions.length})</span>
+      <div style="display:flex;gap:6px;">
+        <button class="btn btn-emerald btn-sm" id="btnResumeNow" type="button">▶ Resume</button>
+        <button class="btn btn-ghost btn-sm" id="btnDiscardResume" type="button">Discard</button>
+      </div>
+    </div>`;
+    ban.classList.remove('hidden');
+    $('btnResumeNow').onclick = () => ExamEngine.resumeSaved(s);
+    $('btnDiscardResume').onclick = () => { clearSavedExamSession(); ban.classList.add('hidden'); };
   }
 
   /* ---------- PINCH-TO-ZOOM & PAN ENGINE (TOUCH + MOUSE WHEEL + BUTTONS) ---------- */
@@ -2636,6 +2471,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 
     openOverlay() {
       const ex = AppState.exam;
+      document.body.classList.add('exam-active');
       $('examOverlay').classList.remove('hidden');
       $('fsForceShield').classList.add('hidden');
       $('exHeaderTitle').textContent = ex.title;
@@ -2647,7 +2483,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       this.renderQuestion();
       this.renderPalette();
       this.startTimer();
-      this.autoSave();
+      this.saveExamBase();
+      this.autoSave(true);
     },
 
     startTimer() {
@@ -2677,10 +2514,36 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       ex.qEnteredAt = Date.now();
     },
 
-    autoSave() {
+    _saveTimer: 0,
+    saveExamBase() {
       const ex = AppState.exam;
       if (!ex || ex.isStudent) return;
-      try { localStorage.setItem('guru_v6_saved_session', JSON.stringify(ex)); } catch (_) {}
+      try {
+        localStorage.removeItem('guru_v6_saved_session');
+        localStorage.setItem('guru_v6_saved_base', JSON.stringify({
+          subjectName: ex.subjectName, title: ex.title, mode: ex.mode, sliceKey: ex.sliceKey,
+          isStudent: false, student: null, forceFullscreen: ex.forceFullscreen,
+          lang: ex.lang, questions: ex.questions, totalDuration: ex.totalDuration, startedAt: ex.startedAt
+        }));
+      } catch (_) {}
+    },
+    autoSave(immediate = false) {
+      const ex = AppState.exam;
+      if (!ex || ex.isStudent) return;
+      const writeDelta = () => {
+        const cur = AppState.exam;
+        if (!cur || cur.isStudent) return;
+        try {
+          localStorage.setItem('guru_v6_saved_delta', JSON.stringify({
+            answers: cur.answers, marked: cur.marked, visited: cur.visited,
+            timePerQ: cur.timePerQ, curIdx: cur.curIdx, remaining: cur.remaining,
+            bilingualView: cur.bilingualView, violations: cur.violations
+          }));
+        } catch (_) {}
+      };
+      clearTimeout(this._saveTimer);
+      if (immediate) writeDelta();
+      else this._saveTimer = setTimeout(writeDelta, 300);
     },
 
     renderQuestion() {
@@ -2780,50 +2643,79 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       pane.style.fontSize = (100 + this.qFontDelta) + '%';
       pane.scrollTop = 0;
 
-      pane.querySelectorAll('.opt-card').forEach((card) => {
-        card.onclick = () => {
-          if (ex.mode === 'practice' && ex.answers[ex.curIdx]) return;
-          ex.answers[ex.curIdx] = card.getAttribute('data-opt');
-          this.autoSave();
-          this.renderQuestion();
-          this.renderPalette();
-        };
-      });
+      // Option clicks handled via single delegated listener on #exQuestionPane (<2ms surgical patch!)
       mountPinchZoom(pane);
+    },
+
+    selectOptionSurgical(optKey) {
+      const ex = AppState.exam;
+      if (!ex) return;
+      if (ex.mode === 'practice' && ex.answers[ex.curIdx]) return;
+      ex.answers[ex.curIdx] = optKey;
+      const pane = $('exQuestionPane');
+      const cards = pane.querySelectorAll('.opt-card');
+      const q = ex.questions[ex.curIdx];
+      if (ex.mode === 'practice') {
+        cards.forEach((c) => {
+          const k = c.getAttribute('data-opt');
+          c.classList.toggle('selected', k === optKey);
+          c.classList.toggle('correct', k === q.answer);
+          c.classList.toggle('wrong', k === optKey && k !== q.answer);
+        });
+        const useHi = ex.bilingualView === 'hi' && q.hi && q.hi.question;
+        const expTxt = useHi ? (q.hi.explanation || q.explanation) : q.explanation;
+        if (expTxt && !pane.querySelector('.exp-box')) {
+          const dict = I18N[ex.bilingualView === 'hi' || AppState.activeLang === 'hi' ? 'hi' : 'en'];
+          const div = document.createElement('div');
+          div.className = 'exp-box';
+          div.innerHTML = `<b>${esc(dict.expHdr)}:</b> ${esc(expTxt)}`;
+          pane.appendChild(div);
+        }
+      } else {
+        cards.forEach((c) => c.classList.toggle('selected', c.getAttribute('data-opt') === optKey));
+      }
+      this.updatePaletteButton(ex.curIdx);
+      this.autoSave();
+    },
+
+    _palClassFor(i) {
+      const ex = AppState.exam;
+      const hasAns = !!ex.answers[i];
+      const isMark = !!ex.marked[i];
+      const isVis = !!ex.visited[i];
+      let st = '';
+      if (hasAns && isMark) st = 'st-ansmark';
+      else if (isMark) st = 'st-mark';
+      else if (hasAns) st = 'st-ans';
+      else if (isVis) st = 'st-not';
+      return 'pal-btn' + (st ? ' ' + st : '') + (i === ex.curIdx ? ' cur' : '');
     },
 
     renderPalette() {
       const ex = AppState.exam;
       if (!ex) return;
       const grid = $('exPalGrid');
-      grid.innerHTML = ex.questions.map((_, i) => {
-        const hasAns = !!ex.answers[i];
-        const isMark = !!ex.marked[i];
-        const isVis = !!ex.visited[i];
-        let st = '';
-        if (hasAns && isMark) st = 'st-ansmark';
-        else if (isMark) st = 'st-mark';
-        else if (hasAns) st = 'st-ans';
-        else if (isVis) st = 'st-not';
-        return `<button class="pal-btn ${st} ${i === ex.curIdx ? 'cur' : ''}" data-jump="${i}" type="button">${i + 1}</button>`;
-      }).join('');
-      grid.querySelectorAll('[data-jump]').forEach((b) => {
-        b.onclick = () => {
-          this.goTo(Number(b.getAttribute('data-jump')));
-          if ($('chkAutoHidePal') && $('chkAutoHidePal').checked) this.closePalette();
-        };
-      });
+      grid.innerHTML = ex.questions.map((_, i) => `<button class="${this._palClassFor(i)}" data-jump="${i}" type="button">${i + 1}</button>`).join('');
+    },
+
+    updatePaletteButton(i) {
+      const ex = AppState.exam;
+      if (!ex || i < 0 || i >= ex.questions.length) return;
+      const btn = $('exPalGrid').children[i];
+      if (btn) btn.className = this._palClassFor(i);
     },
 
     goTo(idx) {
       const ex = AppState.exam;
       if (!ex || idx < 0 || idx >= ex.questions.length) return;
       this.recordTimeOnCurrent();
+      const prevIdx = ex.curIdx;
       ex.curIdx = idx;
       ex.visited[idx] = true;
-      this.autoSave();
       this.renderQuestion();
-      this.renderPalette();
+      this.updatePaletteButton(prevIdx);
+      this.updatePaletteButton(idx);
+      this.autoSave();
     },
 
     openPalette() {
@@ -2857,6 +2749,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       clearInterval(this.timerInt);
       $('fsForceShield').classList.add('hidden');
       $('examOverlay').classList.add('hidden');
+      document.body.classList.remove('exam-active');
       this.exitFullscreenSafe();
       localStorage.removeItem('guru_v6_saved_session');
 
@@ -3143,16 +3036,64 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       renderSliceGrid();
     };
 
-    // Portal Filters
+    // Pause ambient CSS animation briefly while scrolling for 60fps compositor smoothness
+    let _scrTimer = 0;
+    window.addEventListener('scroll', () => {
+      if (!document.body.classList.contains('is-scrolling')) document.body.classList.add('is-scrolling');
+      clearTimeout(_scrTimer);
+      _scrTimer = setTimeout(() => document.body.classList.remove('is-scrolling'), 160);
+    }, { passive: true });
+    window.addEventListener('beforeunload', () => { if (AppState.exam && !AppState.exam.isStudent) ExamEngine.autoSave(true); });
+
+    // Single delegated listener on #pubSliceGrid
+    $('pubSliceGrid').addEventListener('click', (e) => {
+      const btn = e.target.closest('[data-launch-set]');
+      const ctx = $('pubSliceGrid')._sliceCtx;
+      if (!btn || !ctx) return;
+      const idx = Number(btn.getAttribute('data-launch-set'));
+      const mode = btn.getAttribute('data-mode');
+      const sliceQs = ctx.qs.slice(idx * ctx.size, (idx + 1) * ctx.size);
+      const sliceKey = `${ctx.sub.id}::${ctx.unitVal}::${ctx.size}::${idx}`;
+      ExamEngine.launch({
+        subjectName: ctx.sub.name,
+        title: `${ctx.sub.name} — ${ctx.dict.setWord} ${idx + 1}`,
+        questions: sliceQs,
+        mode,
+        sliceKey,
+        isStudent: false,
+        forceFullscreen: mode === 'exam' && $('chkForceProFs').checked && AppState.control.features.proFullscreenLock !== false
+      });
+    });
+
+    // Single delegated listeners on Exam Question Options & Palette Grid
+    $('exQuestionPane').addEventListener('click', (e) => {
+      const card = e.target.closest('.opt-card');
+      if (card) ExamEngine.selectOptionSurgical(card.getAttribute('data-opt'));
+    });
+    $('exPalGrid').addEventListener('click', (e) => {
+      const b = e.target.closest('[data-jump]');
+      if (!b) return;
+      ExamEngine.goTo(Number(b.getAttribute('data-jump')));
+      if ($('chkAutoHidePal') && $('chkAutoHidePal').checked) ExamEngine.closePalette();
+    });
+
+    // Portal Filters (0ms Versioned IndexedDB Pack Cache!)
     $('pubCloudPackSel').onchange = async () => {
       const pid = $('pubCloudPackSel').value;
       if (!pid) return;
-      toast('☁️ Loading Cloud Pack: ' + pid + '...', 'info');
+      const subId = 'PACK_' + pid.replace(/[^A-Za-z0-9_-]+/g, '_').toUpperCase();
+      const packMeta = AppState.packs.find((p) => p.packId === pid);
+      const cached = AppState.subjects.find((s) => s.id === subId && s.questions.length > 0 && (!packMeta || Number(s.packVersion || 0) >= Number(packMeta.version || 1)));
+      if (cached) {
+        if ($('pubSubjectSel')) { $('pubSubjectSel').value = subId; populatePublicUnitsAndGrid(); }
+        toast(`⚡ Loaded instantly from cache (${cached.questions.length} Qs • v${cached.packVersion || 1})`, 'ok', 2000);
+        return;
+      }
+      toast('☁️ Downloading Cloud Pack: ' + pid + '...', 'info');
       const r = await Cloud.call('fetchPublishedPack', { packId: pid });
       if (r && r.ok && r.cartridge) {
-        await mergeCartridgeIntoVault(r.cartridge, r.meta);
+        await mergeCartridgeIntoVault(r.cartridge, r.meta || packMeta);
         renderPublicPortal();
-        const subId = 'PACK_' + pid.replace(/[^A-Za-z0-9_-]+/g, '_').toUpperCase();
         if ($('pubSubjectSel')) { $('pubSubjectSel').value = subId; populatePublicUnitsAndGrid(); }
         toast('✅ Loaded ' + r.cartridge.questions.length + ' questions!', 'ok');
       } else toast('Failed to load pack: ' + (r && r.error ? r.error : ''), 'err');
@@ -3174,7 +3115,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     };
 
     // Student CBT Login & Launch
-    $('btnStuVerify').onclick = verifyStudentLive;
+    $('btnStuVerify').onclick = () => withBusy($('btnStuVerify'), '⏳ Verifying...', verifyStudentLive);
     $('btnStuStartExam').onclick = () => {
       if (!AppState.verifiedStudent) return;
       const sid = $('stuSubjectSel').value;
@@ -3198,12 +3139,16 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       const ex = AppState.exam;
       if (!ex || (ex.mode === 'practice' && ex.answers[ex.curIdx])) return;
       delete ex.answers[ex.curIdx];
-      ExamEngine.autoSave(); ExamEngine.renderQuestion(); ExamEngine.renderPalette();
+      $('exQuestionPane').querySelectorAll('.opt-card.selected').forEach((c) => c.classList.remove('selected'));
+      ExamEngine.updatePaletteButton(ex.curIdx);
+      ExamEngine.autoSave();
     };
     $('btnExMark').onclick = () => {
       const ex = AppState.exam;
+      if (!ex) return;
       ex.marked[ex.curIdx] = !ex.marked[ex.curIdx];
-      ExamEngine.autoSave(); ExamEngine.renderPalette();
+      ExamEngine.updatePaletteButton(ex.curIdx);
+      ExamEngine.autoSave();
     };
     $('btnExSubmit').onclick = $('btnExSubmitPal').onclick = () => {
       if (confirm('Submit exam and view scorecard?')) ExamEngine.submit('Submitted by Candidate');
@@ -3260,8 +3205,9 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     document.addEventListener('fullscreenchange', onFsChange);
     document.addEventListener('webkitfullscreenchange', onFsChange);
     document.addEventListener('visibilitychange', () => {
-      if (document.hidden && AppState.exam && AppState.exam.isStudent) {
-        ExamEngine.logViolation('TAB_SWITCH', 'Switched browser tab or minimized window');
+      if (document.hidden && AppState.exam) {
+        if (AppState.exam.isStudent) ExamEngine.logViolation('TAB_SWITCH', 'Switched browser tab or minimized window');
+        else ExamEngine.autoSave(true);
       }
     });
     $('btnReenterFs').onclick = () => { ExamEngine.requestFullscreenSync(); $('fsForceShield').classList.add('hidden'); };
@@ -3325,7 +3271,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 
   // Expose Core API cleanly for Pass 2C Admin Engine
   window.GuruCore = {
-    $, esc, toast, I18N, DEFAULT_BRAND, DEFAULT_CONTROL, DEFAULT_BOSS,
+    $, esc, toast, withBusy, I18N, DEFAULT_BRAND, DEFAULT_CONTROL, DEFAULT_BOSS,
     AppState, VaultDB, Cloud, Splash, ExamEngine,
     isDevanagariText, resolveUiLang, applyI18n, applyTypographyAndBrand,
     applyControlMatrix, applyAllVisualsAndControls, saveSubjectsToVault,
@@ -3978,7 +3924,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
   const C = window.GuruCore;
   const P = window.GuruParser;
   if (!C || !P) return;
-  const { $, esc, toast, AppState, VaultDB, Cloud, Splash, DEFAULT_BRAND, DEFAULT_CONTROL, DEFAULT_BOSS } = C;
+  const { $, esc, toast, withBusy, AppState, VaultDB, Cloud, Splash, DEFAULT_BRAND, DEFAULT_CONTROL, DEFAULT_BOSS } = C;
 
   let stagedQs = [];
   let upPage = 1, stPage = 1;
@@ -3988,6 +3934,22 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
   let currentSheetTab = 'Results';
   let currentSheetRowNums = [];
   let adminInitialized = false;
+  let activeAdminTab = 'controls';
+  const tabPopulated = { controls: false, studio: false, brand: false, roster: false, cloud: false, seo: false };
+  const tabStale = { controls: true, studio: true, brand: true, roster: true, cloud: true, seo: true };
+  function markTabsStale(...names) {
+    (names.length ? names : Object.keys(tabStale)).forEach((k) => { tabStale[k] = true; });
+  }
+  function ensureAdminTabRendered(tab) {
+    if (!tabStale[tab]) return;
+    tabStale[tab] = false;
+    if (tab === 'controls') { populateControlsTab(); tabPopulated.controls = true; }
+    else if (tab === 'studio') { populateStudioTab(); tabPopulated.studio = true; }
+    else if (tab === 'brand') { populateBrandTab(); tabPopulated.brand = true; }
+    else if (tab === 'roster') { renderRosterTable(); tabPopulated.roster = true; }
+    else if (tab === 'cloud') { populateCloudTab(); tabPopulated.cloud = true; }
+    else if (tab === 'seo') { populateSeoTab(); tabPopulated.seo = true; }
+  }
 
   /* ---------- DIRTY STATE & GLOBAL STICKY SUBMIT BAR ---------- */
   function markDirty(msg) {
@@ -4008,8 +3970,8 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
   }
 
   async function submitAndPublishLive() {
-    readControlsIntoState();
-    readBrandIntoState();
+    if (tabPopulated.controls) readControlsIntoState();
+    if (tabPopulated.brand) readBrandIntoState();
     await Promise.all([
       VaultDB.setSetting('v6_brand', AppState.brand),
       VaultDB.setSetting('v6_control', AppState.control),
@@ -4241,19 +4203,24 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
           </label>`).join('') + `</div></div>`;
     }
     AppState.subjects.forEach((s) => {
-      const units = Array.from(new Set(s.questions.map((q) => q.unit || 'UNIT 01')));
+      const unitCounts = new Map();
+      for (let i = 0; i < s.questions.length; i++) {
+        const u = s.questions[i].unit || 'UNIT 01';
+        unitCounts.set(u, (unitCounts.get(u) || 0) + 1);
+      }
+      const unitRows = [];
+      unitCounts.forEach((cnt, u) => {
+        const uk = s.id + '::' + u;
+        unitRows.push(`<label class="toggle-row" style="background:var(--surface);"><span>${esc(u)} (${cnt})</span>
+          <input type="checkbox" data-vis-unit="${esc(uk)}" ${!hidU[uk] ? 'checked' : ''}>
+        </label>`);
+      });
       html += `<div style="padding:10px;border-radius:12px;background:var(--surface-2);border:1px solid var(--border);">
         <label style="display:flex;align-items:center;justify-content:space-between;font-weight:800;margin-bottom:8px;cursor:pointer;">
           <span>📚 ${esc(s.name)} (${s.questions.length} Qs)</span>
           <span><input type="checkbox" data-vis-sub="${esc(s.id)}" ${!hidS[s.id] ? 'checked' : ''}> LIVE</span>
         </label>
-        <div class="toggle-grid">` + units.map((u) => {
-          const uk = s.id + '::' + u;
-          const cnt = s.questions.filter((q) => (q.unit || 'UNIT 01') === u).length;
-          return `<label class="toggle-row" style="background:var(--surface);"><span>${esc(u)} (${cnt})</span>
-            <input type="checkbox" data-vis-unit="${esc(uk)}" ${!hidU[uk] ? 'checked' : ''}>
-          </label>`;
-        }).join('') + `</div></div>`;
+        <div class="toggle-grid">${unitRows.join('')}</div></div>`;
     });
     box.innerHTML = html || '<div style="color:var(--text-2);font-size:0.84rem;">No subjects or packs loaded yet.</div>';
 
@@ -4973,6 +4940,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     ['authModal', 'driveImgModal', 'qPaperModal', 'qEditModal', 'seoPreviewModal', 'examOverlay', 'fsForceShield', 'siteOfflineScreen', 'studentView', 'scoreView'].forEach((id) => {
       const n = clone.querySelector('#' + id); if (n) n.classList.add('hidden');
     });
+    const bNode = clone.querySelector('body'); if (bNode) bNode.classList.remove('exam-active');
     const pv = clone.querySelector('#practiceView'); if (pv) pv.classList.remove('hidden');
     const sp = clone.querySelector('#guruSplash'); if (sp) sp.classList.remove('hidden', 'splash-out');
 
@@ -5007,12 +4975,9 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 
   /* ---------- BIND ALL ADMIN EVENTS ONCE ---------- */
   function populateAllAdminForms() {
-    populateControlsTab();
-    populateStudioTab();
-    populateBrandTab();
-    renderRosterTable();
-    populateCloudTab();
-    populateSeoTab();
+    Object.keys(tabPopulated).forEach((k) => { tabPopulated[k] = false; });
+    markTabsStale();
+    ensureAdminTabRendered(activeAdminTab);
     const rev = $('admRevBadge');
     if (rev) rev.textContent = `(Rev #${AppState.revision})`;
   }
@@ -5020,7 +4985,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
   function bindAdminEvents() {
     // Sticky Publish & Lock
     $('btnSubmitPublishLive').onclick = submitAndPublishLive;
-    $('btnAdmRollback').onclick = rollbackSnapshot;
+    $('btnAdmRollback').onclick = () => withBusy($('btnAdmRollback'), '⏳ Rolling back...', rollbackSnapshot);
     $('btnAdminLock').onclick = async () => {
       if (AppState.bridgeUrl) await Cloud.call('adminLogout', {});
       AppState.isAdminUnlocked = false;
@@ -5035,7 +5000,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 
     // Auth Modal
     $('btnCloseAuth').onclick = () => $('authModal').classList.add('hidden');
-    $('btnAuthSubmit').onclick = handleAuthSubmit;
+    $('btnAuthSubmit').onclick = () => withBusy($('btnAuthSubmit'), '⏳ Checking...', handleAuthSubmit);
     $('authPwInp').onkeydown = (e) => { if (e.key === 'Enter') handleAuthSubmit(); };
     $('btnAuthToggleReset').onclick = () => {
       authMode = authMode === 'reset' ? 'login' : 'reset';
@@ -5053,15 +5018,14 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       } else toast((r && r.error) || 'Failed to send OTP.', 'err');
     };
 
-    // Admin Sub-Tabs
+    // Admin Sub-Tabs (Lazy-rendered for instant 0ms tab switching!)
     $('adminTabs').querySelectorAll('.adm-tab-btn').forEach((b) => {
       b.onclick = () => {
         const tab = b.getAttribute('data-tab');
+        activeAdminTab = tab;
         $('adminTabs').querySelectorAll('.adm-tab-btn').forEach((x) => x.classList.toggle('active', x === b));
         document.querySelectorAll('.adm-pane').forEach((p) => p.classList.toggle('hidden', p.id !== 'pane-' + tab));
-        if (tab === 'cloud') populateCloudTab();
-        if (tab === 'studio') populateStudioTab();
-        if (tab === 'brand') renderBrandLivePreview();
+        ensureAdminTabRendered(tab);
       };
     });
 
@@ -5104,7 +5068,7 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       if (ok) renderStagedPreview();
     };
     $('btnCommitClean').onclick = () => commitStagedQuestions(false);
-    $('btnCommitAndPublish').onclick = () => commitStagedQuestions(true);
+    $('btnCommitAndPublish').onclick = () => withBusy($('btnCommitAndPublish'), '⏳ Publishing...', () => commitStagedQuestions(true));
     $('btnClearStaged').onclick = () => { stagedQs = []; renderStagedPreview(); };
 
     // Vault Studio
@@ -5161,16 +5125,23 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
     };
 
     // Brand, Photo, Drag Layout & Dual-Script Font Studio
+    let _brandRaf = 0, _prevDeb = 0;
     const onBrandChange = () => {
       $('lblHeroW').textContent = $('rngHeroW').value;
       $('lblHeroH').textContent = $('rngHeroH').value;
       $('lblHeroR').textContent = $('rngHeroR').value;
       $('lblBaseSz').textContent = $('rngBaseSz').value;
       $('lblHiLh').textContent = $('rngHiLh').value;
-      readBrandIntoState();
-      C.applyTypographyAndBrand();
-      renderBrandLivePreview();
-      markDirty('Visual/Typography updated');
+      if (!_brandRaf) {
+        _brandRaf = requestAnimationFrame(() => {
+          _brandRaf = 0;
+          readBrandIntoState();
+          C.applyTypographyAndBrand();
+          markDirty('Visual/Typography updated');
+        });
+      }
+      clearTimeout(_prevDeb);
+      _prevDeb = setTimeout(renderBrandLivePreview, 120);
     };
     ['brName','brBadge','brPrimary','brAccent','brCountdownDate','brWatermark','brHeroTitle','brHeroSub','brNotice','brShayari','brFooter','rngHeroW','rngHeroH','rngHeroR','selHeroDir','fntEnHead','fntEnBody','fntHiHead','fntHiBody','fntShayari','fntCode','rngBaseSz','rngHiLh'].forEach((id) => {
       if ($(id)) $(id).addEventListener('input', onBrandChange);
@@ -5207,12 +5178,12 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
       VaultDB.setSetting('v6_roster', AppState.roster);
       renderRosterTable(); markDirty('All PINs rotated');
     };
-    $('btnPullRoster').onclick = async () => { await pullRosterAdmin(); toast('Roster pulled from live Sheet.', 'ok'); };
-    $('btnPushRosterNow').onclick = pushRosterInstant;
+    $('btnPullRoster').onclick = () => withBusy($('btnPullRoster'), '⏳ Pulling...', async () => { await pullRosterAdmin(); toast('Roster pulled from live Sheet.', 'ok'); });
+    $('btnPushRosterNow').onclick = () => withBusy($('btnPushRosterNow'), '⏳ Syncing...', pushRosterInstant);
     $('btnPrintPinSlips').onclick = printPinSlips;
 
     // Cloud Bridge, Packs & Sheets CRUD
-    $('btnSavePingBridge').onclick = async () => {
+    $('btnSavePingBridge').onclick = () => withBusy($('btnSavePingBridge'), '⏳ Testing...', async () => {
       AppState.bridgeUrl = $('cloudBridgeUrl').value.trim();
       AppState.rootFolder = $('cloudFolderName').value.trim() || 'TheGuru-EXamO_Project';
       AppState.sheetId = $('cloudSheetId').value.trim();
@@ -5229,19 +5200,19 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
           toast('Bridge v' + resp.version + ' verified!', 'ok');
         } else out.textContent = '❌ Ping failed: ' + ((resp && resp.error) || 'Check deployment');
       } catch (e) { out.textContent = '❌ Network/CORS error: ' + e.message; }
-    };
-    $('btnForceCloudPull').onclick = async () => { await Cloud.bootstrap(); populateAllAdminForms(); toast('Cloud pull complete!', 'ok'); };
+    });
+    $('btnForceCloudPull').onclick = () => withBusy($('btnForceCloudPull'), '⏳ Pulling...', async () => { await Cloud.bootstrap(); populateAllAdminForms(); toast('Cloud pull complete!', 'ok'); });
     $('pubFromSubjectSel').onchange = () => {
       const sub = AppState.subjects.find((s) => s.id === $('pubFromSubjectSel').value);
       if (sub) $('pubNewPackId').value = P.deriveNomenclatureFromFilename(sub.name).packId;
     };
-    $('btnPublishPackNow').onclick = () => publishSubjectAsPack($('pubFromSubjectSel').value, $('pubNewPackId').value.trim());
-    $('btnRefreshPacks').onclick = async () => {
+    $('btnPublishPackNow').onclick = () => withBusy($('btnPublishPackNow'), '⏳ Publishing...', () => publishSubjectAsPack($('pubFromSubjectSel').value, $('pubNewPackId').value.trim()));
+    $('btnRefreshPacks').onclick = () => withBusy($('btnRefreshPacks'), '⏳ Refreshing...', async () => {
       const l = await Cloud.call('listPublishedPacks', {});
       if (l && l.ok) { AppState.packs = l.packs || []; await VaultDB.setSetting('v6_packs', AppState.packs); renderPublishedPacksTable(); C.renderPublicPortal(); toast('Packs refreshed.', 'ok'); }
-    };
-    $('btnLoadSheetTab').onclick = loadSheetPreviewTab;
-    $('btnDeleteSelectedRows').onclick = deleteSelectedSheetRows;
+    });
+    $('btnLoadSheetTab').onclick = () => withBusy($('btnLoadSheetTab'), '⏳ Loading...', loadSheetPreviewTab);
+    $('btnDeleteSelectedRows').onclick = () => withBusy($('btnDeleteSelectedRows'), '⏳ Deleting...', deleteSelectedSheetRows);
 
     // Clean Manual SEO Exporter
     $('btnInspectSeo').onclick = () => {
@@ -5312,6 +5283,5 @@ html[data-lang="hi"] h1, html[data-lang="hi"] h2, html[data-lang="hi"] h3, html[
 })();
 if (document.readyState !== 'loading' && window.GuruAdmin) window.GuruAdmin.init();
 </script>
-
-
-</body></html>
+</body>
+</html>
